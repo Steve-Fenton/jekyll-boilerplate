@@ -1,0 +1,16 @@
+<head>
+	<meta charset="utf-8">
+	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
+	<meta name="description" content="{{ page.description }}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image" content="">
+	<link href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" rel="shortcut icon" type="image/x-icon">
+	<link href="{{ "/assets/icons/apple-touch-icon.png" | prepend: site.baseurl }}" rel="apple-touch-icon">
+	<link href="{{ "/sitemap.xml" | prepend: site.baseurl }}" type="application/rss+xml" rel="alternate">
+	<meta name="theme-color" content="#{{site.theme-color-hex}}">
+	<meta name="msapplication-navbutton-color" content="#{{site.theme-color-hex}}">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#{{site.theme-color-hex}}">
+	<link href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" rel="stylesheet">
+    {% include analytics.html %}
+</head>

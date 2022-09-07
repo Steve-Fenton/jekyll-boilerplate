@@ -1,0 +1,20 @@
+<nav>
+    <ul>
+    {%- assign main_pages = site.pages | where: 'nav-level', '1' | sort: 'nav-order' -%}
+    {% for page in main_pages %}
+      <li>
+        <a href="{{ page.url}}">{{page.title}}</a>
+        {%- assign sub_pages = site.pages | where: 'nav-level', page.title | sort: 'nav-order' -%}
+        {%- if sub_pages.size > 0 %}
+        <ul>
+          {%- for child in sub_pages %}
+          <li>
+            <a href="{{ child.url}}">{{child.title}}</a>
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </li>
+    {%- endfor %}
+    </ul>
+  </nav>
