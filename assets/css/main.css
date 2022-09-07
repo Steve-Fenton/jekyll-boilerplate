@@ -119,7 +119,7 @@ body > main {
 
 body > footer {
     text-align: center;
-    margin: 2rem 1rem;
+    margin: 2rem 0;
     position: absolute;
     bottom: 0;
     width: 100%;

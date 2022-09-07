@@ -8,6 +8,10 @@ So far, just:
 
 - jekyll-paginate
 
+Run the bundler command to install stuff:
+
+    jekyll-boilerplate> bundler
+
 ## Your list to do
 
 1. Edit `_config.yml`
