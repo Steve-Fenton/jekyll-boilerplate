@@ -45,6 +45,10 @@ a:focus {
   color: var(--aft);
 }
 
+:focus {
+    outline: 4px dashed var(--link);
+}
+
 /* General */
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,52 +81,77 @@ body > header {
     padding: 1rem;
 }
 
-/* Navigation */
+/* Footer */
 
-body > nav {
-    font-size: 1.2rem;
+body > footer {
     text-align: center;
+    padding: 0.5rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--aft2);
 }
 
-body > nav ul li {
-    display: inline-block;
+
+/* Content Group */
+
+.content-group {
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 1rem;
+}
+
+/* Navigation */
+
+.content-group > nav {
+    font-size: 1.2rem;
+}
+
+.content-group > nav ul li {
     list-style: none;
 }
 
-body > nav ul > li a {
+.content-group > nav ul > li a {
     display: block;
     padding: 0.5rem 1rem;
 }
 
-body > nav ul > li > ul {
-    position: absolute;
-    display: none;
+.content-group > nav ul > li.has-children a {
+    display: inline-block;
+    width: calc(100% - 80px);
+    padding: 0.5rem 1rem;
 }
 
-body > nav ul > li:hover,
-body > nav ul > li:focus {
+.content-group > nav ul > li:focus {
     background: #000;
 }
 
-body > nav ul > li:hover > ul,
-body > nav ul > li:focus > ul {
+.content-group > nav .sub-nav {
+    fill: var(--link);
+    display: inline-block;
+}
+
+.content-group > nav .sub-nav svg {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.content-group > nav .sub-nav > ul {
+    display: none;
+    width: 0;
+}
+
+.content-group > nav .sub-nav:focus-within > ul {
     display: block;
+    width: 300px;
 }
 
 /* Content */
 
-body > main {
+.content-group > main {
     max-width: 980px;
     width: 90%;
     margin: 0 auto;
-}
-
-body > footer {
-    text-align: center;
-    margin: 2rem 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Jekyll Post List */
@@ -131,7 +160,6 @@ body > footer {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(12rem,20rem));
     gap: 1rem;
-    justify-content: center;
 }
 
 .post-list li {
@@ -141,7 +169,7 @@ body > footer {
 }
 
 .pager {
-    text-align: center;
+    margin-top: 2rem;
 }
 
 .pager li {
