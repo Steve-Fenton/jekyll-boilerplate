@@ -20,5 +20,6 @@ The YAML headers have additional custom properties that give you more control ov
 
 ## Where Next?
 
-- Find out how to [get started](/jekyll-boilerplate/about/getting-started/)
-- Read about [markdown extensions](/jekyll-boilerplate/about/markdown-extensions/)
+- Find out how to [get started](/about/getting-started/)
+- Read about [markdown extensions](/about/markdown-extensions/)
+- See how [breadcrumbs work](/about/breadcrumbs/)

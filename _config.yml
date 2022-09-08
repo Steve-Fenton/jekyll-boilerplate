@@ -7,11 +7,11 @@ description: >-
   Jekyll Boilerplate is a theme-less, plugin-less clean starting point
   for Jekyll sites where you want to run only your own code.
 # The subpath of your site, e.g. /blog
-baseurl: "/jekyll-boilerplate"
+baseurl: ""
 # The output folder
-destination: _site/jekyll-boilerplate/
+destination: _site
 # The website URL
-url: https://github.stevefenton.co.uk
+url: https://jekyll.stevefenton.co.uk
 
 # Sets the theme colour for browsers
 theme_color_hex: 333333
