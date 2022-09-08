@@ -15,7 +15,9 @@
     window.addEventListener('resize', resizeEnd);
 }());
 
-/* Sticky Navigation 
+/*
+Sticky Navigation 
+
     Depends on
         .site-header
         .site-nav
@@ -52,3 +54,24 @@
     document.addEventListener('resized', setNavigationMode);
     
 }());
+
+/*
+Auto-Open Current Navigation 
+
+    Depends on
+        details.sub-nav
+*/
+(function() {
+    var summaries = document.querySelectorAll('details.sub-nav');
+    var site = document.location.origin;
+    var location = document.location.pathname;
+
+    for (var i = 0; i < summaries.length; i++) {
+        var summary = summaries[i];
+        var anchor = summary.querySelector('a').href.replace(site, '');
+
+        if (location.startsWith(anchor)){
+            summary.setAttribute('open', 'open');
+        }
+    }
+}())
