@@ -228,3 +228,7 @@ pre.highlight {
     max-width: calc(100vw - var(--block-gap) - var(--block-gap));
     margin: 1em 0;
 }
+
+code {
+    font-family: var(--code-font);
+}

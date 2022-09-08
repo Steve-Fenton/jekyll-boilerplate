@@ -37,3 +37,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Inline `code` and a code block.
 
     const elem = document.querySelector('.elem');
+
+## Custom Element
+
+:::custom
+This is a custom div element with the class `custom`
+:::

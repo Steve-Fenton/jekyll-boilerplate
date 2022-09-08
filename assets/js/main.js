@@ -31,10 +31,14 @@
         var className = 'sticky';
 
         var browserHeight = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
+        var browserWidth = isNaN(window.innerWidth) ? window.clientWidth : window.innerWidth;
         var headerHeight = header.clientHeight;
         var navigationHeight = navigationList.clientHeight;
         
-        if (navigationHeight < ((browserHeight - headerHeight) - buffer)) {
+        // Only enable sticky mode if the menu will fit vertically
+        // && where the browser is more than 860px wide
+        if (navigationHeight < ((browserHeight - headerHeight) - buffer)
+            && browserWidth > 860) {
             console.log('Navigation: Sticky Mode');
             navigation.classList.add(className)
             navigation.style.top = headerHeight.toString() + 'px';

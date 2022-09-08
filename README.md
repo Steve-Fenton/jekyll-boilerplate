@@ -52,9 +52,25 @@ Sub-pages reference their parent by title
 
 ## Extensions
 
-## Pagination
+### Pagination
 
 Based on the deprecated `jekyll-paginate` plugin, but updated.
+
+### Markdown Extensions
+
+There is a markdown extension for creating `<div>` elements with a class name (or names).
+
+    :::class1 class2
+    Text
+    :::
+
+Which outputs:
+
+   <div class="class1 class2">
+   Text
+   </div>
+
+You can use markdown within the element.
 
 ### Liquid Regex Replace
 
