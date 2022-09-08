@@ -273,6 +273,15 @@ code {
     font-family: var(--code-font);
 }
 
+/* Custom Divisions */
+
+.note {
+    margin: 1em 0 ;
+    border: 1px solid var(--fore);
+    padding: 0 1em;
+    box-shadow: var(--box-shadow);
+}
+
 @media (max-width: 860px) {
     .content-group {
         grid-template-columns: auto;

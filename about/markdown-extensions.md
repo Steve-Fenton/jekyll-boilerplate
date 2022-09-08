@@ -16,12 +16,19 @@ Built-in markdown extensions are explained below.
 
 There is a markdown extension that allows you to insert `<div>` elements with one or more class names.
 
-    :::class-one class-two
+    :::note
     Your markdown content
     :::
 
 The output for this is:
 
-    <div class="class-one class-two">
+    <div class="note">
     Your markdown content
     </div>
+
+And it looks like this:
+
+:::note
+Your markdown content
+:::
+
