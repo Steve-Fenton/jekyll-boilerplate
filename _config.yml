@@ -12,17 +12,21 @@ baseurl: ""
 destination: _site
 # The website URL
 url: https://example.com
+
 # Sets the theme colour for browsers
-theme-color-hex: 333333
+theme_color_hex: 333333
+# Sets the date format
+date_format: "%b %-d, %Y"
+
 # Number of results per page
-paginate: 10
+paginate: 2
 # The path for articles (note, rename the "articles" folder if you change this)
-paginate_path: "/articles/page:num/"
+paginate_path: "/articles/page-:num/"
+# Should match the word for "page" above (including any separators, like -)
+paginate_page: "page-"
 
 # Build settings
 markdown: kramdown
 
 include: [_pages]
 exclude: ["LICENSE", "README.md"]
-
-plugins: [jekyll-paginate]

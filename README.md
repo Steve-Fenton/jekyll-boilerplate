@@ -1,20 +1,10 @@
 # Jekyll Boilerplate
 
-An opinionated boilerplate Jekyll site with its own theme, which allows you to set up a Jekyll site with minimal plugins.
+An opinionated boilerplate Jekyll site with its own theme, which allows you to set up a Jekyll site with no plugins.
 
 The theme has variables you can use to customize it, or you can use it as a starting point to create a custom theme.
 
 The YAML headers have custom properties that give you more control over how items are displayed.
-
-## Minimal plugins
-
-So far, just:
-
-- jekyll-paginate
-
-Run the bundler command to install stuff:
-
-    jekyll-boilerplate> bundler
 
 ## Your to do list
 
@@ -59,3 +49,19 @@ Sub-pages reference their parent by title
 
     nav-level: Sample Page
     nav-order: 3000
+
+## Extensions
+
+## Pagination
+
+Based on the deprecated `jekyll-paginate` plugin, but updated.
+
+### Liquid Regex Replace
+
+Replace all:
+
+{{ 'Replaces 1 All 2 Number 3' | regex_replace: '^[0-9]*-', '' }}
+
+Replace one:
+
+{{ 'Replaces 1 One 2 Number 3' | regex_replace_once: '[0-9]*-', '' }}

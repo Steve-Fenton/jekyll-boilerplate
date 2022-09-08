@@ -17,6 +17,8 @@
     --block-gap: 2rem;
 
     --marker-size: 1.2em;
+
+    --box-shadow: 0 12px 24px -12px rgb(0 0 0 / 80%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -190,23 +192,22 @@ details summary::marker {
 
 .post-list {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.post-list li {
+.post-list > * {
     list-style: none;
-    padding: 2rem;
+    padding: 1rem;
     background-color: var(--aft2);
+    border: 1px solid var(--fore);
+    width: 17.5rem;
+    box-shadow: var(--box-shadow);
 }
 
-.pager {
+.post-paging {
     margin-top: 2rem;
-}
-
-.pager li {
-    list-style: none;
-    display: inline-block;
+    text-align: center;
 }
 
 @media (max-width: 860px) {
