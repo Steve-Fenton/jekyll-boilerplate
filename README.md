@@ -20,7 +20,7 @@ The YAML headers have custom properties that give you more control over how item
 
 ### Menu title
 
-You can set the navigation to use an alternate name to the `title` text for menus.
+You can set the navigation to use an alternate name to the `title` text for menus (the main navigation and the breadcrumbs).
 
     nav-title: Short Title
 
@@ -55,6 +55,10 @@ Sub-pages reference their parent by title
 ### Pagination
 
 Based on the deprecated `jekyll-paginate` plugin, but updated.
+
+### Breadcrumbs
+
+Based on `jekyll-breadcrumbs` but updated to work with the navigation front-matter.
 
 ### Markdown Extensions
 

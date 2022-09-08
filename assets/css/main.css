@@ -9,7 +9,7 @@
     --aft-head: #BBC;
 
     --fore-breadcrumb: #333;
-    --aft-breadcrumb: #CCC;
+    --aft-breadcrumb: #CCD;
 
     --link-head: #2d4295;
     --link-alt-head: #2a4dd8;
@@ -35,6 +35,9 @@
         
         --fore-head: #CCC;
         --aft-head: #222;
+
+        --fore-breadcrumb: #CCC;
+        --aft-breadcrumb: #223;
 
         --link-head: #abb9ef;
         --link-alt-head: #6580ed;
