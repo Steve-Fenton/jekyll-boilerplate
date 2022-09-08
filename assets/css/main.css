@@ -15,6 +15,8 @@
     --content-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     --block-gap: 2rem;
+
+    --marker-size: 1.2em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,11 +32,6 @@
 
         --link-head: #abb9ef;
         --link-alt-head: #6580ed;
-
-        --heading-font: Georgia, 'Times New Roman', Times, serif;
-        --content-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        
-        --block-gap: 2rem;
     }
 }
 
@@ -158,14 +155,35 @@ body > footer {
     list-style: none;
 }
 
+.content-group > nav li a {
+    margin-left: calc(var(--marker-size) + 1em);
+}
+
 .content-group > nav a {
-    display: block;
+    display: inline-block;
     padding: 0.5rem 1rem;
 }
 
-.content-group > nav .has-children ul {
-    padding-left: 1rem;
+.content-group > nav li.has-children a {
+    margin-left: 1em;
 }
+
+.content-group > nav li.has-children ul {
+    margin-left: calc(var(--marker-size) + 1em);
+}
+
+.content-group > nav li.has-children ul a {
+    margin-left: 1em;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+    font-size: var(--marker-size);
+}
+
+/* .content-group > nav .has-children ul {
+    padding-left: 1rem;
+} */
 
 /* Jekyll Post List */
 

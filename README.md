@@ -12,14 +12,14 @@ Run the bundler command to install stuff:
 
     jekyll-boilerplate> bundler
 
-## Your list to do
+## Your to do list
 
 1. Edit `_config.yml`
    1. `title`
    2. `description`
-   3. `url`
+   3. `owner`
+   4. `url`
 2. Add your analytics scripts to `analytics.html`
-3. Add your name or brand to `footer.html`
 4. Add your icons to `/assets/icons/`
 
 ## Navigation
