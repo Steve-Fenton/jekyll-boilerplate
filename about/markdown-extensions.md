@@ -5,7 +5,7 @@ permalink: /about/markdown-extensions/
 date:   2022-09-06
 nav-title: Markdown Extensions
 nav-level: About Jekyll Boilerplate
-nav-order: 2000
+nav-order: 3000
 nav-sitemap: true
 nav-search: true
 ---
