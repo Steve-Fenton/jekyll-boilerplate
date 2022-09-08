@@ -1,4 +1,4 @@
-/** Utility */
+/** Utility Functions */
 (function(){
     var debounce = null;
 
@@ -74,4 +74,4 @@ Auto-Open Current Navigation
             summary.setAttribute('open', 'open');
         }
     }
-}())
+}());
