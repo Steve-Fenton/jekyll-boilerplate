@@ -1,12 +1,22 @@
+# Displayed in the site header
 title: Jekyll Boilerplate
-description: >- # this means to ignore newlines until "baseurl:"
+# Shown in the copyright footer
+owner: Your Organisation
+# Website description
+description: >-
   Jekyll Boilerplate is a theme-less, plugin-less clean starting point
   for Jekyll sites where you want to run only your own code.
-baseurl: "" # the subpath of your site, e.g. /blog
+# The subpath of your site, e.g. /blog
+baseurl: ""
+# The output folder
 destination: _site
+# The website URL
 url: https://example.com
+# Sets the theme colour for browsers
 theme-color-hex: 333333
+# Number of results per page
 paginate: 10
+# The path for articles (note, rename the "articles" folder if you change this)
 paginate_path: "/articles/page:num/"
 
 # Build settings
