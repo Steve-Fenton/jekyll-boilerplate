@@ -146,10 +146,15 @@ body > footer {
     gap: 1rem;
     max-width: 60rem;
     width: 90%;
-    margin: 0 auto var(--block-gap) auto;
+    margin: var(--block-gap) auto var(--block-gap) auto;
 }
 
 /* Navigation */
+
+.content-group > nav.sticky {
+    align-self: start;
+    position: sticky;
+}
 
 .content-group > nav li {
     list-style: none;
@@ -181,16 +186,12 @@ details summary::marker {
     font-size: var(--marker-size);
 }
 
-/* .content-group > nav .has-children ul {
-    padding-left: 1rem;
-} */
-
 /* Jekyll Post List */
 
 .post-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(12rem,20rem));
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .post-list li {

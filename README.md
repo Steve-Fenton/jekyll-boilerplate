@@ -1,6 +1,10 @@
 # Jekyll Boilerplate
 
-A boilerplate Jekyll site with its own theme.
+An opinionated boilerplate Jekyll site with its own theme, which allows you to set up a Jekyll site with minimal plugins.
+
+The theme has variables you can use to customize it, or you can use it as a starting point to create a custom theme.
+
+The YAML headers have custom properties that give you more control over how items are displayed.
 
 ## Minimal plugins
 
@@ -24,13 +28,19 @@ Run the bundler command to install stuff:
 
 ## Navigation
 
-### Sitemap
+### Menu title
+
+You can set the navigation to use an alternate name to the `title` text for menus.
+
+    nav-title: Short Title
+
+### Show in sitemap
 
 Set whether pages or posts should appear in the sitemap.
 
     nav-sitemap: true
 
-### Search
+### Show in search
 
 Set whether pages or posts should appear in the search.
 

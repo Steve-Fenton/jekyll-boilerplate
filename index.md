@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Home
+title: Heading 1
 description: A boilderplate for a very clean version of Jekyll.
+nav-title: Home
 nav-level: 1
 nav-order: 1000
 nav-sitemap: true

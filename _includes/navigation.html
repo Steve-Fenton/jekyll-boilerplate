@@ -1,4 +1,4 @@
-<nav>
+<nav class="site-nav">
     <ul>
     {%- assign main_pages = site.pages | where: 'nav-level', '1' | sort: 'nav-order' -%}
     {% for page in main_pages %}
@@ -8,13 +8,13 @@
         <details class="sub-nav">
           <summary>
         {%- endif %}
-        <a href="{{ page.url }}">{{ page.title }}</a>
+        <a href="{{ page.url }}">{% if (page.nav-title) %}{{ page.nav-title }}{% else %}{{ page.title }}{% endif %}</a>
         {%- if sub_pages.size > 0 %}
           </summary>
           <ul>
             {%- for child in sub_pages %}
             <li>
-              <a href="{{ child.url }}">{{ child.title }}</a>
+              <a href="{{ child.url }}">{% if (child.nav-title) %}{{ child.nav-title }}{% else %}{{ child.title }}{% endif %}</a>
             </li>
             {%- endfor %}
           </ul>

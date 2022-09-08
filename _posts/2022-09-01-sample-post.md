@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  Example Post
-date:   2022-09-06
+title: Example Post
+date: 2022-09-01
 categories: articles
 tags: sample, post
 nav-sitemap: true
