@@ -1,7 +1,7 @@
 # Displayed in the site header
 title: Jekyll Boilerplate
 # Shown in the copyright footer
-owner: Your Organisation
+owner: Steve Fenton
 # Website description
 description: >-
   Jekyll Boilerplate is a theme-less, plugin-less clean starting point
@@ -19,7 +19,7 @@ theme_color_hex: 333333
 date_format: "%b %-d, %Y"
 
 # Number of results per page
-paginate: 2
+paginate: 4
 # The path for articles (note, rename the "articles" folder if you change this)
 paginate_path: "/articles/page-:num/"
 # Should match the word for "page" above (including any separators, like -)
