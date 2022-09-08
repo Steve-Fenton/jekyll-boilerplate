@@ -11,7 +11,7 @@ baseurl: "/jekyll-boilerplate"
 # The output folder
 destination: _site/jekyll-boilerplate/
 # The website URL
-url: https://steve-fenton.github.io
+url: https://github.stevefenton.co.uk
 
 # Sets the theme colour for browsers
 theme_color_hex: 333333
