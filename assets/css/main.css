@@ -13,6 +13,7 @@
 
     --heading-font: Georgia, 'Times New Roman', Times, serif;
     --content-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --code-font: Consolas, 'Courier New', Courier, monospace;
 
     --block-gap: 2rem;
 
@@ -186,6 +187,7 @@ body > footer {
 details summary::-webkit-details-marker,
 details summary::marker {
     font-size: var(--marker-size);
+    width: 1em;
 }
 
 /* Jekyll Post List */
@@ -214,4 +216,15 @@ details summary::marker {
     .content-group {
         grid-template-columns: auto;
     }
+}
+
+/* Code Block */
+
+pre.highlight {
+    border-left: 5px solid var(--fore);
+    padding-left: 1rem;
+    font-family: var(--code-font);
+    overflow: auto;
+    max-width: calc(100vw - var(--block-gap) - var(--block-gap));
+    margin: 1em 0;
 }

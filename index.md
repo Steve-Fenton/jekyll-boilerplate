@@ -31,3 +31,9 @@ Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultricies lacus sed tur
 ###### Heading 6
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque varius morbi enim nunc faucibus a. Montes nascetur ridiculus mus mauris vitae ultricies.
+
+## Code block
+
+Inline `code` and a code block.
+
+    const elem = document.querySelector('.elem');

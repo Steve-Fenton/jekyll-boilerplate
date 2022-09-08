@@ -60,8 +60,8 @@ Based on the deprecated `jekyll-paginate` plugin, but updated.
 
 Replace all:
 
-{{ 'Replaces 1 All 2 Number 3' | regex_replace: '^[0-9]*-', '' }}
+    {{ 'Replaces 1 All 2 Number 3' | regex_replace: '^[0-9]*-', '' }}
 
 Replace one:
 
-{{ 'Replaces 1 One 2 Number 3' | regex_replace_once: '[0-9]*-', '' }}
+    {{ 'Replaces 1 One 2 Number 3' | regex_replace_once: '[0-9]*-', '' }}
