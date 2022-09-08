@@ -13,13 +13,13 @@
         <details class="sub-nav">
           <summary>
         {%- endif %}
-        <a href="{{ page.url | regex_replace: regex,'/' }}">{{ page.nav-title | default: page.title }}</a>
+        <a href="{{ page.url | regex_replace: regex,'/' | prepend: site.baseurl }}">{{ page.nav-title | default: page.title }}</a>
         {%- if sub_pages.size > 0 %}
           </summary>
           <ul>
             {%- for child in sub_pages %}
             <li>
-              <a href="{{ child.url }}">{{ child.nav-title | default: child.title }}</a>
+              <a href="{{ child.url | prepend: site.baseurl }}">{{ child.nav-title | default: child.title }}</a>
             </li>
             {%- endfor %}
           </ul>
