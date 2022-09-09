@@ -143,6 +143,10 @@ body > header a:focus {
     color: var(--link-alt-head);
 }
 
+.navigation-icon {
+    display: none;
+}
+
 /* Footer */
 
 body > footer {
@@ -283,6 +287,17 @@ code {
 /* Smaller Screens */
 
 @media (max-width: 860px) {
+
+    /* Show the Hamburger Icon */
+    body > header {
+        display: grid;
+        grid-template-columns: 3rem auto 3rem;
+    }
+
+    .navigation-icon {
+        display: block;
+    }
+
     .site-breadcrumbs ol {
         text-align: center;
     }
@@ -290,7 +305,7 @@ code {
     /* Content First on Small Screens */
     .content-group {
         grid-template-columns: auto;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr auto;
     }
 
     .content-group > nav {
