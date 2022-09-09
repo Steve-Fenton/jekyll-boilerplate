@@ -46,10 +46,9 @@ date: 2022-09-07
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
           <em>{{ page }}</em>
-        {% elsif page == 1 %}
-          <a href="{{ '/' | relative_url }}">{{ page }}</a>
         {% else %}
-          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+          {% assign page_one_link = '/' | append: site.paginate_page | append: '1' | append: '/' %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page | replace: page_one_link, '/' }}">{{ page }}</a>
         {% endif %}
       {% endfor %}
     
