@@ -2,8 +2,9 @@
     --fore: #333;
     --aft: #DDD;
 
-    --link: #2d4295;
-    --link-alt: #2a4dd8;
+    --fore-link: #2d4295;
+    --fore-link-alt: #2a4dd8;
+    --aft-link-alt: #C3C3C3;
 
     --fore-head: #333;
     --aft-head: #BBC;
@@ -42,8 +43,9 @@
         --fore: #CCC;
         --aft: #333;
     
-        --link: #abb9ef;
-        --link-alt: #6580ed;
+        --fore-link: #abb9ef;
+        --fore-link-alt: #abb9ef;
+        --aft-link-alt: #232323;
         
         --fore-head: #CCC;
         --aft-head: #222;
@@ -99,12 +101,13 @@ body {
 }
 
 a {
-    color: var(--link);
+    color: var(--fore-link);
 }
 
 a:hover,
 a:focus {
-    color: var(--link-alt);
+    color: var(--fore-link-alt);
+    background-color: var(--aft-link-alt);
 }
 
 :focus {
@@ -295,6 +298,7 @@ body > header a:focus {
 .navigation-icon {
     display: none;
     font-size: 3rem;
+    height: 40px;
 }
 
 /* Footer */
@@ -353,25 +357,21 @@ nav.site-nav li {
     list-style: none;
 }
 
-nav.site-nav li a {
-    margin-left: calc(var(--marker-size));
-}
-
 nav.site-nav a {
+    text-indent: var(--marker-size);
+    width: calc(100% - 2rem);
     display: inline-block;
     padding: 0.5rem 1rem;
 }
 
 nav.site-nav li.has-children a {
-    margin-left: 0;
-}
-
-nav.site-nav li.has-children ul {
-    margin-left: calc(var(--marker-size));
+    text-indent: 0;
+    width: calc(100% - 2rem - var(--marker-size));
 }
 
 nav.site-nav li.has-children ul a {
-    margin-left: 1em;
+    width: calc(100% - 2rem);
+    text-indent: calc(var(--marker-size) * 2);
 }
 
 details summary::-webkit-details-marker,
@@ -381,6 +381,7 @@ details summary::marker {
 }
 
 /* Mobile Navigation Overlay*/
+
 .overlay {
     position: fixed;
     top: 0;
@@ -480,18 +481,5 @@ code {
     
     .content-group > main {
         grid-row: 1;
-    }
-
-    /* Extra Margin for Small Screens */
-    nav.site-nav li.has-children a {
-        margin-left: 1em;
-    }
-
-    nav.site-nav li a {
-        margin-left: calc(var(--marker-size) + 1em);
-    }
-
-    nav.site-nav li.has-children ul {
-        margin-left: calc(var(--marker-size) + 1em);
     }
 }
