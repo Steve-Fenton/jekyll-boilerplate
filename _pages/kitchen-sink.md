@@ -45,11 +45,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Block Quote
 
-Block quotes can be included.
+Markdown:
 
-> Quiet minds cannot be perplexed or frightened but go on in fortune or misfortune at their own private pace, like a clock during a thunderstorm. <cite>Robert Louis Stevenson</cite>
+```markdown
+> Quiet minds cannot be perplexed or frightened 
+but go on in fortune or misfortune at their own 
+private pace, like a clock during a thunderstorm. 
+<cite>Robert Louis Stevenson</cite>
+```
+
+Result:
+
+> Quiet minds cannot be perplexed or frightened 
+but go on in fortune or misfortune at their own 
+private pace, like a clock during a thunderstorm. 
+<cite>Robert Louis Stevenson</cite>
 
 ## Code
+
+Markdown:
+
+`````markdown
+Inline `code` and a code block.
+
+    const elem = document.querySelector('.elem');
+
+A code block with a language set.
+
+```javascript
+const elem = document.querySelector('.elem');
+```
+`````
+
+Result:
 
 Inline `code` and a code block.
 
@@ -63,7 +91,15 @@ const elem = document.querySelector('.elem');
 
 ## Custom Element
 
-Custom markdown element:
+Markdown:
+
+```markdown
+:::note
+This is a custom div element with the class `note`
+:::
+```
+
+Result:
 
 :::note
 This is a custom div element with the class `note`
@@ -71,9 +107,30 @@ This is a custom div element with the class `note`
 
 ## Images
 
+Markdown:
+
+```markdown
+![An old book front for Jekyll and Hyde](/assets/img/jekyll-and-hyde.webp){:loading="lazy"}
+```
+
+Result:
+
 ![An old book front for Jekyll and Hyde](/assets/img/jekyll-and-hyde.webp){:loading="lazy"}
 
 ## Lists
+
+Markdown:
+
+```markdown
+1. Item
+1. Item
+   - Nested Item
+1. Item
+
+   Item additional paragraph.
+```
+
+Result:
 
 1. Item
 1. Item
@@ -84,9 +141,27 @@ This is a custom div element with the class `note`
 
 ## Horizontal Rule
 
+Markdown:
+
+```markdown
+***
+```
+
+Result:
+
 ***
 
 ## Links
+
+Markdown:
+
+```markdown
+<https://jekyll.stevefenton.co.uk/kitchen-sink/>
+
+[Jekyll Boilerplate](https://jekyll.stevefenton.co.uk/ "The Jekyll Boilerplate Site")
+```
+
+Result:
 
 <https://jekyll.stevefenton.co.uk/kitchen-sink/>
 
@@ -94,13 +169,34 @@ This is a custom div element with the class `note`
 
 ## Tables
 
+Markdown:
+
+```markdown
 | Item | One | Two | Three |
-|------|-----|-----|-------|
+| :--  | :-: | :-: | :-:   |
+| A    | 1   | 2   | 3     |
+| B    | 2   | 3   | 4     |
+| C    | 3   | 4   | 5     |
+```
+
+Result:
+
+| Item | One | Two | Three |
+| :--  | :-: | :-: | :-:   |
 | A    | 1   | 2   | 3     |
 | B    | 2   | 3   | 4     |
 | C    | 3   | 4   | 5     |
 
 ## Text
+
+Markdown:
+
+```markdown
+Text can use *emphasis* or **strong**. You can create\
+line breaks.
+```
+
+Result:
 
 Text can use *emphasis* or **strong**. You can create\
 line breaks.
