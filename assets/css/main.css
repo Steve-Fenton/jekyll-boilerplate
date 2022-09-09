@@ -386,11 +386,11 @@ details summary::marker {
 .overlay {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: calc(100% - 2em);
     height: calc(100% - 5rem);
     max-height: 100vh;
     background-color: var(--aft);
-    padding-top: 5rem;
+    padding : 5rem 1em 0 1em;
     overflow-y: scroll;
 }
 
