@@ -346,33 +346,33 @@ body > footer {
 
 /* Navigation */
 
-.content-group > nav.sticky {
+nav.site-nav.sticky {
     align-self: start;
     position: sticky;
 }
 
-.content-group > nav li {
+nav.site-nav li {
     list-style: none;
 }
 
-.content-group > nav li a {
+nav.site-nav li a {
     margin-left: calc(var(--marker-size));
 }
 
-.content-group > nav a {
+nav.site-nav a {
     display: inline-block;
     padding: 0.5rem 1rem;
 }
 
-.content-group > nav li.has-children a {
+nav.site-nav li.has-children a {
     margin-left: 0;
 }
 
-.content-group > nav li.has-children ul {
+nav.site-nav li.has-children ul {
     margin-left: calc(var(--marker-size));
 }
 
-.content-group > nav li.has-children ul a {
+nav.site-nav li.has-children ul a {
     margin-left: 1em;
 }
 
@@ -380,6 +380,18 @@ details summary::-webkit-details-marker,
 details summary::marker {
     font-size: var(--marker-size);
     width: 1em;
+}
+
+/* Mobile Navigation Overlay*/
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 5rem);
+    max-height: 100vh;
+    background-color: var(--aft);
+    padding-top: 5rem;
+    overflow-y: scroll;
 }
 
 /* Content */
@@ -464,7 +476,7 @@ code {
         grid-template-rows: 1fr auto;
     }
 
-    .content-group > nav {
+    nav.site-nav {
         grid-row: 2;
     }
     
@@ -473,15 +485,15 @@ code {
     }
 
     /* Extra Margin for Small Screens */
-    .content-group > nav li.has-children a {
+    nav.site-nav li.has-children a {
         margin-left: 1em;
     }
 
-    .content-group > nav li a {
+    nav.site-nav li a {
         margin-left: calc(var(--marker-size) + 1em);
     }
 
-    .content-group > nav li.has-children ul {
+    nav.site-nav li.has-children ul {
         margin-left: calc(var(--marker-size) + 1em);
     }
 }

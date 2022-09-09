@@ -75,3 +75,42 @@ Auto-Open Current Navigation
         }
     }
 }());
+
+/*
+Mobile Menu Enhancement
+
+    Depens on
+        .navigation-icon
+        .site-nav
+*/
+(function() {
+    var icon = document.querySelector('.navigation-icon');
+    var originalIcon = icon.innerHTML;
+    var overlay = document.createElement('div');
+    var dataOpen = 'data-open';
+
+    icon.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (icon.dataset.open == dataOpen) {
+            document.body.style.overflow = 'auto';
+            overlay.innerHTML = '';
+            overlay.style.display = 'none';
+            icon.innerHTML = originalIcon;
+            icon.removeAttribute(dataOpen);
+        } else {
+            document.body.style.overflow = 'hidden';
+            var navigation = document.querySelector('.site-nav');
+            
+            overlay.innerHTML = navigation.outerHTML;
+            overlay.className = 'overlay';
+            overlay.style.display = 'block';
+            icon.innerHTML = '×';
+            document.body.appendChild(overlay);
+            
+            icon.setAttribute(dataOpen, dataOpen);
+        }
+
+        return false;
+    });
+}());
