@@ -293,13 +293,16 @@ body > header a:focus {
 .site-title {
     letter-spacing: -1px;
     text-transform: uppercase;
-    font-family: var(--heading-font);
 }
 
 .navigation-icon {
     display: none;
     font-size: 3rem;
     height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 /* Footer */
@@ -391,7 +394,7 @@ details summary::marker {
     max-height: 100vh;
     background-color: var(--aft);
     padding : 5rem 1em 0 1em;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /* Content */
@@ -459,11 +462,6 @@ code {
 @media (max-width: 860px) {
 
     /* Show the Hamburger Icon */
-    body > header {
-        display: grid;
-        grid-template-columns: 3rem auto 3rem;
-    }
-
     .navigation-icon {
         display: block;
     }
