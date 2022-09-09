@@ -3,6 +3,7 @@ layout: page
 title:  About Jekyll Boilerplate
 permalink: /about/
 date:   2022-09-06
+description: Jekyll Boilerplate is an opinionated Jekyll site with built in theme and extensions.
 nav-title: About Boilerplate
 nav-level: 1
 nav-order: 2000

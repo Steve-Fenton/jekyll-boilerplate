@@ -3,6 +3,7 @@ layout: page
 title:  Markdown Extensions
 permalink: /about/markdown-extensions/
 date:   2022-09-06
+description: Examples of custom markdown exentions in Jekyll Boilerplate.
 nav-title: Markdown Extensions
 nav-level: About Jekyll Boilerplate
 nav-order: 3000
@@ -10,7 +11,7 @@ nav-sitemap: true
 nav-search: true
 ---
 
-Built-in markdown extensions are explained below.
+Built-in custom markdown extensions for Jekyll Boilerplate are explained below.
 
 ## HTML Division Element
 

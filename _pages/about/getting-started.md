@@ -3,6 +3,7 @@ layout: page
 title:  Getting Started
 permalink: /about/getting-started/
 date:   2022-09-06
+description: There are just a couple of tasks to turn the Jekyll Boilerplate into your own working website.
 nav-title: Getting Started
 nav-level: About Jekyll Boilerplate
 nav-order: 1000
@@ -19,3 +20,5 @@ There are just a couple of tasks to turn the Jekyll Boilerplate into your own wo
    4. Edit the `url`
 2. Add your analytics scripts to `analytics.html`
 4. Add your icons to `/assets/icons/`
+
+You can then edit the CSS variables, or write your own stylesheet. We strongly recommend sticking with the supplied HTML and using your CSS chops to make style changes.

@@ -3,6 +3,7 @@ layout: page
 title:  Breadcrumbs
 permalink: /about/breadcrumbs/
 date:   2022-09-06
+description: Built-in breadcrumbs are available in Jekyll Boilerplate.
 nav-title: Breadcrumbs
 nav-level: About Jekyll Boilerplate
 nav-order: 5000
