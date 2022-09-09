@@ -13,7 +13,7 @@ date: 2022-09-07
 Welcome to Jekyll Boilerplate.
 
 :::note
-This project is available on [GitHub - Jekyll Boilerplate](https://github.com/Steve-Fenton/jekyll-boilerplte).
+This project is available on [GitHub - Jekyll Boilerplate](https://github.com/Steve-Fenton/jekyll-boilerplate).
 :::
 
 Jekyll Boilerplate is built on some big opinions, such as:
