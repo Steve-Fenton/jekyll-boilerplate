@@ -107,6 +107,8 @@ Mobile Menu Enhancement
             overlay.style.display = 'block';
             icon.innerHTML = '×';
             document.body.appendChild(overlay);
+
+            overlay.querySelector('a').focus();
             
             icon.setAttribute(dataOpen, dataOpen);
         }

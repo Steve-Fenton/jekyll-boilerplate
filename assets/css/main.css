@@ -111,7 +111,7 @@ a:focus {
 }
 
 :focus {
-    outline: 2px dashed var(--link-alt);
+    outline: 2px dashed var(--fore-link-alt);
     border-radius: 5px;
 }
 
@@ -248,7 +248,7 @@ tbody tr:nth-child(odd) {
     overflow: hidden;
     padding: 1rem;
     position: absolute;
-    z-index: 2;
+    z-index: 15;
     text-align: center;
     display: inline-block;
     height: 1px;
@@ -287,6 +287,7 @@ body > header a {
 body > header a:hover,
 body > header a:focus {
     color: var(--link-alt-head);
+    background-color: unset;
 }
 
 .site-title {
