@@ -46,7 +46,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Block quotes can be included.
 
-> This is a block quote
+> Quiet minds cannot be perplexed or frightened but go on in fortune or misfortune at their own private pace, like a clock during a thunderstorm. <cite>Robert Louis Stevenson</cite>
 
 ## Code
 
