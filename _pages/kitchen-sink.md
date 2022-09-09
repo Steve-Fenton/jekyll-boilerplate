@@ -10,7 +10,17 @@ nav-sitemap: true
 nav-search: true
 ---
 
-Kitchen sink is below.
+This page contains the most common content components, such as:
+
+- [Block Quotes](#block-quote)
+- [Code](#code)
+- [Custom Elements](#custom-element)
+- [Images](#image)
+- [Lists](#lists)
+- [Horizontal Rules](#horizontal-rule)
+- [Links](#links)
+- [Tables](#tables)
+- [Text](#text)
 
 ## Heading 2
 
@@ -32,16 +42,64 @@ Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultricies lacus sed tur
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque varius morbi enim nunc faucibus a. Montes nascetur ridiculus mus mauris vitae ultricies.
 
+## Block Quote
+
+Block quotes can be included.
+
+> This is a block quote
+
 ## Code
 
 Inline `code` and a code block.
 
     const elem = document.querySelector('.elem');
 
+A code block with a language set.
+
+```javascript
+const elem = document.querySelector('.elem');
+```
+
 ## Custom Element
 
 Custom markdown element:
 
-:::custom
-This is a custom div element with the class `custom`
+:::note
+This is a custom div element with the class `note`
 :::
+
+## Images
+
+![An old book front for Jekyll and Hyde](/assets/img/jekyll-and-hyde.webp){:loading="lazy"}
+
+## Lists
+
+1. Item
+1. Item
+   - Nested Item
+1. Item
+
+   Item additional paragraph.
+
+## Horizontal Rule
+
+***
+
+## Links
+
+<https://jekyll.stevefenton.co.uk/kitchen-sink/>
+
+[Jekyll Boilerplate](https://jekyll.stevefenton.co.uk/ "The Jekyll Boilerplate Site")
+
+## Tables
+
+| Item | One | Two | Three |
+|------|-----|-----|-------|
+| A    | 1   | 2   | 3     |
+| B    | 2   | 3   | 4     |
+| C    | 3   | 4   | 5     |
+
+## Text
+
+Text can use *emphasis* or **strong**. You can create\
+line breaks.

@@ -14,6 +14,17 @@
     --link-head: #2d4295;
     --link-alt-head: #2a4dd8;
 
+    --fore-block: #333;
+    --aft-block: #BCC;
+
+    --fore-table-head: #333;
+    --aft-table-head: #CCC;
+    --fore-table-row-odd: #333;
+    --aft-table-row-odd: #EEE;
+    --fore-table-row-even: #333;
+    --aft-table-row-even: #DDD;
+
+
     --heading-font: Georgia, 'Times New Roman', Times, serif;
     --content-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --code-font: Consolas, 'Courier New', Courier, monospace;
@@ -41,6 +52,13 @@
 
         --link-head: #abb9ef;
         --link-alt-head: #6580ed;
+
+        --fore-table-head: #CCC;
+        --aft-table-head: #222; 
+        --fore-table-row-odd: #CCC;
+        --aft-table-row-odd: #333;
+        --fore-table-row-even: #CCC;
+        --aft-table-row-even: #444;
     }
 }
 
@@ -97,6 +115,28 @@ a:focus {
     }
 }
 
+blockquote {
+    color: var(--fore-block);
+    background-color: var(--aft-block);
+    font-size: 1.3rem;
+    font-style: italic;
+    padding: 0.1px 1.2em;
+}
+
+blockquote::before {
+    content: '“';
+    float: left;
+    font-size: 4em;
+    font-family: var(--heading-font);
+    position: relative;
+    left: -0.5em;
+    top: 0.1em;
+}
+
+em {
+    font-style: italic;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     margin: 1.5em 0 0.6em 0;
@@ -126,8 +166,44 @@ h4, h5, h6 {
     font-size: clamp(1.4em, 2.5vw, 2em);
 }
 
-p {
+hr {
+    border: 1px dashed var(--fore);
+    opacity: 0.5;
+    width: 80%;
+    margin: 0 auto;
+}
+
+p, main ul, mail ol {
     margin: 1.2em 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead tr {
+    background-color: var(--aft-table-head);
+    color: var(--fore-table-head);
+}
+
+th, td {
+    border: 1px solid var(--fore);
+    padding: 0.2em;
+}
+
+tbody tr {
+    background-color: var(--aft-table-row-even);
+    color: var(--fore-table-row-even);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--aft-table-row-odd);
+    color: var(--fore-table-row-odd);
 }
 
 /* Skip Links */
@@ -166,6 +242,7 @@ body > header {
     background-color: var(--aft-head);
     text-align: center;
     font-size: 2rem;
+    font-size: clamp(1.2em, 4vw, 2em);
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -283,6 +360,10 @@ main ul li, main ol li {
 .post-list {
     margin: 0;
 }
+
+.post-list h3 {
+    margin: 1rem 0;
+} 
 
 .post-list > * {
     list-style: none;
