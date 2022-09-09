@@ -36,6 +36,11 @@
     --marker-size: 1.2em;
 
     --box-shadow: 0 12px 24px -12px rgb(0 0 0 / 80%);
+
+    --navigation-width: 300px;
+    --grid-gap: 1rem;
+    --grid-max-width: 60rem;
+    --grid-width: 90vw;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -343,10 +348,10 @@ body > footer {
 
 .content-group {
     display: grid;
-    grid-template-columns: 300px auto;
-    gap: 1rem;
-    max-width: 60rem;
-    width: 90vw;
+    grid-template-columns: var(--navigation-width) auto;
+    gap: var(--grid-gap);
+    max-width: var(--grid-max-width);
+    width: var(--grid-width);
     margin: var(--block-gap) auto var(--block-gap) auto;
     min-height: 75vh;
 }
@@ -401,8 +406,8 @@ details summary::marker {
 /* Content */
 
 main {
-    max-width: calc(60rem - 300px - 1rem);
-    width: calc(90vw - 300px - 1rem);
+    max-width: calc(var(--grid-max-width) - var(--navigation-width) - var(--grid-gap));
+    width: calc(var(--grid-width) - var(--navigation-width) - var(--grid-gap));
 }
 
 main ul, main ol {
@@ -496,6 +501,6 @@ code {
 
     main {
         max-width: unset;
-        width: 90vw;
+        width: var(--grid-width);
     }
 }
