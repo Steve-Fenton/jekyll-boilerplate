@@ -22,6 +22,7 @@ date: 2022-09-07
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
       <li>
+        <img src="{{ post.banner-image }}" alt="{{ post.banner-image-alt }}" />
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">

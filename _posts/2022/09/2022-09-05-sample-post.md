@@ -5,6 +5,8 @@ date: 2022-09-05
 description: This is a test post.
 categories: articles
 tags: sample, post
+banner-image: /assets/img/2022/09/surface-accessories-600.webp
+banner-image-alt: Microsoft Surface headphones and ergonomic keyboard
 nav-sitemap: true
 nav-search: true
 ---
