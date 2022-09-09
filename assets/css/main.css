@@ -239,9 +239,7 @@ main ul li, main ol li {
 /* Jekyll Post List */
 
 .post-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    margin: 0;
 }
 
 .post-list > * {
@@ -249,8 +247,8 @@ main ul li, main ol li {
     padding: 1rem;
     background-color: var(--aft2);
     border: 1px solid var(--fore);
-    width: 17rem;
     box-shadow: var(--box-shadow);
+    margin: 0 0 1rem 0;
 }
 
 .post-paging {
@@ -282,12 +280,28 @@ code {
     box-shadow: var(--box-shadow);
 }
 
+/* Smaller Screens */
+
 @media (max-width: 860px) {
-    .content-group {
-        grid-template-columns: auto;
+    .site-breadcrumbs ol {
+        text-align: center;
     }
 
-    /* Extra Margin on Mobile for Nav */
+    /* Content First on Small Screens */
+    .content-group {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .content-group > nav {
+        grid-row: 2;
+    }
+    
+    .content-group > main {
+        grid-row: 1;
+    }
+
+    /* Extra Margin for Small Screens */
     .content-group > nav li.has-children a {
         margin-left: 1em;
     }

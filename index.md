@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Heading 1
+title: Welcome to Jekyll Boilerplate
 description: A boilderplate for a very clean version of Jekyll.
 nav-title: Home
 nav-level: 1
@@ -13,7 +13,7 @@ date: 2022-09-07
 Welcome to Jekyll Boilerplate.
 
 :::note
-This project is available on [GitHub - Jekyll Boilerplate](https://github.com/Steve-Fenton/jekyll-boilerplate).
+This project is available on [GitHub - Jekyll Boilerplate](https://github.com/Steve-Fenton/jekyll-boilerplate){:target="_blank"}.
 :::
 
 Jekyll Boilerplate is built on some big opinions, such as:

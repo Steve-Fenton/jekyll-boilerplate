@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  Kitchen Sink
+title:  Heading 1
 permalink: /kitchen-sink/
 date:   2022-09-06
 nav-title: Kitchen Sink

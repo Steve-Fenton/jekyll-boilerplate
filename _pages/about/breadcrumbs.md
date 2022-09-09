@@ -15,5 +15,5 @@ Built-in breadcrumbs are available using `breadcrumbs.html`.
 Breadcrumbs use the `nav-title` or `title`, the same as the main navigation.
 
 :::note
-Breadcrumbs don't currently work on GitHub Pages, but work for self-hosting scenarios.
+See [GitHub Pages](/about/github-pages/) to find out how to use this feature when hosting your site in GitHub.
 :::
