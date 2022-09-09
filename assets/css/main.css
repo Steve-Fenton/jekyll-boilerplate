@@ -16,6 +16,7 @@
 
     --fore-block: #333;
     --aft-block: #BCC;
+    --icon-block: #71cece;
 
     --fore-table-head: #333;
     --aft-table-head: #CCC;
@@ -52,6 +53,10 @@
 
         --link-head: #abb9ef;
         --link-alt-head: #6580ed;
+
+        --fore-block: #333;
+        --aft-block: #CCC;
+        --icon-block: #71cece;
 
         --fore-table-head: #CCC;
         --aft-table-head: #222; 
@@ -125,6 +130,7 @@ blockquote {
 
 blockquote::before {
     content: '“';
+    color: var(--icon-block);
     float: left;
     font-size: 4em;
     font-family: var(--heading-font);
@@ -171,6 +177,10 @@ hr {
     opacity: 0.5;
     width: 80%;
     margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
 }
 
 p, main ul, mail ol {
