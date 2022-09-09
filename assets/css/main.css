@@ -295,8 +295,6 @@ body > header a:focus {
 .navigation-icon {
     display: none;
     font-size: 3rem;
-    position: relative;
-    top: -0.4rem;
 }
 
 /* Footer */
