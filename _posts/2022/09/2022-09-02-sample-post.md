@@ -2,7 +2,7 @@
 layout: page
 title: Example Post 2
 date: 2022-09-02
-description: This is a test post.
+excerpt: This is a test post.
 categories: articles
 tags: sample, post
 nav-sitemap: true

@@ -15,10 +15,11 @@ There are several ways Jekyll Boilerplate gives you to customise the website usi
 
 ## Standard Items
 
-- `layout`: the layout to be used for the content
-- `title`: the main title for the page, used in the `H1` tag (and as a fallback)
-- `date`: the last udpated date, or date of the post - for pages this is signalled in `sitemap.xml`, so worth updating on changes
-- `description`: used in the meta tag and where exerpts are used on the site
+- `layout`: The layout to be used for the content
+- `title`: The main title for the page, used in the `H1` tag (and as a fallback)
+- `date`: The last udpated date, or date of the post - for pages this is signalled in `sitemap.xml`, so worth updating on changes
+- `description`: Used in the meta tag and where exerpts are used on the site
+- `excerpt`: Used on list pages (fallback `description`)
 
 ## Custom Items
 

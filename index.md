@@ -25,4 +25,10 @@ Jekyll Boilerplate is built on some strong opinions, such as:
 
 > This project does **not** contain jQuery, Node modules, or front-end frameworks.
 >
-> It is majestic HTML, simple CSS, and some minor non-essential enhancements in plain JavaScript. <cite>Steve Fenton</cite>
+> It's just majestic HTML, simple CSS, and some minor non-essential enhancements in plain JavaScript. <cite>Steve Fenton</cite>
+
+Out of the box, Jekyll Boilerplate is a "top scores" high-performance website.
+
+![Jekyll Boilerplate lighthouse score of 100 in performance, accessibility, SEO, and best practices](/assets/img/lighthouse-scores.webp){:loading="lazy"}
+
+Lighthouse scores aren't everything, but the real user experience of using blazingly fast accessible websites *is*.

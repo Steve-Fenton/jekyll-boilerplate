@@ -181,3 +181,23 @@ function addMobileNavigation(iconSelector, navigationSelector) {
 }
 
 addMobileNavigation('.navigation-icon', '.site-nav');
+
+/**
+ * Makes an entire block clickable based on data-destination attribute
+ * For example, the list-item elements in the article list
+ */
+function expandLinks() {
+    var listItems = qsa('[data-destination]');
+
+    for(var i = 0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+        listItem.style.cursor = 'pointer';
+        listItem.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.location = /** @type {string} */ (this.dataset.destination);
+            return false;
+        });
+    }
+}
+
+expandLinks();

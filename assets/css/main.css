@@ -464,7 +464,7 @@ main ul li, main ol li {
     margin: 0.5rem 0;
 }
 
-.post-list > * > img {
+.post-list .list-item img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;

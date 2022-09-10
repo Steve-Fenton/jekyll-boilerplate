@@ -8,60 +8,58 @@ nav-order: 3000
 date: 2022-09-07
 ---
 <main id="site-main">
-	<h1>Articles</h1>
-    {%- if site.paginate %}
-        {% assign posts = paginator.posts %}
-    {% else %}
-        {% assign posts = site.posts %}
-    {% endif %}
-    {%- if posts.size > 0 -%}
-    <ul class="post-list">
-      {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li class="list-item">
-        {%- if post.banner-image -%}
-        <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.banner-image }}" alt="{{ post.banner-image-alt }}" />
-        </a>
+  <h1>Articles</h1>
+  {%- if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+  {%- if posts.size > 0 -%}
+  <ul class="post-list">
+    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in posts -%}
+    <li class="list-item" data-destination="{{ post.url | relative_url }}">
+      {%- if post.banner-image -%}
+      <img src="{{ post.banner-image }}" alt="{{ post.banner-image-alt }}" {% unless forloop.first %}loading="lazy"{% endunless %} />
+      {%- endif -%}
+      <div class="list-item-content">
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h2>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h2>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt | default: post.description }}
         {%- endif -%}
-        <div class="list-item-content">
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h2>
-            <a href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h2>
-          {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
-          {%- endif -%}
-        </div>
-      </li>
-      {%- endfor -%}
-    </ul>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
 
-    {% if paginator.total_pages > 1 %}
-    <div class="post-paging">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
-      {% else %}
-        <span>&laquo; Prev</span>
-      {% endif %}
-    
-      {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-          <em>{{ page }}</em>
-        {% else %}
-          {% assign page_one_link = '/' | append: site.paginate_page | append: '1' | append: '/' %}
-          <a href="{{ site.paginate_path | relative_url | replace: ':num', page | replace: page_one_link, '/' }}">{{ page }}</a>
-        {% endif %}
-      {% endfor %}
-    
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
-      {% else %}
-        <span>Next &raquo;</span>
-      {% endif %}
-    </div>
+  {% if paginator.total_pages > 1 %}
+  <div class="post-paging">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+    {% else %}
+      <span>&laquo; Prev</span>
     {% endif %}
-    {%- endif -%}
+  
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <em>{{ page }}</em>
+      {% else %}
+        {% assign page_one_link = '/' | append: site.paginate_page | append: '1' | append: '/' %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', page | replace: page_one_link, '/' }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+  
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    {% else %}
+      <span>Next &raquo;</span>
+    {% endif %}
+  </div>
+  {% endif %}
+  {%- endif -%}
 </main>

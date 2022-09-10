@@ -17,6 +17,8 @@ url: https://jekyll.stevefenton.co.uk
 theme_color_hex: 333333
 # Sets the date format
 date_format: "%b %-d, %Y"
+# Whether to show exerpts on list pages
+show_excerpts: true;
 
 # Number of results per page
 paginate: 4
