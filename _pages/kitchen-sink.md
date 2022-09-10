@@ -16,7 +16,7 @@ This page contains the most common content components, such as:
 - [Block Quotes](#block-quote)
 - [Code](#code)
 - [Custom Elements](#custom-element)
-- [Images](#image)
+- [Images](#images)
 - [Lists](#lists)
 - [Horizontal Rules](#horizontal-rule)
 - [Links](#links)
