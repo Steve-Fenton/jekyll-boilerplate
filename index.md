@@ -10,14 +10,19 @@ nav-search: true
 date: 2022-09-07
 ---
 
-Welcome to Jekyll Boilerplate.
+Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for [Jekyll](https://jekyllrb.com/).
 
 :::note
 This project is available on [GitHub - Jekyll Boilerplate](https://github.com/Steve-Fenton/jekyll-boilerplate){:target="_blank"}.
 :::
 
-Jekyll Boilerplate is built on some big opinions, such as:
+Jekyll Boilerplate is built on some strong opinions, such as:
 
-- The best way to serve web pages is to have web pages
+- The best way to *serve* web pages is to *have* web pages
 - Everything should work without JavaScript, especially the navigation
 - A minimal software supply chain is easier to manage and less risky
+- Accessibility is not just important, it's fundamental
+
+> This project does **not** contain jQuery, Node modules, or front-end frameworks.
+>
+> It is majestic HTML, simple CSS, and some minor non-essential enhancements in plain JavaScript. <cite>Steve Fenton</cite>
