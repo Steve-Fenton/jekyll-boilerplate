@@ -23,7 +23,9 @@ date: 2022-09-07
       {%- for post in posts -%}
       <li>
         {%- if post.banner-image -%}
+        <a class="post-link" href="{{ post.url | relative_url }}">
         <img src="{{ post.banner-image }}" alt="{{ post.banner-image-alt }}" />
+        </a>
         {%- endif -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
