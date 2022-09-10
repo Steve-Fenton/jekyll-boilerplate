@@ -66,9 +66,9 @@
         --link-head: #abb9ef;
         --link-alt-head: #6580ed;
 
-        --fore-block: #333;
-        --aft-block: #CCC;
-        --icon-block: #71cece;
+        --fore-block: #CCC;
+        --aft-block: #111;
+        --icon-block: #abb9ef;
 
         --fore-table-head: #CCC;
         --aft-table-head: #222; 
