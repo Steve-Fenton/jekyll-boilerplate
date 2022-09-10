@@ -6,7 +6,7 @@ date:   2022-09-06
 description: Examples of custom markdown exentions in Jekyll Boilerplate.
 nav-title: Markdown Extensions
 nav-level: About Jekyll Boilerplate
-nav-order: 3000
+nav-order: 4000
 nav-sitemap: true
 nav-search: true
 ---

@@ -316,7 +316,7 @@ body > header a:focus {
     font-size: 3rem;
     height: 40px;
     width: 40px;
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     text-align: center;

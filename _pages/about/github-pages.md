@@ -6,7 +6,7 @@ date:   2022-09-06
 description: How to get the most from Jekyll Boilerplate and GitHub Pages.
 nav-title: GitHub Pages
 nav-level: About Jekyll Boilerplate
-nav-order: 2000
+nav-order: 3000
 nav-sitemap: true
 nav-search: true
 ---

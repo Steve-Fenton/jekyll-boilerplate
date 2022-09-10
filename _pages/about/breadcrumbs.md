@@ -6,7 +6,7 @@ date:   2022-09-06
 description: Built-in breadcrumbs are available in Jekyll Boilerplate.
 nav-title: Breadcrumbs
 nav-level: About Jekyll Boilerplate
-nav-order: 5000
+nav-order: 6000
 nav-sitemap: true
 nav-search: true
 ---
