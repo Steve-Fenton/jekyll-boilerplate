@@ -99,7 +99,14 @@
             throw new Error('Cannot find #site-search-results');
         }
 
-        results.innerHTML = '';
+            var h2 = document.createElement('h2');
+        h2.innerHTML =  needles.length === 0
+            ? 'No Results'
+            : 'Results';
+
+        var ol = document.createElement('ol');
+        ol.className = 'site-search-results';
+        ol.appendChild(h2);
 
         var limit = Math.min(needles.length, 12)
 
@@ -113,8 +120,11 @@
             var li = document.createElement('li');
             li.appendChild(a);
 
-            results.appendChild(li);
+            ol.appendChild(li);
         }
+
+        results.innerHTML = '';
+        results.appendChild(ol);
     }
 
     var debounceTimer;
