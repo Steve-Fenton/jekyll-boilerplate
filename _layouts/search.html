@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<main id="site-main">
+    <header>
+	    <h1>{{ page.title }}</h1>
+    </header>
+    <div>
+        {{ content }}
+        <form method="GET" action="{{ site.search_fallback_url }}" id="site-search" class="site-search note">
+            <fieldset>
+                <input type="hidden" name="{{ site.search_fallback_site }}" value="{{ site.url | prepend: 'site:' }}" />
+                <div>
+                    <label>
+                        <span>Search for</span><input type="text" name="{{ site.search_fallback_query }}" id="site-search-query" autofocus="autofocus" />
+                    </label>
+                    <button id="site-search-button">Go</button>
+                </div>
+            </fieldset>
+        </form>
+        <ol id="site-search-results" class="site-search-results">
+        </ol>
+        <script src="{{ "/assets/js/search.js" | prepend: site.baseurl }}" async></script>
+    </div>
+  </main>

@@ -4,7 +4,7 @@ title: Example Post 4
 date: 2022-09-04
 excerpt: This is a test post.
 categories: articles
-tags: sample, post
+tags: sample post
 nav-sitemap: true
 nav-search: true
 ---

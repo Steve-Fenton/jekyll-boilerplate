@@ -313,14 +313,17 @@ body > header a:focus {
 
 .navigation-icon {
     display: none;
-    font-size: 3rem;
-    height: 40px;
-    width: 40px;
     position: fixed;
     top: 10px;
     left: 10px;
-    text-align: center;
-    vertical-align: middle;
+    stroke: var(--link-head);
+}
+
+.search-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    stroke: var(--link-head);
 }
 
 /* Footer */
@@ -487,6 +490,30 @@ pre.highlight {
 
 code {
     font-family: var(--code-font);
+}
+
+/* Site Search */
+
+form.site-search {
+    padding: 1em;
+}
+
+form.site-search label {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+form.site-search label > * {
+    padding: 0.2em;
+}
+
+.site-search-results {
+    margin: 2em 0 2em 2em;
+}
+
+.site-search-results a {
+    display: block;
+    padding: 0.2em;
 }
 
 /* Custom Divisions */

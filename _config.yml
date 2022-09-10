@@ -27,6 +27,13 @@ paginate_path: "/articles/page-:num/"
 # Should match the word for "page" above (including any separators, like -)
 paginate_page: "page-"
 
+# A fallback search location
+search_fallback_url: https://www.google.com/search
+# The query parameter for the site to search (for Google, this is 'q')
+search_fallback_site: q
+# The query parameter for the fallback (for Google, this is 'q')
+search_fallback_query: q
+
 # Build settings
 markdown: kramdown
 
