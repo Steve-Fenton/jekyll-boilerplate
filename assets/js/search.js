@@ -1,13 +1,24 @@
+// @ts-check    
+
 (function () {
-    function startsWith(a, b) {
-        return a.indexOf(b) === 0;
+    /**
+     * Looks for a search within a string
+     * @param {string} string 
+     * @param {string} search 
+     * @returns 
+     */
+    function contains(string, search) {
+        return string.indexOf(search) > -1;
     }
 
-    function contains(a, b) {
-        return a.indexOf(b) > -1;
-    }
-
+    /**
+     * Simplifies a string to plain lower case, removing diacritic characters and hyphens
+     * This means a search for "co-op" will be found in "COOP" and "Café" will be found in "cafe"
+     * @param {string} a 
+     * @returns 
+     */
     function sanitise(a) {
+        // @ts-ignore
         if (String.prototype.normalize) {
             // Reduces diacritic characters to plain characters
             a.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/-/g, '');
@@ -31,6 +42,11 @@
 
     var ready = false;
 
+    /**
+     * Performs the search
+     * @param {string} s 
+     * @returns 
+     */
     function search(s) {
         needles = [];
 
@@ -78,6 +94,11 @@
         });
 
         var results = document.getElementById('site-search-results');
+
+        if (results == null) {
+            throw new Error('Cannot find #site-search-results');
+        }
+
         results.innerHTML = '';
 
         var limit = Math.min(needles.length, 12)
@@ -99,7 +120,13 @@
     var debounceTimer;
 
     function debounceSearch() {
-        var s = document.getElementById('site-search-query').value;
+        var input = /** @type {HTMLInputElement} */(document.getElementById('site-search-query'));
+
+        if (input == null) {
+            throw new Error('Cannot find #site-search-query');
+        }
+
+        var s = input.value;
 
         window.clearTimeout(debounceTimer);
         debounceTimer = window.setTimeout(function () {
@@ -120,6 +147,10 @@
 
             var siteSearch = document.getElementById('site-search');
             var siteSearchQuery = document.getElementById('site-search-query');
+
+            if (siteSearch == null || siteSearchQuery == null) {
+                throw new Error('Cannot find #site-search or #site-search-query');
+            }
         
             siteSearch.addEventListener('submit', function (e) {
                 e.preventDefault();
