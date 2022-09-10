@@ -11,13 +11,13 @@ layout: default
             <fieldset>
                 <input type="hidden" name="{{ site.search_fallback_site }}" value="{{ site.url | prepend: 'site:' }}" />
                 <div>
-                    <label>
-                        <span>Search for</span><input type="text" name="{{ site.search_fallback_query }}" id="site-search-query" autofocus="autofocus" />
-                    </label>
-                    <button id="site-search-button">Go</button>
+                    <label for="site-search-query">Search for</label>
+                    <input type="text" name="{{ site.search_fallback_query }}" id="site-search-query" autofocus="autofocus" />
+                    <button id="site-search-button" type="submit">Go</button>
                 </div>
             </fieldset>
         </form>
+        <h2>Results</h2>
         <ol id="site-search-results" class="site-search-results">
         </ol>
         <script src="{{ "/assets/js/search.js" | prepend: site.baseurl }}" async></script>

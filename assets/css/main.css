@@ -498,9 +498,10 @@ form.site-search {
     padding: 1em;
 }
 
-form.site-search label {
+form.site-search div {
     display: grid;
     grid-template-columns: repeat(3, auto);
+    gap: 1em;
 }
 
 form.site-search label > * {
@@ -508,7 +509,7 @@ form.site-search label > * {
 }
 
 .site-search-results {
-    margin: 2em 0 2em 2em;
+    font-size: 1.3rem;
 }
 
 .site-search-results a {

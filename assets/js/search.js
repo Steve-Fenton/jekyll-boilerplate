@@ -38,7 +38,7 @@
         .then(function (data) { 
             haystack = data;
             ready = true;
-            document.getElementById('site-search-button').style.display = 'none';
+            document.getElementById('site-search-button').style.visibility = 'hidden';
 
             console.log(haystack[0])
         });
