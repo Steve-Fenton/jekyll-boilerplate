@@ -28,10 +28,20 @@
         return a.trim().toLowerCase().replace(/-/g, '');
     }
 
+    /**
+     * Sets a minimum length for a search
+     * @param {string} a 
+     * @returns 
+     */
     function isLongEnough(a) {
         return a.length > 1;
     }
 
+    /**
+     * Splits a sentence into individual search terms
+     * @param {string} s 
+     * @returns 
+     */
     function explode(s) {
         return s.split(' ').filter(isLongEnough).map(sanitise);
     }
@@ -51,19 +61,21 @@
         needles = [];
 
         // Clean the input
-        var trimmedQuery = sanitise(s);
+        var cleanQuery = sanitise(s);
 
-        if (currentQuery === trimmedQuery) {
+        if (currentQuery === cleanQuery) {
             return;
         }
 
-        currentQuery = trimmedQuery;
+        currentQuery = cleanQuery;
 
         var queryTerms = explode(currentQuery);
 
         for (var i = 0; i < haystack.length; i++) {
             var item = haystack[i];
+
             item.score = 0;
+            
             var title = sanitise(item.title);
             var category = sanitise(item.category);
             var tags = sanitise(item.tags);
