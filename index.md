@@ -27,7 +27,7 @@ Jekyll Boilerplate is built on some strong opinions, such as:
 >
 > It's just majestic HTML, simple CSS, and some minor non-essential enhancements in plain JavaScript. <cite>Steve Fenton</cite>
 
-Out of the box, Jekyll Boilerplate is a "top scores" high-performance website.
+Out of the box, Jekyll Boilerplate is a "top scores" high-performance website. This is a standard test that covers the performance of the website, how fast the site is visible and interactive, whether the screen has major layout shifts, and more. As well as performance, it checks for accessibility, best practices, and SEO friendliness.
 
 ![Jekyll Boilerplate lighthouse score of 100 in performance, accessibility, SEO, and best practices](/assets/img/lighthouse-scores.webp){:loading="lazy"}
 

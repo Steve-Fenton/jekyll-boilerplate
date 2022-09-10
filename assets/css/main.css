@@ -309,6 +309,8 @@ body > header a:focus {
 .site-title {
     letter-spacing: -1px;
     text-transform: uppercase;
+    margin: 0 30px;
+    display: block;
 }
 
 .navigation-icon {
