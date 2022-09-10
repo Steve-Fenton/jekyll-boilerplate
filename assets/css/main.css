@@ -5,7 +5,7 @@
 
 :root {
     --fore: #333;
-    --aft: #FDFDFE;
+    --aft: #FBFBFC;
 
     --fore-link: #2d4295;
     --fore-link-alt: #4D71FF;
@@ -409,17 +409,21 @@ details summary::marker {
     width: 1em;
 }
 
-/* Mobile Navigation Overlay*/
+/* Overlay (Mobile Navigation, Search) */
 
 .overlay {
     position: fixed;
     top: 0;
     width: calc(100% - 2em);
-    height: calc(100% - 5rem);
+    height: calc(100% - 7rem);
     max-height: 100vh;
     background-color: var(--aft);
-    padding : 5rem 1em 0 1em;
+    padding : 5rem 1em 2rem 1em;
     overflow-y: auto;
+}
+
+.overlay a, .overlay summary {
+    border-bottom: 1px solid var(--fore-link);
 }
 
 /* Content */
