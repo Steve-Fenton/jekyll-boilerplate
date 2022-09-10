@@ -15,27 +15,26 @@ date: 2022-09-07
         {% assign posts = site.posts %}
     {% endif %}
     {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
     <ul class="post-list">
       {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-      <li>
+      <li class="list-item">
         {%- if post.banner-image -%}
-        <a class="post-link" href="{{ post.url | relative_url }}">
+        <a href="{{ post.url | relative_url }}">
         <img src="{{ post.banner-image }}" alt="{{ post.banner-image-alt }}" />
         </a>
         {%- endif -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+        <div class="list-item-content">
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h2>
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h2>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </div>
       </li>
       {%- endfor -%}
     </ul>
