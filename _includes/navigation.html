@@ -11,12 +11,15 @@
       <li{%- if sub_pages.size > 0 %} class="has-children"{% endif %}>
         {%- if sub_pages.size > 0 %}
         <details class="sub-nav">
-          <summary>
-        {%- endif %}
+          <summary><span>{{ page.nav-title | default: page.title }}</span></summary>
+        {%- else %}
         <a href="{{ page.url | regex_replace: regex,'/' | prepend: site.baseurl }}">{{ page.nav-title | default: page.title }}</a>
+        {%- endif %}
         {%- if sub_pages.size > 0 %}
-          </summary>
           <ul>
+            <li>
+              <a href="{{ page.url | regex_replace: regex,'/' | prepend: site.baseurl }}">{{ page.nav-title | default: page.title }}</a>
+            </li>
             {%- for child in sub_pages %}
             <li>
               <a href="{{ child.url | prepend: site.baseurl }}">{{ child.nav-title | default: child.title }}</a>

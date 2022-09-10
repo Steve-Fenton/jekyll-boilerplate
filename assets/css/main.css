@@ -110,12 +110,15 @@ body {
     font-family: var(--content-font);
 }
 
-a {
+a, summary {
     color: var(--fore-link);
+    text-decoration: underline;
 }
 
 a:hover,
-a:focus {
+a:focus,
+summary:hover,
+summary:focus {
     color: var(--fore-link-alt);
     background-color: var(--aft-link-alt);
 }
@@ -383,14 +386,21 @@ nav.site-nav a {
     padding: 0.5rem 1rem;
 }
 
-nav.site-nav li.has-children a {
+nav.site-nav li.has-children summary span {
     text-indent: 0;
     width: calc(100% - 2rem - var(--marker-size));
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: underline;
 }
 
 nav.site-nav li.has-children ul a {
     width: calc(100% - 2rem);
     text-indent: calc(var(--marker-size) * 2);
+}
+
+details summary {
+    cursor: pointer;
 }
 
 details summary::-webkit-details-marker,
