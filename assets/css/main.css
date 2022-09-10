@@ -27,9 +27,9 @@
     --fore-table-head: #FDFDFE;
     --aft-table-head: #2F3141;
     --fore-table-row-odd: #333;
-    --aft-table-row-odd: #F3F5FF;
+    --aft-table-row-odd: #FDFDFE;
     --fore-table-row-even: #333;
-    --aft-table-row-even: #FDFDFE;
+    --aft-table-row-even: #F3F5FF;
 
 
     --heading-font: Georgia, 'Times New Roman', Times, serif;
@@ -316,6 +316,8 @@ body > header a:focus {
     position: absolute;
     top: 10px;
     left: 10px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 /* Footer */

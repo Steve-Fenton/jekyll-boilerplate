@@ -1,59 +1,109 @@
-/** Utility Functions */
-(function(){
+// @ts-check
+
+/**
+ * Adds a de-bounced "resized" event, so you can listen to:
+ * document.addEventListener('resized', <handler>);
+ * @param {Window} global 
+ * @param {Node} target
+ */
+function addResizedEventUtility(global, target) {
     var debounce = null;
 
     function resizeEnd() {
-        window.clearTimeout(debounce);
-        debounce = window.setTimeout(raiseEvent, 500);
+        global.clearTimeout(debounce);
+        debounce = global.setTimeout(raiseEvent, 500);
     }
 
     function raiseEvent() {
         const resizeEndEvent = new CustomEvent('resized');
-        document.dispatchEvent(resizeEndEvent);
+        target.dispatchEvent(resizeEndEvent);
     }
 
-    window.addEventListener('resize', resizeEnd);
-}());
+    global.addEventListener('resize', resizeEnd);
+}
 
-/*
-Sticky Navigation 
+addResizedEventUtility(window, document);
 
-    Depends on
-        .site-header
-        .site-nav
-        .site-nav > ul
-*/
-(function() {
+/**
+ * Utility for query selector
+ * @param {string} query
+ * @param {HTMLElement | null} [container]
+ * @returns HTMLElement
+ */
+ function qs(query, container) {
+    var target = (container)
+        ? container
+        : document;
+
+    /** @type {HTMLElement | null} */
+    var result = target.querySelector(query);
+
+    if (result) {
+        return result;
+    }
+
+    throw new Error(`No element ${query}`);
+}
+
+/**
+ * Utility for query selector all
+ * @param {string} query
+ * @param {HTMLElement | null} [container]
+ * @returns NodeListOf<any>
+ */
+ function qsa(query, container) {
+    var target = (container)
+        ? container
+        : document;
+
+    /** @type {NodeListOf<HTMLElement>} */
+    var result = target.querySelectorAll(query);
+    return result;
+}
+
+/**
+ * Makes an existing navigation element sticky
+ * if the screen size makes that useful.
+ * @param {string} headerSelector 
+ * @param {string} navigationSelector 
+ * @param {string} navigationListSelector 
+ */
+function addStickyNavigation(headerSelector, navigationSelector, navigationListSelector) {
     function setNavigationMode() {
-        var header = document.querySelector('.site-header');
-        var navigation = document.querySelector('.site-nav');
-        var navigationList = document.querySelector('.site-nav > ul'); 
+        var header = qs(headerSelector);
+        var navigation = qs(navigationSelector);
+        var navigationList = qs(navigationListSelector); 
         
         var buffer = 50;
         var className = 'sticky';
 
-        var browserHeight = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
-        var browserWidth = isNaN(window.innerWidth) ? window.clientWidth : window.innerWidth;
-        var headerHeight = header.clientHeight;
-        var navigationHeight = navigationList.clientHeight;
-        
+        var dimensions = {
+            browserHeight: window.innerHeight,
+            browserWidth: window.innerWidth,
+            headerHeight: header.clientHeight,
+            navigationHeight: navigationList.clientHeight
+        };
+
         // Only enable sticky mode if the menu will fit vertically
         // && where the browser is more than 860px wide
-        if (navigationHeight < ((browserHeight - headerHeight) - buffer)
-            && browserWidth > 860) {
+        if (dimensions.navigationHeight < ((dimensions.browserHeight - dimensions.headerHeight) - buffer)
+            && dimensions.browserWidth > 860) {
             console.log('Navigation: Sticky Mode');
             navigation.classList.add(className)
-            navigation.style.top = headerHeight.toString() + 'px';
+            navigation.style.top = dimensions.headerHeight.toString() + 'px';
         } else {
             console.log('Navigation: Fixed Mode');
-            navigation.classList.remove('sticky');
+            navigation.classList.remove(className);
         }
     }
 
     setNavigationMode();
+
     document.addEventListener('resized', setNavigationMode);
     
-}());
+}
+
+addStickyNavigation('.site-header', '.site-nav', '.site-nav > ul');
 
 /*
 Auto-Open Current Navigation 
@@ -62,15 +112,16 @@ Auto-Open Current Navigation
         details.sub-nav
 */
 (function() {
-    var summaries = document.querySelectorAll('details.sub-nav');
+    var summaries = qsa('details.sub-nav');
     var site = document.location.origin;
     var location = document.location.pathname;
 
     for (var i = 0; i < summaries.length; i++) {
         var summary = summaries[i];
-        var anchor = summary.querySelector('a').href.replace(site, '');
+        var anchorElement = /** @type {HTMLAnchorElement} */(qs('a', summary));
+        var address = anchorElement.href.replace(site, '');
 
-        if (location.startsWith(anchor)){
+        if (location.startsWith(address)){
             summary.setAttribute('open', 'open');
         }
     }
@@ -84,7 +135,7 @@ Mobile Menu Enhancement
         .site-nav
 */
 (function() {
-    var icon = document.querySelector('.navigation-icon');
+    var icon = qs('.navigation-icon');
     var originalIcon = icon.innerHTML;
     var overlay = document.createElement('div');
     var dataOpen = 'data-open';
@@ -100,7 +151,7 @@ Mobile Menu Enhancement
             icon.removeAttribute(dataOpen);
         } else {
             document.body.style.overflow = 'hidden';
-            var navigation = document.querySelector('.site-nav');
+            var navigation = qs('.site-nav');
             
             overlay.innerHTML = navigation.outerHTML;
             overlay.className = 'overlay';
@@ -108,7 +159,7 @@ Mobile Menu Enhancement
             icon.innerHTML = '×';
             document.body.appendChild(overlay);
 
-            overlay.querySelector('a').focus();
+            qs('a', overlay).focus();
             
             icon.setAttribute(dataOpen, dataOpen);
         }
