@@ -31,18 +31,6 @@
 
     var ready = false;
 
-    fetch('/search.json')
-        .then(function (response) { 
-            return response.json();
-        })
-        .then(function (data) { 
-            haystack = data;
-            ready = true;
-            document.getElementById('site-search-button').style.visibility = 'hidden';
-
-            console.log(haystack[0])
-        });
-
     function search(s) {
         needles = [];
 
@@ -115,23 +103,36 @@
 
         window.clearTimeout(debounceTimer);
         debounceTimer = window.setTimeout(function () {
-            console.log('Searching...', s);
-            search(s);
+            if (ready) {
+                console.log('Searching...', s);
+                search(s);
+            }
         }, 200);
     }
 
-    var siteSearch = document.getElementById('site-search');
-    var siteSearchQuery = document.getElementById('site-search-query');
+    fetch('/search.json')
+        .then(function (response) { 
+            return response.json();
+        })
+        .then(function (data) { 
+            haystack = data;
+            ready = true;
 
-    siteSearch.addEventListener('submit', function (e) {
-        e.preventDefault();
-        debounceSearch();
-        return false;
-    });
+            var siteSearch = document.getElementById('site-search');
+            var siteSearchQuery = document.getElementById('site-search-query');
+        
+            siteSearch.addEventListener('submit', function (e) {
+                e.preventDefault();
+                debounceSearch();
+                return false;
+            });
+        
+            siteSearchQuery.addEventListener('keyup', function (e) {
+                e.preventDefault();
+                debounceSearch();
+                return false;
+            });
 
-    siteSearchQuery.addEventListener('keyup', function (e) {
-        e.preventDefault();
-        debounceSearch();
-        return false;
-    });
+            console.log('Search ready');
+        });
 }());

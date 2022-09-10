@@ -508,6 +508,10 @@ form.site-search label > * {
     padding: 0.2em;
 }
 
+form.site-search button {
+    display: none;
+}
+
 .site-search-results {
     font-size: 1.3rem;
 }
@@ -559,4 +563,9 @@ form.site-search label > * {
         max-width: unset;
         width: var(--grid-width);
     }
+
+    /*  */
+    form.site-search div {
+        grid-template-columns: repeat(1, auto);
+    }    
 }
