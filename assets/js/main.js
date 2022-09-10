@@ -127,15 +127,13 @@ function setCurrentNavigationItem(className) {
 
 setCurrentNavigationItem('details.sub-nav');
 
-/*
-Mobile Menu Enhancement
-
-    Depens on
-        .navigation-icon
-        .site-nav
-*/
-function addMobileNavigation(iconClass, navigationSelector) {
-    var icon = qs(iconClass);
+/**
+ * Creates a mobile menu overlay
+ * @param {string} iconSelector 
+ * @param {string} navigationSelector 
+ */
+function addMobileNavigation(iconSelector, navigationSelector) {
+    var icon = qs(iconSelector);
     var originalIcon = icon.innerHTML;
     var overlay = document.createElement('div');
     var dataOpen = 'data-open';
