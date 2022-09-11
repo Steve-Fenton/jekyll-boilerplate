@@ -3,10 +3,12 @@ layout: page
 title:  Heading 1
 permalink: /kitchen-sink/
 date:   2022-09-06
+author: steve-fenton
 description: The most common content components arranged for testing.
 nav-title: Kitchen Sink
 nav-level: 1
 nav-order: 4000
+published: true
 nav-sitemap: true
 nav-search: true
 ---

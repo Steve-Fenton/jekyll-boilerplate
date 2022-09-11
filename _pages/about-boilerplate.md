@@ -3,11 +3,13 @@ layout: page
 title:  About Jekyll Boilerplate
 permalink: /about/
 date:   2022-09-06
+author: steve-fenton
 description: Jekyll Boilerplate is an opinionated Jekyll site with built in theme and extensions.
 nav-section: About
 nav-title: About Jekyll Boilerplate
 nav-level: 1
 nav-order: 2000
+published: true
 nav-sitemap: true
 nav-search: true
 ---

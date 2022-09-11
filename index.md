@@ -1,13 +1,16 @@
 ---
 layout: page
-title: Welcome to Jekyll Boilerplate
+title:  Welcome to Jekyll Boilerplate
+permalink: /
+date:   2022-09-06
+author: steve-fenton
 description: A boilderplate for a very clean version of Jekyll.
 nav-title: Home
 nav-level: 1
-nav-order: 1000
+nav-order: 0
+published: true
 nav-sitemap: true
 nav-search: true
-date: 2022-09-07
 ---
 
 Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for [Jekyll](https://jekyllrb.com/).

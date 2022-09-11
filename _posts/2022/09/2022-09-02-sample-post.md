@@ -3,9 +3,11 @@ layout: page
 title: Example Post 2
 permalink: /2022/09/example-post-2/
 date: 2022-09-02
+author: steve-fenton
 excerpt: This is a test post.
 categories: articles
 tags: sample post
+published: true
 nav-sitemap: true
 nav-search: true
 ---
