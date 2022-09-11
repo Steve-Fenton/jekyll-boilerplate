@@ -15,17 +15,23 @@ nav-search: true
 
 There are no third-party dependencies in Jekyll Boilerplate, so a couple of extensions have been baked-in to provide key features.
 
-### Pagination
+## Pagination
 
 The pagination extension handles paging for your articles, posts, or blogs.
 
 It's based on the original `jekyll-paginate` plugin, but in part of the boilerplate, not a dependency.
 
-### Breadcrumbs
+## Breadcrumbs
 
 The breadcrumbs extensions shows the path to the current content, to help users orient themselves within the site. It also adds structured data to help search engines understand the structure of the website.
 
 It's based on `jekyll-breadcrumbs`, but is part of the boilerplate and works with the custom [front matter](/about/front-matter/).
+
+## Authors
+
+Authors are baked-in, allowing you to link posts to an author and display an author page, based on [Jet Holt's](https://jetholt.com/jekyll/) Jekyll articles.
+
+It used the `authors` front-matter, see the [front matter](/about/front-matter/) page for more information.
 
 ## Search
 
