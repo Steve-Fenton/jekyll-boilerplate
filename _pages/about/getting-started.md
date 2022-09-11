@@ -11,6 +11,8 @@ nav-sitemap: true
 nav-search: true
 ---
 
+To run Jekyll locally, set up the pre-requisites in the [Jekyll docs](https://jekyllrb.com/docs/). You can then grab the [Jekyll Boilerplate code from GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate) and run it using `jekyll serve`.
+
 There are just a couple of tasks to turn the Jekyll Boilerplate into your own working website.
 
 1. Edit `_config.yml`
