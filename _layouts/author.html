@@ -23,14 +23,6 @@ layout: default
         {{ content }}
     </div>
 
-    {% assign number_of_posts = 0 %}
-    {% for post in site.posts %}
-        {% if post.authors contains page.username or page.username == post.authors %}
-            {% assign number_of_posts = number_of_posts | plus: 1 %}
-        {% endif %}
-    {% endfor %}
-    {% if number_of_posts == 0 %}No posts{% elsif number_of_posts == 1 %}1 post{% else %}{{ number_of_posts }} posts{% endif %}
-
     {% for post in site.posts %}
         {% if post.authors contains page.username or page.username == post.authors %}
             <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
