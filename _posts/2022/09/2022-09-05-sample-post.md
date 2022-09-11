@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Example Post 5
+permalink: /2022/09/example-post-5/
 date: 2022-09-05
 excerpt: This is an example post with more of the front matter.
 categories: articles

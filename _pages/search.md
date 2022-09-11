@@ -6,7 +6,7 @@ date:   2022-09-06
 description: Search the Jekyll Boilerplate website.
 nav-title: Search
 nav-level: 0
-nav-order: 4000
+nav-order: 0
 nav-sitemap: false
 nav-search: false
 ---

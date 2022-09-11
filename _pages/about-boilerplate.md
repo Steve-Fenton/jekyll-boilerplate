@@ -12,18 +12,18 @@ nav-sitemap: true
 nav-search: true
 ---
 
-Jekyll Boilerplate is an opinionated Jekyll site with built in theme and extensions.
+Jekyll Boilerplate has some Jekyll and Markdown extensions built-in. These provide essential features that are needed by most sites.
 
-The supplied theme can be customised through CSS variables, or you can use the boilerplate to build out your own custom site.
+You can adjust the existing theme by changing the CSS variables, or use it as the starting point for your own bespoke design.
 
-Jekyll Boilerplate doesn't depend on any plugins and works on [GitHub Pages](/about/github-pages/)
+The customised elements include:
 
-A set of features like breadcrumbs, pagination, and markdown extensions are built in.
+- [Custom front-matter](/about/front-matter/) to power nevigation features
+- [Jekyll extensions](/about/jekyll-extensions/) for breadcrumbs, pagination, and search
+- [Markdown extensions](/about/markdown-extensions/) for some additional markdown options
 
-The YAML headers have additional custom properties that give you more control over how items are displayed.
+You can use an action to push your site to [GitHub Pages](/about/github-pages/)
 
 ## Where Next?
 
 - Find out how to [get started](/about/getting-started/)
-- Read about [markdown extensions](/about/markdown-extensions/)
-- See how [breadcrumbs work](/about/breadcrumbs/)

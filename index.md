@@ -13,22 +13,22 @@ date: 2022-09-07
 Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for [Jekyll](https://jekyllrb.com/).
 
 :::note
-This project is available on [GitHub - Jekyll Boilerplate](https://github.com/Steve-Fenton/jekyll-boilerplate){:target="_blank"}.
+The Jekyll Boilerplate source code is available on [GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate){:target="_blank"}.
 :::
 
-Jekyll Boilerplate is built on some strong opinions, such as:
+Jekyll Boilerplate is built on some strong opinions:
 
-- The best way to *serve* web pages is to *have* web pages
-- Everything should work without JavaScript, especially the navigation
-- A minimal software supply chain is easier to manage and less risky
 - Accessibility is not just important, it's fundamental
+- Everythings should still work without JavaScript
+- The democratising force in the World Wide Web is HTML files
+- Software supply chains should be minimal
 
-> This project does **not** contain jQuery, Node modules, or front-end frameworks.
+> Jekyll Boilerplate minimises third-party dependencies. There aren't any plugins, jQuery isn't in the picture, and there are no front-end frameworks.
 >
 > It's just majestic HTML, simple CSS, and some minor non-essential enhancements in plain JavaScript. <cite>Steve Fenton</cite>
 
-Out of the box, Jekyll Boilerplate is a "top scores" high-performance website. This is a standard test that covers the performance of the website, how fast the site is visible and interactive, whether the screen has major layout shifts, and more. As well as performance, it checks for accessibility, best practices, and SEO friendliness.
+Out of the box, Jekyll Boilerplate is a "top scores" high-performance website in the Pagespeed lab. [Pagespeed Insights](https://developers.google.com/speed/docs/insights/v5/about?hl=en-US) tests website performance on mobile and desktop across a number of measurements.
 
 ![Jekyll Boilerplate lighthouse score of 100 in performance, accessibility, SEO, and best practices](/assets/img/lighthouse-scores.webp){:loading="lazy"}
 
-Lighthouse scores aren't everything, but the real user experience of using blazingly fast accessible websites *is*.
+Test scores aren't everything, but Jekyll Boilerplate is light and fast.

@@ -6,7 +6,7 @@ date:   2022-09-06
 description: Information about baked-in extensions in Jekyll Boilerplate.
 nav-title: Jekyll Extensions
 nav-level: About Jekyll Boilerplate
-nav-order: 4500
+nav-order: 3000
 nav-sitemap: true
 nav-search: true
 ---

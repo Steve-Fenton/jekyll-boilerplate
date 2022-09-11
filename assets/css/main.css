@@ -31,7 +31,6 @@
     --fore-table-row-even: #333;
     --aft-table-row-even: #F3F5FF;
 
-
     --heading-font: Georgia, 'Times New Roman', Times, serif;
     --content-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --code-font: Consolas, 'Courier New', Courier, monospace;
@@ -218,7 +217,7 @@ img {
     max-width: 100%;
 }
 
-p, main ul, mail ol {
+p, main ul, main ol {
     margin: 1.2em 0;
 }
 
@@ -439,7 +438,7 @@ main {
 }
 
 main ul, main ol {
-    margin-left: 1em;
+    margin-left: 1.2em;
 }
 
 main ul li, main ol li {
