@@ -3,7 +3,7 @@ layout: page
 title:  Host Jekyll on GitHub Pages
 permalink: /about/github-pages/
 date:   2022-09-06
-author: steve-fenton
+authors: steve-fenton
 description: How to get the most from Jekyll Boilerplate and GitHub Pages.
 nav-title: GitHub Pages
 nav-level: About Jekyll Boilerplate

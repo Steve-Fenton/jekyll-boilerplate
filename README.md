@@ -3,3 +3,11 @@
 An opinionated boilerplate Jekyll site with its own theme, which allows you to set up a Jekyll site with no plugins.
 
 More information is available at: <https://jekyll.stevefenton.co.uk/>
+
+# Credits
+
+I found useful content in the following places!
+
+https://jetholt.com/jekyll/
+
+https://dev.to/m0nica

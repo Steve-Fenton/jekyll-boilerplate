@@ -28,4 +28,16 @@ layout: default
     <div>
         {{ content }}
     </div>
+    <div>
+        {% assign authordata = '' | split:'@' %}
+        {% for author in site.authors %}
+            {% if page.authors contains author.username or author.username == page.authors %}
+                {% capture data %}
+                    <a href="{{ site.url }}{{ site.baseurl }}/author/{{ author.username }}">{{ author.name }}</a>
+                {% endcapture %}
+                {% assign authordata = authordata | push: data %}
+            {% endif %}
+        {% endfor %}
+        <p>Written by {{ authordata | array_to_sentence_string }}</p>
+    </div>
 </main>

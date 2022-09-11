@@ -3,7 +3,7 @@ layout: page
 title:  Getting Started
 permalink: /about/getting-started/
 date:   2022-09-06
-author: steve-fenton
+authors: steve-fenton
 description: There are just a couple of tasks to turn the Jekyll Boilerplate into your own working website.
 nav-title: Getting Started
 nav-level: About Jekyll Boilerplate

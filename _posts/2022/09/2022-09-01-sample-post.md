@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: post
 title: Example Post
 permalink: /2022/09/example-post/
 date: 2022-09-01
-author: steve-fenton
+authors: steve-fenton
 excerpt: This is a test post.
 categories: articles
 tags: sample post

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<main id="site-main">
+    <header>
+	    <h1>{{ page.name }}</h1>
+    </header>
+    <div>
+        {% if page.picture %}
+        <img src="/{{ page.picture }}" alt="{{ page.name }}" class="author-image" />
+        {% endif %}
+
+        {% if page.url_short and page.url_full %}
+        <a href="{{ page.url_full }}" target="_blank" rel="noopener">{{ page.url_short }}</a>
+        {% endif %}
+
+        {% if page.twitter %}
+        <a href="https://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener">
+            Twitter
+        </a>
+        {% endif %}
+
+        {{ content }}
+    </div>
+
+    {% assign number_of_posts = 0 %}
+    {% for post in site.posts %}
+        {% if post.authors contains page.username or page.username == post.authors %}
+            {% assign number_of_posts = number_of_posts | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+    {% if number_of_posts == 0 %}No posts{% elsif number_of_posts == 1 %}1 post{% else %}{{ number_of_posts }} posts{% endif %}
+
+    {% for post in site.posts %}
+        {% if post.authors contains page.username or page.username == post.authors %}
+            <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        {% endif %}
+    {% endfor %}
+  </main>

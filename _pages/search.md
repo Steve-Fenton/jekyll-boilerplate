@@ -3,7 +3,7 @@ layout: search
 title:  Search
 permalink: /search/
 date:   2022-09-06
-author: steve-fenton
+authors: steve-fenton
 description: Search the Jekyll Boilerplate website.
 nav-title: Search
 nav-level: 0

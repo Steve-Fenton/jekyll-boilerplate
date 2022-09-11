@@ -3,7 +3,7 @@ layout: page
 title:  Welcome to Jekyll Boilerplate
 permalink: /
 date:   2022-09-06
-author: steve-fenton
+authors: steve-fenton
 description: A boilderplate for a very clean version of Jekyll.
 nav-title: Home
 nav-level: 1

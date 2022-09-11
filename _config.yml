@@ -42,4 +42,17 @@ kramdown:
   syntax_highlighter: rouge
 
 include: [_pages]
-exclude: ["LICENSE", "README.md"]
+exclude: ['LICENSE', 'README.md']
+
+collections:
+  authors:
+    output: true
+    permalink: author/:title/
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: authors
+    values:
+      layout: author

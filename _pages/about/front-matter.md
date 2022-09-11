@@ -3,7 +3,7 @@ layout: page
 title:  Front Matter
 permalink: /about/front-matter/
 date:   2022-09-06
-author: steve-fenton
+authors: steve-fenton
 description: A list of all custom front-matter features in Jekyll Boilerplate.
 nav-title: Front Matter
 nav-level: About Jekyll Boilerplate
@@ -40,7 +40,7 @@ Full details of standard [Jekyll front-matter](https://jekyllrb.com/docs/front-m
 
 - `categories`: Groups posts into sections
 - `tags`: Tags are used to filter posts and for keywords
-- `author`: A reference to the author of a post, using the URL format, such as `steve-fenton`
+- `authors`: A reference to the author of a post, using the URL format, such as `steve-fenton` or `[steve-fenton, another-person]`
 
 ## Custom Items
 
@@ -63,7 +63,7 @@ layout: page
 title:  Front Matter
 permalink: /about/front-matter/
 date:   2022-09-06
-author: steve-fenton
+authors: steve-fenton
 description: A list of all custom front-matter features in Jekyll Boilerplate.
 nav-title: Front Matter
 nav-level: About Jekyll Boilerplate
