@@ -1,6 +1,6 @@
 // @ts-check
 
-import { qs } from './query.js';
+import { qs, qsa } from './query.js';
 
 /**
  * Makes an existing navigation element sticky
@@ -44,7 +44,11 @@ function addStickyNavigation(headerSelector, navigationSelector, navigationListS
 
     setNavigationMode();
 
-    document.addEventListener(resizedEventName, setNavigationMode);
+    document.addEventListener(resizedEventName, function(e) {
+        if (e.detail && e.detail.change && e.detail.change.height != 0) {
+            setNavigationMode();
+        }
+    });
 }
 
 export { addStickyNavigation };

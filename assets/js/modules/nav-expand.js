@@ -42,8 +42,6 @@ function setNavigationItem(navQuery, selectedClass) {
         var anchor = /** @type {HTMLAnchorElement} */ (anchors[j]);
         var href = anchor.href.replace(site, '');
 
-        console.log(site, location, href);
-
         if (href === location) {
             anchor.classList.add(selectedClass);
         }

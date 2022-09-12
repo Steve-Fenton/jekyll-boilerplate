@@ -10,7 +10,7 @@ setNavigationTree('details.sub-nav');
 setNavigationItem('.site-nav a', 'current-item')
 setClickableBlocks('data-destination');
 
-var resizedEventName = addResizedEvent(window, document);
+var resizedEventName = addResizedEvent();
 
 addStickyNavigation('.site-header', '.site-nav', '.site-nav > ul', resizedEventName);
 addMobileNavigation('.navigation-icon', '.site-nav', resizedEventName);

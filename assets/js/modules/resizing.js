@@ -1,29 +1,41 @@
 // @ts-check
 
+import { raiseEvent } from './events.js';
+
 var resizeEventName = 'resize';
 var resizedEventName = 'resized';
+
+var width = window.innerWidth;
+var height = window.innerHeight;
 
 /**
  * Adds a de-bounced "resized" event, so you can listen to:
  * document.addEventListener('resized', <handler>);
- * @param {Window} global 
- * @param {Node} target
+ * 
  * @returns {string}
  */
- function addResizedEvent(global, target) {
+ function addResizedEvent() {
     var debounce = null;
 
-    function resizeEnd() {
-        global.clearTimeout(debounce);
-        debounce = global.setTimeout(raiseEvent, 500);
+    function resizeEnd(e) {
+        window.clearTimeout(debounce);
+        debounce = window.setTimeout(raiseResizeEvent, 500);
     }
 
-    function raiseEvent() {
-        const resizeEndEvent = new CustomEvent(resizedEventName);
-        target.dispatchEvent(resizeEndEvent);
+    function raiseResizeEvent() {
+        var change = {
+            width: window.innerWidth - width,
+            height: window.innerHeight - height
+        };
+
+        width = window.innerWidth;
+        height = window.innerHeight;
+        
+
+        raiseEvent(resizedEventName, { change: change });
     }
 
-    global.addEventListener(resizeEventName, resizeEnd);
+    window.addEventListener(resizeEventName, resizeEnd);
 
     return resizedEventName;
 }

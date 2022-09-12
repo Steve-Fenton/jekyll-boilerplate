@@ -7,7 +7,7 @@ layout: default
     </header>
     <div>
         {{ content }}
-        <form method="GET" action="{{ site.search_fallback_url }}" id="site-search" class="site-search note">
+        <form method="GET" action="{{ site.search_fallback_url }}" id="site-search" class="site-search note" autocomplete="off">
             <fieldset>
                 <input type="hidden" name="{{ site.search_fallback_site }}" value="{{ site.url | prepend: 'site:' }}" />
                 <div>
@@ -19,6 +19,6 @@ layout: default
         </form>
         <div id="site-search-results">
         </div>
-        <script src="{{ "/assets/js/search.js" | prepend: site.baseurl }}" async></script>
+        <script src="{{ "/assets/js/search.js" | prepend: site.baseurl }}" type="module" async></script>
     </div>
   </main>
