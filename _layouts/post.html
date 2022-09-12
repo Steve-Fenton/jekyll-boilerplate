@@ -18,7 +18,7 @@ layout: default
         <img src="/{{ author.picture }}" alt="{{ author.name }}" class="author-image" />
                     {%- endif %}
                     {%- capture data %}
-                        <a href="{{ site.url }}{{ site.baseurl }}/author/{{ author.username }}">{{ author.name }}</a>
+                        <a href="{{ site.url }}{{ site.baseurl }}/author/{{ author.username }}/">{{ author.name }}</a>
                     {%- endcapture %}
                     {%- assign authordata = authordata | push: data %}
                 {%- endif %}
