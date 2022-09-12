@@ -114,7 +114,6 @@ function debounceSearch() {
     window.clearTimeout(debounceTimer);
     debounceTimer = window.setTimeout(function () {
         if (ready) {
-            console.log('Searching...', s);
             search(s);
         }
     }, 400);
@@ -145,7 +144,7 @@ fetch('/search.json')
             e.preventDefault();
             if (!scrolled) {
                 scrolled = true;
-                this.scrollIntoView();
+                this.scrollIntoView(true);
             }
             debounceSearch();
             return false;
