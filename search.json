@@ -3,6 +3,7 @@ layout: null
 ---
 {% assign pages = site.pages | where: 'nav-search', 'true' %}
 {% assign posts = site.posts | where: 'nav-search', 'true' %}
+{% assign authors = site.authors | where: 'nav-search', 'true' %}
 [
   {% for page in pages %}{
     "title"    : "{{ page.title | escape }}",
@@ -10,12 +11,28 @@ layout: null
     "tags"     : "{{ page.tags | join: ', ' }}",
     "url"      : "{{ site.baseurl }}{{ page.url }}",
     "date"     : "{{ page.date }}"
-  }{% if posts.size > 0 %},{% endif %}{% endfor %}{% for post in posts %}{
+  }
+
+  {%- if authors.size > 0 %},{% endif %}
+  {%- endfor %}
+  {%- for author in authors %}{
+    "title"    : "{{ author.name | escape }}",
+    "category" : "{{ author.category }}",
+    "tags"     : "{{ author.tags | join: ', ' }}",
+    "url"      : "{{ site.baseurl }}{{ author.url }}",
+    "date"     : "{{ author.date }}"
+  }
+  
+  {%- if posts.size > 0 %},{% endif %}
+  {%- endfor %}
+  {%- for post in posts %}{
     "title"    : "{{ post.title | escape }}",
     "category" : "{{ post.category }}",
     "tags"     : "{{ post.tags | join: ', ' }}",
     "url"      : "{{ site.baseurl }}{{ post.url }}",
     "date"     : "{{ post.date }}"
-   } {% unless forloop.last %},{% endunless %} {% endfor %}
+  }
+  {%- unless forloop.last %},{% endunless %}
+  {%- endfor %}
 ]
 

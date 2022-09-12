@@ -8,6 +8,7 @@ layout: null
                             http://www.sitemaps.org/schemas/sitemap/0.9.xsd">
 {%- assign pages = site.pages | where: 'nav-sitemap','true' %}
 {%- assign posts = site.posts | where: 'nav-sitemap','true' %}
+{%- assign authors = site.authors | where: 'nav-sitemap','true' %}
 {% for page in pages %}  <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     <lastmod>{{ page.date }}</lastmod>
@@ -16,6 +17,11 @@ layout: null
 {%- for post in posts %}  <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
     <lastmod>{{ post.date }}</lastmod>
+  </url>
+{%- endfor %}
+{%- for author in authors %}  <url>
+    <loc>{{ site.url }}{{ author.url }}</loc>
+    <lastmod>{{ author.date }}</lastmod>
   </url>
 {%- endfor %}
 </urlset>

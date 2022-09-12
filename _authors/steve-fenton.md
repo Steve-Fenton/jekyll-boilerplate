@@ -7,6 +7,9 @@ url_short: stevefenton.co.uk
 bio: Steve is the creator of Jekyll Boilerplate
 picture: assets/img/authors/steve-fenton.webp
 twitter: _stevefenton
+date: 2022-09-12
+nav-sitemap: true
+nav-search: true
 ---
 
 This is some information about Steve Fenton.
