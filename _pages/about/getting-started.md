@@ -32,7 +32,7 @@ There are just a couple of tasks to turn the Jekyll Boilerplate into your own wo
 
 ## Adjusting the Theme
 
-You can then edit the CSS variables, or write your own stylesheet. We strongly recommend sticking with the supplied HTML and using your CSS chops to make style changes.
+You can then edit the CSS variables in `/assets/css/vars.css`, or completely replace the stylesheets. We strongly recommend sticking with the supplied HTML and using your CSS chops to make style changes.
 
 ## Writing Content
 
