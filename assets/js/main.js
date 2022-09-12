@@ -241,9 +241,11 @@ function addMobileNavigation(iconSelector, navigationSelector) {
     function closeMobileMenu() {
         document.body.style.overflow = 'auto';
 
-        overlay.innerHTML = '';
-        overlay.style.display = 'none';
-        document.body.removeChild(overlay);
+        if (icon.getAttribute(dataOpen) === dataOpen) {
+            overlay.innerHTML = '';
+            overlay.style.display = 'none';
+            document.body.removeChild(overlay);
+        }
 
         icon.innerHTML = originalIcon;
         icon.removeAttribute(dataOpen);
