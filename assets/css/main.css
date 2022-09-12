@@ -329,6 +329,10 @@ nav.site-nav li.has-children ul a {
     text-indent: calc(var(--marker-size) * 2);
 }
 
+nav.site-nav .current-item {
+    font-weight: bold;
+}
+
 details summary {
     cursor: pointer;
 }
