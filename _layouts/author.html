@@ -25,7 +25,7 @@ layout: default
 
     {% for post in site.posts %}
         {% if post.authors contains page.username or page.username == post.authors %}
-            <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ site.url }}{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         {% endif %}
     {% endfor %}
   </main>

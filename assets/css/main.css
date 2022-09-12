@@ -493,6 +493,12 @@ main ul li, main ol li {
 
 /* Code Block */
 
+code {
+    background-color: var(--aft-block);
+    font-family: var(--code-font);
+    font-weight: bold;
+}
+
 pre.highlight {
     border-left: 5px solid var(--fore);
     padding: 1rem;
@@ -501,8 +507,9 @@ pre.highlight {
     margin: 1em 0;
 }
 
-code {
-    font-family: var(--code-font);
+pre.highlight code {
+    font-weight: unset;
+    background-color: unset;
 }
 
 /* Site Search */

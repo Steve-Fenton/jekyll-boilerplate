@@ -4,7 +4,17 @@ An opinionated boilerplate Jekyll site with its own theme, which allows you to s
 
 More information is available at: <https://jekyll.stevefenton.co.uk/>
 
-# Credits
+## Grabbing the Repo
+
+Make sure you have the [prerequisites](https://jekyllrb.com/docs/)
+
+Download the repo and run...
+
+    jekyll-boilerplate>bundler
+
+    jekyll-boilerplate>jekyll serve
+
+## Credits
 
 I found useful content in the following places!
 

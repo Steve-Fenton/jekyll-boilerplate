@@ -1,0 +1,5 @@
+---
+layout: null
+---
+Sitemap: {{ site.url }}{{ '/sitemap.xml' | prepend: site.baseurl }}
+User-agent: *
