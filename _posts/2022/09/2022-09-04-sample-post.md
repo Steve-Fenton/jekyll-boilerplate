@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Example Post 4
-permalink: /2022/09/example-post-4/
+permalink: /articles/2022/09/example-post-4/
 date: 2022-09-04
 authors: steve-fenton
 excerpt: This is a test post.
