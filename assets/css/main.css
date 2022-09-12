@@ -300,6 +300,11 @@ nav.site-nav.sticky {
     position: sticky;
 }
 
+nav.site-nav h2 {
+    margin-top: 0.1em;
+    display: none;
+}
+
 nav.site-nav li {
     list-style: none;
 }
@@ -525,6 +530,10 @@ form.site-search button {
     main {
         max-width: unset;
         width: var(--grid-width);
+    }
+
+    nav.site-nav h2 {
+        display: block;
     }
 
     /*  */
