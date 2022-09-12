@@ -400,6 +400,26 @@ main ul li, main ol li {
     text-align: center;
 }
 
+/* Jekyll Post */
+.post-meta {
+    display: flex;
+    align-items: center;
+}
+
+.post-meta .author-image {
+    max-width: 50px;
+    margin-right: 1rem;
+}
+
+.post-meta > .author-info {
+    display: flex;
+    align-items: center;
+}
+
+.post-meta time {
+    display: block;
+}
+
 /* Authors */
 
 .author-image {

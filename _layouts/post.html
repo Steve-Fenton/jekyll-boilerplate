@@ -5,11 +5,31 @@ layout: default
     <header>
 	    <h1>{{ page.title }}</h1>
     </header>
-    <div class="f-post-meta">
+    <div class="post-meta">
         {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {{ page.date | date: date_format }}
-        </time>
+            {%- assign authordata = '' | split:'@' %}
+            {%- for author in site.authors %}
+                {%- if page.authors contains author.username or author.username == page.authors %}
+                    {%- if page.authors.first %}
+                        {%- if page.authors.first == author.username %}
+        <img src="/{{ author.picture }}" alt="{{ author.name }}" class="author-image" />
+                        {%- endif %}
+                    {%- elsif forloop.first and author.picture %}
+        <img src="/{{ author.picture }}" alt="{{ author.name }}" class="author-image" />
+                    {%- endif %}
+                    {%- capture data %}
+                        <a href="{{ site.url }}{{ site.baseurl }}/author/{{ author.username }}">{{ author.name }}</a>
+                    {%- endcapture %}
+                    {%- assign authordata = authordata | push: data %}
+                {%- endif %}
+            {%- endfor %}
+        <div class="author-info">
+            <span>Written by {{ authordata | array_to_sentence_string }}
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"></time>
+                {{ page.date | date: date_format }}
+            </time>
+            </span>
+        </div>
         {%- if page.modified_date -%}
             ~ 
             {%- assign mdate = page.modified_date | date_to_xmlschema -%}
@@ -21,16 +41,4 @@ layout: default
     <div>
         {{ content }}
     </div>
-    <div>
-        {% assign authordata = '' | split:'@' %}
-        {% for author in site.authors %}
-            {% if page.authors contains author.username or author.username == page.authors %}
-                {% capture data %}
-                    <a href="{{ site.url }}{{ site.baseurl }}/author/{{ author.username }}">{{ author.name }}</a>
-                {% endcapture %}
-                {% assign authordata = authordata | push: data %}
-            {% endif %}
-        {% endfor %}
-        <p>Written by {{ authordata | array_to_sentence_string }}</p>
-    </div>
-</main>
+  </main>

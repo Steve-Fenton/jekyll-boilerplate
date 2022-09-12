@@ -7,15 +7,15 @@
       {%- assign current = page.nav-title | default: page.title %}
       {%- if (current != previous) %}
       {%- assign previous = page.nav-title | default: page.title %}
-      {%- assign sub_pages = site.pages | where: 'nav-level', page.title | sort: 'nav-order' -%}
+      {%- assign sub_pages = site.pages | where: 'nav-level', page.title | sort: 'nav-order' %}
       <li{%- if sub_pages.size > 0 %} class="has-children"{% endif %}>
         {%- if sub_pages.size > 0 %}
         <details class="sub-nav">
           <summary><span>{{ page.nav-section | default: page.nav-title | default: page.title }}</span></summary>
         {%- else %}
         <a href="{{ page.url | regex_replace: regex,'/' | prepend: site.baseurl }}">{{ page.nav-title | default: page.title }}</a>
-        {%- endif %}
-        {%- if sub_pages.size > 0 %}
+        {%- endif -%}
+        {% if sub_pages.size > 0 %}
           <ul>
             <li>
               <a href="{{ page.url | regex_replace: regex,'/' | prepend: site.baseurl }}">{{ page.nav-title | default: page.title }}</a>
