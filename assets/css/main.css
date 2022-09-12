@@ -426,8 +426,13 @@ main ul li, main ol li {
     border-radius: 50%;
     aspect-ratio: 1/1;
     object-fit: cover;
-    max-width: 200px;
+    max-width: 150px;
+    float: right
 }
+
+/* .author-profile {
+    display: flex;
+} */
 
 /* Code Block */
 

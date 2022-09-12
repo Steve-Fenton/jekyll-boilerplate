@@ -12,24 +12,8 @@ nav-sitemap: true
 nav-search: true
 ---
 
-Jekyll requires blog post files to be named according to the following format:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet elit sodales, egestas odio eu, interdum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elit odio, dapibus nec finibus sit amet, aliquam a tortor.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Sed ultricies sollicitudin ipsum at bibendum. Nulla euismod erat arcu, vel convallis risus sagittis non. Fusce scelerisque arcu nec blandit dictum. In vel ultricies nisi. Vivamus pharetra, nibh sit amet semper tristique, leo sapien scelerisque risus, a pharetra tortor lectus at nisl.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Vestibulum dui mauris, mattis mattis hendrerit non, aliquam non sem. Nullam orci arcu, viverra vel quam sed, dapibus porta dui. Etiam venenatis ipsum eget mi sodales lobortis. Donec varius non metus eget congue. Suspendisse quis mauris vitae lectus porttitor placerat at quis sapien.

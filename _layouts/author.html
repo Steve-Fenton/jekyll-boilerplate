@@ -5,27 +5,35 @@ layout: default
     <header>
 	    <h1>{{ page.name }}</h1>
     </header>
-    <div>
-        {% if page.picture %}
+    <div class="author-profile">
+        {%- if page.picture %}
         <img src="/{{ page.picture }}" alt="{{ page.name }}" class="author-image" />
-        {% endif %}
-
-        {% if page.url_short and page.url_full %}
-        <a href="{{ page.url_full }}" target="_blank" rel="noopener">{{ page.url_short }}</a>
-        {% endif %}
-
-        {% if page.twitter %}
-        <a href="https://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener">
-            Twitter
-        </a>
-        {% endif %}
+        {%- endif %}
 
         {{ content }}
-    </div>
 
-    {% for post in site.posts %}
-        {% if post.authors contains page.username or page.username == post.authors %}
-            <a href="{{ site.url }}{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        {% endif %}
-    {% endfor %}
+        {%- if page.url_short and page.url_full %}
+        <p><a href="{{ page.url_full }}" target="_blank" rel="noopener">{{ page.url_short }}</a></p>
+        {%- endif %}
+
+        {%- if page.twitter %}
+        <p><a href="https://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener">Twitter</a></p>
+        {%- endif %}
+    </div>
+    <div>
+        <h2>Recent Articles</h2>
+        <ul>
+        {%- assign found = 0 %}
+        {%- for post in site.posts %}
+            {%- if post.authors contains page.username or page.username == post.authors %}
+                {%- assign found = found | plus: 1 %}
+                {%- if found > 3 %}
+                    {% break %}
+                {%- else %}
+            <li><a href="{{ site.url }}{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                {%- endif %}
+            {%- endif %}
+        {%- endfor %}
+        </ul>
+    </div>
   </main>
