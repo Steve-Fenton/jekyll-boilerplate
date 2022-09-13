@@ -48,12 +48,14 @@ _config.yml
 
     theme: fenton-jekyll-boilerplate
 
+I'll create a zip file that contains a starter pack...
+
 ### Folders
 
-articles
-feed
-search
-sitemap
+articles/
+feed/
+search/
+sitemap/
 
 ### Files
 
