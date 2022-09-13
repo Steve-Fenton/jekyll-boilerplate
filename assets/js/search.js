@@ -91,9 +91,9 @@ function search(s) {
     }
 
     var h2 = document.createElement('h2');
-    h2.innerHTML =  needles.length === 0
-        ? 'No Results'
-        : 'Results';
+    h2.innerHTML = needles.length === 0
+        ? results.dataset.emptytitle || 'No Results'
+        : results.dataset.title || 'Results';
 
     results.innerHTML = '';
     results.appendChild(h2);

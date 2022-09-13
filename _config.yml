@@ -13,6 +13,9 @@ destination: _site
 # The website URL
 url: https://jekyll.stevefenton.co.uk
 
+# Sets the language of included text strings
+language: en
+
 # Sets the theme colour for browsers
 theme_color_hex: 333333
 # Sets the date format

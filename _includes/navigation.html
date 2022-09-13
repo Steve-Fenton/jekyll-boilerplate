@@ -1,5 +1,5 @@
 <nav class="site-nav" id="site-nav">
-  <h2 class="site-nav-title">Navigation</h2>
+  <h2 class="site-nav-title">{{ 'navigation' | t: 'title' }}</h2>
   <ul>
   {%- assign previous = null %}
   {%- assign regex = '/' | append: site.paginate_page | append: '[0-9]/' %}

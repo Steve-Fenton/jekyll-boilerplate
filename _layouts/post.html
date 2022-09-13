@@ -24,7 +24,7 @@ layout: default
                 {%- endif %}
             {%- endfor %}
         <div class="author-info">
-            <span>Written by {{ authordata | array_to_sentence_string }}
+            <span>{{ 'post' | t: 'written_by' }} {{ authordata | array_to_sentence_string }}
             <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"></time>
                 {{ page.date | date: date_format }}
             </time>

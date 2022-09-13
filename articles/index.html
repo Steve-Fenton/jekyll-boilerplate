@@ -13,7 +13,7 @@ nav-search: true
 # Don't use permalink on list pages
 ---
 <main id="site-main">
-  <h1>Articles</h1>
+  <h1>{{ 'articles' | t: 'title' }}</h1>
   {%- if site.paginate %}
     {% assign posts = paginator.posts %}
   {% else %}
@@ -45,9 +45,9 @@ nav-search: true
   {% if paginator.total_pages > 1 %}
   <div class="post-paging">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; {{ 'articles' | t: 'previous' }}</a>
     {% else %}
-      <span>&laquo; Prev</span>
+      <span>&laquo; {{ 'articles' | t: 'previous' }}</span>
     {% endif %}
   
     {% for page in (1..paginator.total_pages) %}
@@ -60,9 +60,9 @@ nav-search: true
     {% endfor %}
   
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+      <a href="{{ paginator.next_page_path | relative_url }}">{{ 'articles' | t: 'next' }} &raquo;</a>
     {% else %}
-      <span>Next &raquo;</span>
+      <span>{{ 'articles' | t: 'next' }} &raquo;</span>
     {% endif %}
   </div>
   {% endif %}

@@ -17,11 +17,11 @@ layout: default
         {%- endif %}
 
         {%- if page.twitter %}
-        <p><a href="https://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener">Twitter</a></p>
+        <p><a href="https://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener">{{ 'author' | t: 'twitter' }}</a></p>
         {%- endif %}
     </div>
     <div>
-        <h2>Recent Articles</h2>
+        <h2>{{ 'author' | t: 'recent_articles' }}</h2>
         <ul>
         {%- assign found = 0 %}
         {%- for post in site.posts %}
