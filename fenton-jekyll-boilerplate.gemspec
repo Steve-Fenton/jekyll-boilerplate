@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
     spec.homepage      = "https://jekyll.stevefenton.co.uk/"
     spec.license       = "Apache-2.0"
    
-    spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|articles|feed|sitemap|_authors|_data|_layouts|_includes|_plugins|LICENSE|README.md|search.json|sitemap.xml)}i) }
+    spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_authors|_data|_layouts|_includes|_plugins|LICENSE|README.md|search.json|sitemap.xml)}i) }
    
     spec.add_development_dependency "jekyll", "~> 3.3"
     spec.add_development_dependency "bundler", "~> 1.12"
