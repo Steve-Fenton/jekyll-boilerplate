@@ -15,4 +15,4 @@ var resizedEventName = addResizedEvent();
 
 addStickyNavigation('.site-header', '.site-nav', '.site-nav > ul', resizedEventName);
 addMobileNavigation('.navigation-icon', '.site-nav', resizedEventName);
-addIntersectionObserver('.post-list .list-item');
+addIntersectionObserver('.post-list .list-item, main img, main .note, main blockquote');

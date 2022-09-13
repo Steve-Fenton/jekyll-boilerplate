@@ -46,12 +46,19 @@ Full details of standard [Jekyll front-matter](https://jekyllrb.com/docs/front-m
 
 - `excerpt`: Used on list pages (fallback `description`)
 - `description`: Used in the meta tag and where exerpts are used on the site
+- `keywords`: Used for the keywords meta tag
 - `nav-title`: Used in the site navigation, allowing a shorter title to be used in the menu (fallback `title`)
 - `nav-section`: Where the content has child content, this allows the navigation section to be named separately to the content (fallback `nav-title` then `title`)
 - `nav-level`: The name of the parent page, or `1` for top-level pages
 - `nav-order`: Used to order the content in the site navigation
 - `nav-sitemap`: Whether to add the content to `sitemap.xml`
 - `nav-search`: Whether to add the content to the site search
+- `banner-image`: An image used in list views and open-graph data
+- `banner-image-alt`: Used where the banner image is shown on a page
+
+## Recommendation: Go Nuts
+
+If you want to take control of your website and provide a superb experience in the widest use cases (social, sharing, SEO, usability, accessibility)... you should specifiy maximum front-matter.
 
 ## Full Example
 
@@ -68,6 +75,8 @@ description: A list of all custom front-matter features in Jekyll Boilerplate.
 nav-title: Front Matter
 nav-level: About Jekyll Boilerplate
 nav-order: 2000
+banner-image: /assets/img/2022/09/featured-700.webp
+banner-image-alt: Description of the banner image
 published: true
 nav-sitemap: true
 nav-search: true

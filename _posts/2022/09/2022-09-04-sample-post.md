@@ -7,6 +7,8 @@ authors: steve-fenton
 excerpt: This is a test post.
 categories: articles
 tags: sample post
+banner-image: /assets/img/2022/09/surface-accessories-700.webp
+banner-image-alt: Microsoft Surface headphones and ergonomic keyboard
 published: true
 nav-sitemap: true
 nav-search: true

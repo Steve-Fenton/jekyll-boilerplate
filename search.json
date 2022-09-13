@@ -8,7 +8,7 @@ layout: null
   {% for page in pages %}{
     "title"    : "{{ page.title | escape }}",
     "category" : "{{ page.category }}",
-    "tags"     : "{{ page.tags | join: ', ' }}",
+    "tags"     : "{{ page.tags | join: ' ' }} {{page.keywords}}",
     "url"      : "{{ site.baseurl }}{{ page.url }}",
     "date"     : "{{ page.date }}"
   }
@@ -18,7 +18,7 @@ layout: null
   {%- for author in authors %}{
     "title"    : "{{ author.name | escape }}",
     "category" : "{{ author.category }}",
-    "tags"     : "{{ author.tags | join: ', ' }}",
+    "tags"     : "{{ page.tags | join: ' ' }} {{page.keywords}}",
     "url"      : "{{ site.baseurl }}{{ author.url }}",
     "date"     : "{{ author.date }}"
   }
@@ -28,7 +28,7 @@ layout: null
   {%- for post in posts %}{
     "title"    : "{{ post.title | escape }}",
     "category" : "{{ post.category }}",
-    "tags"     : "{{ post.tags | join: ', ' }}",
+    "tags"     : "{{ page.tags | join: ' ' }} {{page.keywords}}",
     "url"      : "{{ site.baseurl }}{{ post.url }}",
     "date"     : "{{ post.date }}"
   }

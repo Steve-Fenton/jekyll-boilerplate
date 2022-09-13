@@ -54,7 +54,7 @@ summary:focus {
         scroll-behavior: smooth;
     }
 
-    .post-list .list-item {
+    .post-list .list-item, main img, main blockquote, main .note {
         transition: all 0.2s ease-in;
         scale: calc(0.75 + (var(--shown, 1) * 0.25));
     }

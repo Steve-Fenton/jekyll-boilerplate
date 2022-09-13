@@ -5,6 +5,7 @@ permalink: /
 date:   2022-09-06
 authors: steve-fenton
 description: A boilderplate for a very clean version of Jekyll.
+keywords: jekyll,boilerplate,site generator
 nav-title: Home
 nav-level: 1
 nav-order: 0
@@ -13,7 +14,7 @@ nav-sitemap: true
 nav-search: true
 ---
 
-Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for [Jekyll](https://jekyllrb.com/).
+Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for the [Jekyll](https://jekyllrb.com/) site generator.
 
 :::note
 The Jekyll Boilerplate source code is available on [GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate){:target="_blank"}.
