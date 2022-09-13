@@ -14,7 +14,7 @@ nav-search: true
 ---
 <main id="site-main">
   <h1>{{ 'articles' | t: 'title' }}</h1>
-  {%- if site.paginate %}
+  {%- if site.page_size != nil %}
     {% assign posts = paginator.posts %}
   {% else %}
     {% assign posts = site.posts %}

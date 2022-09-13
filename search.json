@@ -1,9 +1,9 @@
 ---
 layout: null
 ---
-{% assign pages = site.pages | where: 'nav-search', 'true' %}
-{% assign posts = site.posts | where: 'nav-search', 'true' %}
-{% assign authors = site.authors | where: 'nav-search', 'true' %}
+{%- assign pages = site.pages | where: 'nav-search', 'true' %}
+{%- assign posts = site.posts | where: 'nav-search', 'true' %}
+{%- assign authors = site.authors | where: 'nav-search', 'true' %}
 [
   {% for page in pages %}{
     "title"    : "{{ page.title | escape }}",
