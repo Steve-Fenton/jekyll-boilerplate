@@ -21,3 +21,5 @@ I found useful content in the following places!
 https://jetholt.com/jekyll/
 
 https://dev.to/m0nica
+
+https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/jekyll/

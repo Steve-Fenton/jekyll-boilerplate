@@ -14,7 +14,7 @@ destination: _site
 url: https://jekyll.stevefenton.co.uk
 
 # Sets the language of included text strings
-language: en
+language: en #en, fr, fr-be, etc
 
 # Sets the theme colour for browsers
 theme_color_hex: 333333
