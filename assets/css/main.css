@@ -53,6 +53,11 @@ summary:focus {
     body, html {
         scroll-behavior: smooth;
     }
+
+    .post-list .list-item {
+        transition: all 0.2s ease-in;
+        scale: calc(0.75 + (var(--shown, 1) * 0.25));
+    }
 }
 
 blockquote {
