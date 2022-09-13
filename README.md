@@ -14,6 +14,12 @@ Download the repo and run...
 
     jekyll-boilerplate>jekyll serve
 
+## Reminders on GEMs
+
+    gem build fenton-jekyll-boilerplate.gemspec
+
+    gem push fenton-jekyll-boilerplate-0.0.1.gem
+
 ## Credits
 
 I found useful content in the following places!
