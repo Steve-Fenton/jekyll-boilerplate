@@ -48,17 +48,35 @@ _config.yml
 
     theme: fenton-jekyll-boilerplate
 
-I'll create a zip file that contains a starter pack...
+When you first set up your site, it's worth adding a set of files that makes sure you have all features available.
 
 ### Folders
 
-articles/
-feed/
-search/
-sitemap/
+- `/articles/`: This contains the list page that supports pages lists of articles
+- `feed/`: This contains ATOM feeds for your site
+- `search/`: This contains a customisable search template and search data generation
+- `sitemap/`: This contains sitemaps for pages, articles, and authors
 
 ### Files
 
-robots.txt
-sitemap.xml
-favicon.ico
+- `robots.txt`: You can supply your own, but make sure you have one
+- `sitemap.xml`: Contains the list of sitemaps available - give this to search engines
+- `favicon.ico`: A default icon, replace it with your own
+
+### Overrides
+
+Files in the theme will be used, unless you supply an alternate version of the same file. This means you can just use things out of the box, or you can override one or more files.
+
+We have some recommended files to customise, as well as a list of more advanced replacements you can make.
+
+**Recommended**
+
+- `/assets/css/vars.css` see [vars.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/vars.css)
+- `/assets/icons/` see [icons on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/tree/main/assets/icons)
+
+**Advanced**
+
+- `/assets/css/main.css` see [main.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/main.css)
+- `/assets/css/code.css` see [code.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/code.css)
+
+
