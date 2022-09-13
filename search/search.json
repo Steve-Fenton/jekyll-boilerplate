@@ -1,5 +1,6 @@
 ---
 layout: null
+permalink: /search.json
 ---
 {%- assign pages = site.pages | where: 'nav-search', 'true' %}
 {%- assign posts = site.posts | where: 'nav-search', 'true' %}

@@ -58,7 +58,5 @@ sitemap
 ### Files
 
 robots.txt
-search.json
 sitemap.xml
 favicon.ico
-pages/search.md
