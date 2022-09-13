@@ -1,44 +1,37 @@
 ---
 layout: default
 ---
-<main id="site-main">
-    <header>
-	    <h1>{{ page.title }}</h1>
-    </header>
-    <div class="post-meta">
+  <main id="site-main">
+      <header>
+        <h1>{{ page.title }}</h1>
+      </header>
+      <div class="post-meta">
         {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-            {%- assign authordata = '' | split:'@' %}
-            {%- for author in site.authors %}
-                {%- if page.authors contains author.username or author.username == page.authors %}
-                    {%- if page.authors.first %}
-                        {%- if page.authors.first == author.username %}
+        {%- assign authordata = '' | split:'@' %}
+        {%- for author in site.authors %}
+          {%- if page.authors contains author.username or author.username == page.authors %}
+            {%- if page.authors.first %}
+              {%- if page.authors.first == author.username %}
         <img src="/{{ author.picture }}" alt="{{ author.name }}" class="author-image" />
-                        {%- endif %}
-                    {%- elsif forloop.first and author.picture %}
+              {%- endif %}
+            {%- elsif forloop.first and author.picture %}
         <img src="/{{ author.picture }}" alt="{{ author.name }}" class="author-image" />
-                    {%- endif %}
-                    {%- capture data %}
-                        <a href="{{ site.url }}{{ site.baseurl }}/author/{{ author.username }}/">{{ author.name }}</a>
-                    {%- endcapture %}
-                    {%- assign authordata = authordata | push: data %}
-                {%- endif %}
-            {%- endfor %}
+            {%- endif %}
+            {%- capture data -%}
+            <a href="{{ site.url }}{{ site.baseurl }}/author/{{ author.username }}/">{{ author.name }}</a>
+            {%- endcapture %}
+            {%- assign authordata = authordata | push: data %}
+          {%- endif %}
+        {%- endfor %}
         <div class="author-info">
-            <span>{{ 'post' | t: 'written_by' }} {{ authordata | array_to_sentence_string }}
+          <span>{{ 'post' | t: 'written_by' }} {{ authordata | array_to_sentence_string }}
             <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"></time>
-                {{ page.date | date: date_format }}
+              {{ page.date | date: date_format }}
             </time>
-            </span>
+          </span>
         </div>
-        {%- if page.modified_date -%}
-            ~ 
-            {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-            <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-            {{ mdate | date: date_format }}
-            </time>
-        {%- endif -%}
-    </div>
-    <div>
-        {{ content }}
-    </div>
-  </main>
+      </div>
+      <div>
+          {{ content }}
+      </div>
+    </main>
