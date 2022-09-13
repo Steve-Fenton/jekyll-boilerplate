@@ -37,3 +37,28 @@ You can then edit the CSS variables in `/assets/css/vars.css`, or completely rep
 ## Writing Content
 
 Check out the [custom front matter](/about/front-matter/) to see how you can control how content is displayed in navigation. You can set short-titles and section titles for menu items.
+
+## Using Jekyll Boilerplate as a GEM
+
+gemfile
+
+    gem "fenton-jekyll-boilerplate", "~> 0.0.1"
+
+_config.yml
+
+    theme: fenton-jekyll-boilerplate
+
+### Folders
+
+articles
+feed
+search
+sitemap
+
+### Files
+
+robots.txt
+search.json
+sitemap.xml
+favicon.ico
+pages/search.md
