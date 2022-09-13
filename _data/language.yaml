@@ -1,3 +1,9 @@
+# Translations for template text
+#
+# template:
+#   term:
+#     en: Translation
+
 skiplinks:
   skip_to_navigation:
     en: Skip to navigation
