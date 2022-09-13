@@ -15,7 +15,7 @@ nav-search: true
 
 To run Jekyll locally, set up the pre-requisites, download the code, and run a couple of commands.
 
-- Install the [pre-requisites](https://jekyllrb.com/docs/). You can then grab
+- Install the [pre-requisites](https://jekyllrb.com/docs/)
 - Download the [Jekyll Boilerplate code from GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate)
 - Run the `bundler` command from the root folder
 - Run the site using `jekyll serve`
