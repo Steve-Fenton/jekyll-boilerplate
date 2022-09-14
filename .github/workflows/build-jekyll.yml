@@ -30,9 +30,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build book
+      - name: Move files
         run: |-
           cd ${{ github.workspace }}
+          ls
           mkdir -p _zip
           cp -r /_authors /_zip/_authors
           cp -r /_data /_zip/_data
