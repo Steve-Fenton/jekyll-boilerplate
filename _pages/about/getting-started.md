@@ -52,21 +52,16 @@ When you first set up your site, it's worth adding a set of files that makes sur
 
 ### Folders
 
-- `_authors/`: This contains the list page that supports pages lists of articles
+- `_authors/`: Sample author data, which you can replace / extend
 - `articles/`: This contains the list page that supports pages lists of articles
-- `feed/`: This contains ATOM feeds for your site
-- `search/`: This contains a customisable search template and search data generation
-- `sitemap/`: This contains sitemaps for pages, articles, and authors
 
 ### Files
 
-- `robots.txt`: You can supply your own, but make sure you have one
-- `sitemap.xml`: Contains the list of sitemaps available - give this to search engines
-- `favicon.ico`: A default icon, replace it with your own
+- `favicon.ico`: A default icon, or replace it with your own
 
 Jekyll version < 4.3.0
 
-- `_data/language.yml`: Only required for version of Jekyll prior to 4.3.0 - contains translations for the UI
+- `_data/language.yml`: Only required for versions of Jekyll prior to 4.3.0 - contains translations for the UI
 
 ### Overrides
 
@@ -74,14 +69,46 @@ Files in the theme will be used, unless you supply an alternate version of the s
 
 We have some recommended files to customise, as well as a list of more advanced replacements you can make.
 
-**Recommended**
+#### Recommended
 
-- `/assets/css/vars.css` see [vars.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/vars.css)
-- `/assets/icons/` see [icons on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/tree/main/assets/icons)
+- `assets`
+  - `css`
+    - `vars.css` see [vars.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/vars.css)
+  - `icons` see [icons on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/tree/main/assets/icons)
+    - `android-chrome-192x192.png` (192x192)
+    - `android-chrome-512x512.png` (512x512)
+    - `apple-touch-icon.png` (180x180)
+    - `favicon.ico` (48x48)
+    - `favicon-16x16.png` (16x16)
+    - `favicon-32x32.png` (32x32)
 
-**Advanced**
+#### Advanced
 
 - `/assets/css/main.css` see [main.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/main.css)
 - `/assets/css/code.css` see [code.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/code.css)
 
+##### Sitemap and Feeds
+
+- `assets`
+  - `sitemap`
+    - `atom.xml`: A feed of recent posts, for feed readers and subscriptions
+    - `sitemap.xml`: A sitemap list that points to the authors, pages, and posts site maps
+    - `authors.xml`: A sitemap for authors
+    - `pages.xml`: A sitemap for pages
+    - `posts.xml`: A sitemap for posts
+
+##### Robot File
+
+We recommend you adjust your robot file via the `site.robots_txt` variable. If you really want to replace it with your own, override the theme file:
+
+- `assets`
+  - `sitemap`
+    - `robots.txt`: Uses `permalink: /robots.txt` to push the file to the base folder
+
+##### Search
+
+- `assets`
+  - `search`
+    - `search.json`: Data for the site search feature
+    - `search.md`: The search page (you could override this to place content above the search)
 
