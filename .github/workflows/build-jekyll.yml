@@ -35,19 +35,19 @@ jobs:
           cd ${{ github.workspace }}
           ls
           mkdir -p _zip
-          cp -r /_authors /_zip/_authors
-          cp -r /_data /_zip/_data
-          cp -r /articles /_zip/articles
-          cp -r /feed /_zip/feed
-          cp -r /search /_zip/search
-          cp -r /sitemap /_zip/sitemap
-          cp -r /robots.txt /_zip/
-          cp -r /sitemap.xml /_zip/
-          cp -r /favicon.ico /_zip/
+          cp -r _authors _zip/_authors
+          cp -r _data _zip/_data
+          cp -r articles _zip/articles
+          cp -r feed _zip/feed
+          cp -r search _zip/search
+          cp -r sitemap _zip/sitemap
+          cp -r robots.txt _zip
+          cp -r sitemap.xml _zip
+          cp -r favicon.ico _zip
 
       - uses: vimtor/action-zip@v1
         with:
-          files: /_zip/
+          files: _zip/
           recursive: true
           dest: ${{ github.workspace }}/starter-pack.zip
 
