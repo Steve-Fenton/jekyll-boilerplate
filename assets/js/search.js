@@ -123,7 +123,7 @@ function debounceSearch() {
     }, 400);
 }
 
-fetch('/search.json')
+fetch(dataUrl)
     .then(function (response) { 
         return response.json();
     })

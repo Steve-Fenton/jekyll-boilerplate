@@ -9,14 +9,14 @@
 	<meta name="msapplication-navbutton-color" content="#{{site.theme_color_hex}}" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="#{{site.theme_color_hex}}" />
 	<meta property="og:title" content="{{ page.title }}" />
-	<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}" />
+	<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html',''}}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="{{ page.description }}" />
 	{%- if post.banner-image -%}
 	<meta property="og:image" content="{{ page.banner-image }}" />
 	{%- endif %}
-	<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}" />
-	<link rel="alternate" type="application/rss+xml" title="Steve Fenton &raquo; Feed" href="https://www.stevefenton.co.uk/feed/" />
+	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html',''}}" />
+	<link rel="alternate" type="application/rss+xml" title="Steve Fenton &raquo; Feed" href="https://www.stevefenton.co.uk{{ site.baseurl }}/feed/" />
 	<link rel="shortcut icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="{{ "/assets/icons/apple-touch-icon.png" | prepend: site.baseurl }}" />
 	<link rel="alternate" href="{{ "/sitemap.xml" | prepend: site.baseurl }}" type="application/rss+xml" />
