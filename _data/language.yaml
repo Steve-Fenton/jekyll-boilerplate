@@ -3,6 +3,9 @@
 # template:
 #   term:
 #     en: Translation
+#
+# If you are running Jekyll v4.3.0 or higher, you don't need this file in your site
+# as it will be read from the theme's _data folder
 
 skiplinks:
   skip_to_navigation:

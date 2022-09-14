@@ -52,17 +52,21 @@ When you first set up your site, it's worth adding a set of files that makes sur
 
 ### Folders
 
-- `/articles/`: This contains the list page that supports pages lists of articles
-- `/authors/`: This contains the list page that supports pages lists of articles
-- `/feed/`: This contains ATOM feeds for your site
-- `/search/`: This contains a customisable search template and search data generation
-- `/sitemap/`: This contains sitemaps for pages, articles, and authors
+- `articles/`: This contains the list page that supports pages lists of articles
+- `authors/`: This contains the list page that supports pages lists of articles
+- `feed/`: This contains ATOM feeds for your site
+- `search/`: This contains a customisable search template and search data generation
+- `sitemap/`: This contains sitemaps for pages, articles, and authors
 
 ### Files
 
 - `robots.txt`: You can supply your own, but make sure you have one
 - `sitemap.xml`: Contains the list of sitemaps available - give this to search engines
 - `favicon.ico`: A default icon, replace it with your own
+
+Jekyll version < 4.3.0
+
+- `_data/language.yml`
 
 ### Overrides
 
