@@ -17,7 +17,7 @@ This page contains the most common content components, such as:
 
 - [Block Quotes](#block-quote)
 - [Code](#code)
-- [Custom Elements](#custom-element)
+- [Custom Elements](#custom-elements)
 - [Images](#images)
 - [Lists](#lists)
 - [Horizontal Rules](#horizontal-rule)
@@ -91,20 +91,46 @@ A code block with a language set.
 const elem = document.querySelector('.elem');
 ```
 
-## Custom Element
+## Custom Elements
+
+### Note
 
 Markdown:
 
 ```markdown
-:::note
-This is a custom div element with the class `note`
-:::
+ :::note
+ This is a custom div element with the class `note`
+ :::
 ```
 
 Result:
 
 :::note
 This is a custom div element with the class `note`
+:::
+
+### Simple Grid
+
+Markdown:
+
+```markdown
+ :::simple-grid
+
+ ![An old book front for Jekyll and Hyde](/assets/img/jekyll-and-hyde.webp){:loading="lazy"}
+
+ ![An old book front for Jekyll and Hyde](/assets/img/jekyll-and-hyde.webp){:loading="lazy"}
+
+ :::
+```
+
+Result:
+
+:::simple-grid
+
+![An old book front for Jekyll and Hyde](/assets/img/jekyll-and-hyde.webp){:loading="lazy"}
+
+![An old book front for Jekyll and Hyde](/assets/img/jekyll-and-hyde.webp){:loading="lazy"}
+
 :::
 
 ## Images

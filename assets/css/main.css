@@ -68,7 +68,7 @@ blockquote {
     padding: 0.1px 1.2em;
     position: relative;
     box-shadow: var(--box-shadow);
-
+    margin: 1.2em 0;
 }
 
 blockquote::after {
@@ -507,6 +507,16 @@ form.site-search button {
     padding: 0.1px 1.2em;
     position: relative;
     box-shadow: var(--box-shadow);
+}
+
+.simple-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.simple-grid > * > * {
+    width: 100%;
 }
 
 /* Smaller Screens */
