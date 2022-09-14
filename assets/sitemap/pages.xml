@@ -1,15 +1,16 @@
 ---
 layout: null
+permalink: /sitemap/pages.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9.xsd">
-{%- assign posts = site.posts | where: 'nav-sitemap','true' %}
-{%- for post in posts %}  <url>
-    <loc>{{ site.url }}{{ post.url }}</loc>
-    <lastmod>{{ post.date }}</lastmod>
+{%- assign pages = site.pages | where: 'nav-sitemap','true' %}
+{% for page in pages %}  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.date }}</lastmod>
   </url>
-{%- endfor %}
+{% endfor %}
 </urlset>

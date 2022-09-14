@@ -1,5 +1,6 @@
 ---
 layout: null
+permalink: robots.txt
 ---
 Sitemap: {{ site.url }}{{ '/sitemap.xml' | prepend: site.baseurl }}
-User-agent: *
+{{ site.robots_txt }}

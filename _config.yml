@@ -16,6 +16,9 @@ url: https://jekyll.stevefenton.co.uk
 # Sets the language of included text strings
 language: en #en, fr, fr-be, etc
 
+robots_txt: >-
+  User-agent: *
+
 # Sets the theme colour for browsers
 theme_color_hex: 333333
 # Sets the date format
