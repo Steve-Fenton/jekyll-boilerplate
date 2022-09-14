@@ -42,7 +42,7 @@ Check out the [custom front matter](/about/front-matter/) to see how you can con
 
 Add the following to your `Gemfile`:
 
-gem "fenton-jekyll-boilerplate", "~> 0.0.8"
+gem "fenton-jekyll-boilerplate", "~> 0.0.10"
 gem "fenton-jekyll-plugin", "~> 0.0.4"
 
 Add the following to your `_config.yml`:

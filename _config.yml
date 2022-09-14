@@ -6,9 +6,9 @@ owner: Steve Fenton
 description: >-
   Jekyll Boilerplate is a theme-less, plugin-less clean starting point
   for Jekyll sites where you want to run only your own code.
-# The subpath of your site, e.g. /blog
+# The subpath of your site, e.g. "/blog"
 baseurl: ""
-# The output folder
+# The output folder (update this to match the baseurl, if you change it, e.g. _site/blog)
 destination: _site
 # The website URL
 url: https://jekyll.stevefenton.co.uk
