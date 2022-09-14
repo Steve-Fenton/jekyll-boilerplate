@@ -53,9 +53,10 @@ When you first set up your site, it's worth adding a set of files that makes sur
 ### Folders
 
 - `/articles/`: This contains the list page that supports pages lists of articles
-- `feed/`: This contains ATOM feeds for your site
-- `search/`: This contains a customisable search template and search data generation
-- `sitemap/`: This contains sitemaps for pages, articles, and authors
+- `/authors/`: This contains the list page that supports pages lists of articles
+- `/feed/`: This contains ATOM feeds for your site
+- `/search/`: This contains a customisable search template and search data generation
+- `/sitemap/`: This contains sitemaps for pages, articles, and authors
 
 ### Files
 
