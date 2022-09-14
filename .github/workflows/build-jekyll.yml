@@ -49,9 +49,9 @@ jobs:
         with:
           files: _zip/
           recursive: true
-          dest: ${{ github.workspace }}/starter-pack.zip
+          dest:_zip/starter-pack.zip
 
       - uses: actions/upload-artifact@v1
         with:
           name: starter-pack
-          path: ${{ github.workspace }}/starter-pack.zip
+          path: ${{ github.workspace }}/_zip/starter-pack.zip
