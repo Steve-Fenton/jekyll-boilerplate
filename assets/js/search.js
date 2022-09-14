@@ -1,9 +1,13 @@
+---
+layout: null
+---
 // @ts-check
 
 import { qs } from './modules/query.js';
 import { raiseEvent } from './modules/events.js';
 import { contains, sanitise, explode } from './modules/string.js';
 
+var dataUrl = '{{ "/search.json" | prepend: site.baseurl }}';
 var haystack = [];
 var needles = [];
 var currentQuery = null;
