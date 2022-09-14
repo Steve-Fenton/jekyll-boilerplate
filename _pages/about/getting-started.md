@@ -40,24 +40,25 @@ Check out the [custom front matter](/about/front-matter/) to see how you can con
 
 ## Using Jekyll Boilerplate as a GEM
 
-gemfile
+Add the following to your `Gemfile`:
 
-    gem "fenton-jekyll-boilerplate", "~> 0.0.1"
+gem "fenton-jekyll-boilerplate", "~> 0.0.8"
+gem "fenton-jekyll-plugin", "~> 0.0.4"
 
-_config.yml
+Add the following to your `_config.yml`:
 
-    theme: fenton-jekyll-boilerplate
+theme: fenton-jekyll-boilerplate
+plugins:
+  - fenton-jekyll-plugin
 
-When you first set up your site, it's worth adding a set of files that makes sure you have all features available.
+Run `bundler` before you run `jekyll serve`.
 
-### Folders
+### Additional Files and Folders
+
+You can download the latest [starter pack](https://github.com/Steve-Fenton/jekyll-boilerplate/actions/workflows/build-jekyll.yml) by selecting the latest run and clicking on "starter-pack" in the artefacts.
 
 - `_authors/`: Sample author data, which you can replace / extend
 - `articles/`: This contains the list page that supports pages lists of articles
-
-### Files
-
-- `favicon.ico`: A default icon, or replace it with your own
 
 Jekyll version < 4.3.0
 
