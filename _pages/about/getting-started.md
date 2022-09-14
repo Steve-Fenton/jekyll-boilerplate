@@ -111,4 +111,5 @@ We recommend you adjust your robot file via the `site.robots_txt` variable. If y
   - `search`
     - `search.json`: Data for the site search feature
     - `search.md`: The search page (you could override this to place content above the search)
+    - `404.html`: Page not found includes a search box - uses `permalink: /404.html`
 
