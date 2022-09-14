@@ -52,8 +52,8 @@ When you first set up your site, it's worth adding a set of files that makes sur
 
 ### Folders
 
+- `_authors/`: This contains the list page that supports pages lists of articles
 - `articles/`: This contains the list page that supports pages lists of articles
-- `authors/`: This contains the list page that supports pages lists of articles
 - `feed/`: This contains ATOM feeds for your site
 - `search/`: This contains a customisable search template and search data generation
 - `sitemap/`: This contains sitemaps for pages, articles, and authors
@@ -66,7 +66,7 @@ When you first set up your site, it's worth adding a set of files that makes sur
 
 Jekyll version < 4.3.0
 
-- `_data/language.yml`
+- `_data/language.yml`: Only required for version of Jekyll prior to 4.3.0 - contains translations for the UI
 
 ### Overrides
 
