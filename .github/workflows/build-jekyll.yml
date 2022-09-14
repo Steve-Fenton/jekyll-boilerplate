@@ -29,12 +29,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Build book
+        run: |-
+          cd ${{ github.workspace }}
+          mkdir -p _zip
+          cp -r /_authors /_zip/_authors
+          cp -r /_data /_zip/_data
+          cp -r /articles /_zip/articles
+          cp -r /feed /_zip/feed
+          cp -r /search /_zip/search
+          cp -r /sitemap /_zip/sitemap
+          cp -r /robots.txt /_zip/
+          cp -r /sitemap.xml /_zip/
+          cp -r /favicon.ico /_zip/
+
       - uses: vimtor/action-zip@v1
         with:
-          files: _authors/ articles/ _data/ feed/ search/ sitemap/ robots.txt sitemap.xml favicon.ico
-          dest: starter-pack.zip
+          files: /_zip/
+          recursive: true
+          dest: ${{ github.workspace }}/starter-pack.zip
 
       - uses: actions/upload-artifact@v1
         with:
-          name: my-artifact
+          name: starter-pack
           path: ${{ github.workspace }}/starter-pack.zip
