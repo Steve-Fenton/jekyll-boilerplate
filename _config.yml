@@ -50,15 +50,12 @@ kramdown:
 include: [_pages]
 exclude: ['LICENSE', 'README.md']
 
-permalink: /:path/
-
 collections:
   authors:
     output: true
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ''
       type: authors
     values:

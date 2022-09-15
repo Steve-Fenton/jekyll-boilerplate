@@ -1,12 +1,12 @@
 ---
 layout: page
 title:  Markdown Extensions
+permalink: /about/markdown-extensions/
 date:   2022-09-06
 authors: steve-fenton
 description: Examples of custom markdown exentions in Jekyll Boilerplate.
 nav-title: Markdown Extensions
-nav-level: About Jekyll Boilerplate
-nav-order: 4000
+nav-order: 5000
 published: true
 nav-sitemap: true
 nav-search: true

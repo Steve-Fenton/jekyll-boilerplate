@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  About Jekyll Boilerplate
+permalink: /about/
 date:   2022-09-06
 authors: steve-fenton
 description: Jekyll Boilerplate is an opinionated Jekyll site with built in theme and extensions.

@@ -1,12 +1,12 @@
 ---
 layout: page
 title:  Overrides
+permalink: /about/overrides/
 date:   2022-09-06
 authors: steve-fenton
 description: A description of theme files you can override.
 nav-title: Overrides
-nav-level: About Jekyll Boilerplate
-nav-order: 1500
+nav-order: 2000
 published: true
 nav-sitemap: true
 nav-search: true

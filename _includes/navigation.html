@@ -8,7 +8,20 @@
         {%- assign current = page.nav-title | default: page.title %}
         {%- if (current != previous) %}
         {%- assign previous = page.nav-title | default: page.title %}
-        {%- assign sub_pages = site.pages | where: 'nav-level', page.title | sort: 'nav-order' %}
+
+        {%- assign parent_perma = page.permalink %}
+        {%- assign parent_perma_size = parent_perma | size %}
+        {%- assign sub_pages = '' | split: '' %}
+
+        {%- for p in site.pages %}
+          {%- assign child_perma = p.permalink %}
+          {%- assign child_perma_truncated = child_perma | truncate: parent_perma_size, '' %}
+
+          {%- if parent_perma != '/' and child_perma_truncated == parent_perma and child_perma != parent_perma %}
+            {%- assign sub_pages = sub_pages | push: p %}
+          {%- endif %}
+        {%- endfor %}
+
         <li{%- if sub_pages.size > 0 %} class="has-children"{% endif %}>
           {%- if sub_pages.size > 0 %}
           <details class="sub-nav">

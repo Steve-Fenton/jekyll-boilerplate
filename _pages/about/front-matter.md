@@ -1,12 +1,12 @@
 ---
 layout: page
 title:  Front Matter
+permalink: /about/front-matter/
 date:   2022-09-06
 authors: steve-fenton
 description: A list of all custom front-matter features in Jekyll Boilerplate.
 nav-title: Front Matter
-nav-level: About Jekyll Boilerplate
-nav-order: 2000
+nav-order: 3000
 published: true
 nav-sitemap: true
 nav-search: true
@@ -48,7 +48,7 @@ Full details of standard [Jekyll front-matter](https://jekyllrb.com/docs/front-m
 - `keywords`: Used for the keywords meta tag
 - `nav-title`: Used in the site navigation, allowing a shorter title to be used in the menu (fallback `title`)
 - `nav-section`: Where the content has child content, this allows the navigation section to be named separately to the content (fallback `nav-title` then `title`)
-- `nav-level`: The name of the parent page, or `1` for top-level pages
+- `nav-level`: Set to `1` for "top-level" pages
 - `nav-order`: Used to order the content in the site navigation
 - `nav-sitemap`: Whether to add the content to `sitemap.xml`
 - `nav-search`: Whether to add the content to the site search
@@ -72,7 +72,6 @@ date:   2022-09-06
 authors: steve-fenton
 description: A list of all custom front-matter features in Jekyll Boilerplate.
 nav-title: Front Matter
-nav-level: About Jekyll Boilerplate
 nav-order: 2000
 banner-image: /assets/img/2022/09/featured-700.webp
 banner-image-alt: Description of the banner image

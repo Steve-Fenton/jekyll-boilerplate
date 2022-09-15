@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  Heading 1
+permalink: /kitchen-sink/
 date:   2022-09-06
 authors: steve-fenton
 description: The most common content components arranged for testing.
@@ -14,12 +15,19 @@ nav-search: true
 
 This page contains the most common content components, such as:
 
-- [Block Quotes](#block-quote)
+- [Heading 2](#heading-2)
+  - [Heading 3](#heading-3)
+    - [Heading 4](#heading-4)
+      - [Heading 5](#heading-5)
+        - [Heading 6](#heading-6)
+- [Block Quote](#block-quote)
 - [Code](#code)
 - [Custom Elements](#custom-elements)
+  - [Note](#note)
+  - [Simple Grid](#simple-grid)
 - [Images](#images)
 - [Lists](#lists)
-- [Horizontal Rules](#horizontal-rule)
+- [Horizontal Rule](#horizontal-rule)
 - [Links](#links)
 - [Tables](#tables)
 - [Text](#text)
