@@ -20,11 +20,11 @@ robots_txt: >-
   User-agent: *
 
 # Sets the theme colour for browsers
-theme_color_hex: 333333
+theme_color_hex: 222255
 # Sets the date format
-date_format: "%b %-d, %Y"
+date_format: "%-d %B %Y"
 # Whether to show exerpts on list pages
-show_excerpts: true;
+show_excerpts: true
 
 # Number of results per page
 page_size: 4
