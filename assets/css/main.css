@@ -68,7 +68,7 @@ blockquote {
     padding: 0.1px 1.2em;
     position: relative;
     box-shadow: var(--box-shadow);
-    margin: 1.2em 0;
+    margin: var(--paragraph-margin) 0;
 }
 
 blockquote::after {
@@ -133,10 +133,10 @@ h4, h5, h6 {
 }
 
 hr {
-    border: 0.5px dotted var(--fore);
+    border: 0.5px dashed var(--fore);
     opacity: 0.5;
     width: 80%;
-    margin: 0 auto;
+    margin: var(--paragraph-margin) auto;
 }
 
 img {
@@ -144,7 +144,7 @@ img {
 }
 
 p, main ul, main ol {
-    margin: 1.2em 0;
+    margin: var(--paragraph-margin) 0;
 }
 
 strong {

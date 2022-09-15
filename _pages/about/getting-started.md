@@ -13,6 +13,47 @@ nav-sitemap: true
 nav-search: true
 ---
 
+Add the following to your `Gemfile`:
+
+```ruby
+gem "fenton-jekyll-boilerplate", "~> 0.0.10"
+gem "fenton-jekyll-plugin", "~> 0.0.5"
+```
+
+Add the following to your `_config.yml`:
+
+```yaml
+theme: fenton-jekyll-boilerplate
+plugins:
+  - fenton-jekyll-plugin
+```
+
+Run `bundler` before you run `jekyll serve`.
+
+The [full configuration file is available on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/_config.yml).
+
+The basic configuration changes to make are:
+
+1. Edit `_config.yml`
+   1. Edit the `title`
+   2. Edit the `description`
+   3. Edit the `owner`
+   4. Edit the `url`
+2. Add your icons to `/assets/icons/`
+
+### Additional Files and Folders
+
+You can download the latest [starter pack](https://github.com/Steve-Fenton/jekyll-boilerplate/actions/workflows/build-jekyll.yml) by selecting the latest run and clicking on "starter-pack" in the artefacts.
+
+- `_authors/`: Sample author data, which you can replace / extend
+- `articles/`: This contains the list page that supports pages lists of articles
+
+Jekyll version < 4.3.0
+
+- `_data/language.yml`: Only required for versions of Jekyll prior to 4.3.0 - contains translations for the UI
+
+***
+
 To run Jekyll locally, set up the pre-requisites, download the code, and run a couple of commands.
 
 - Install the [pre-requisites](https://jekyllrb.com/docs/)
@@ -20,15 +61,7 @@ To run Jekyll locally, set up the pre-requisites, download the code, and run a c
 - Run the `bundler` command from the root folder
 - Run the site using `jekyll serve`
 
-There are just a couple of tasks to turn the Jekyll Boilerplate into your own working website.
 
-1. Edit `_config.yml`
-   1. Edit the `title`
-   2. Edit the `description`
-   3. Edit the `owner`
-   4. Edit the `url`
-2. Add your analytics scripts to `analytics.html`
-4. Add your icons to `/assets/icons/`
 
 ## Adjusting the Theme
 
@@ -43,7 +76,7 @@ Check out the [custom front matter](/about/front-matter/) to see how you can con
 Add the following to your `Gemfile`:
 
 gem "fenton-jekyll-boilerplate", "~> 0.0.10"
-gem "fenton-jekyll-plugin", "~> 0.0.4"
+gem "fenton-jekyll-plugin", "~> 0.0.5"
 
 Add the following to your `_config.yml`:
 
@@ -53,16 +86,6 @@ plugins:
 
 Run `bundler` before you run `jekyll serve`.
 
-### Additional Files and Folders
-
-You can download the latest [starter pack](https://github.com/Steve-Fenton/jekyll-boilerplate/actions/workflows/build-jekyll.yml) by selecting the latest run and clicking on "starter-pack" in the artefacts.
-
-- `_authors/`: Sample author data, which you can replace / extend
-- `articles/`: This contains the list page that supports pages lists of articles
-
-Jekyll version < 4.3.0
-
-- `_data/language.yml`: Only required for versions of Jekyll prior to 4.3.0 - contains translations for the UI
 
 ### Overrides
 
