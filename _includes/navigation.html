@@ -1,47 +1,49 @@
   <nav class="site-nav" id="site-nav" aria-label="{{ 'aria' | t: 'site_navigation' }}">
       <h2 class="site-nav-title">{{ 'navigation' | t: 'title' }}</h2>
       <ul>
+      {%- assign current_url = page.url | remove: 'index.html' %}
       {%- assign previous = null %}
       {%- assign regex = '/' | append: site.paginate_page | append: '[0-9]/' %}
       {%- assign main_pages = site.pages | where: 'nav-level', '1' | sort: 'nav-order' -%}
-      {% for page in main_pages %}
-        {%- assign current = page.nav-title | default: page.title %}
+      {% for item in main_pages %}
+        {%- assign current = item.nav-title | default: item.title %}
         {%- if (current != previous) %}
-        {%- assign previous = page.nav-title | default: page.title %}
+          {%- assign previous = item.nav-title | default: item.title %}
 
-        {%- assign parent_perma = page.permalink %}
-        {%- assign parent_perma_size = parent_perma | size %}
-        {%- assign sub_pages = '' | split: '' %}
+          {%- assign parent_perma = item.permalink %}
+          {%- assign parent_perma_size = parent_perma | size %}
+          {%- assign sub_pages = '' | split: '' %}
 
-        {%- for p in site.pages %}
-          {%- assign child_perma = p.permalink %}
-          {%- assign child_perma_truncated = child_perma | truncate: parent_perma_size, '' %}
+          {%- for p in site.pages %}
+            {%- assign child_perma = p.permalink %}
+            {%- assign child_perma_truncated = child_perma | truncate: parent_perma_size, '' %}
 
-          {%- if parent_perma != '/' and child_perma_truncated == parent_perma and child_perma != parent_perma %}
-            {%- assign sub_pages = sub_pages | push: p %}
-          {%- endif %}
-        {%- endfor %}
+            {%- if parent_perma != '/' and child_perma_truncated == parent_perma and child_perma != parent_perma %}
+              {%- assign sub_pages = sub_pages | push: p %}
+            {%- endif %}
+          {%- endfor %}
 
         <li{%- if sub_pages.size > 0 %} class="has-children"{% endif %}>
-          {%- if sub_pages.size > 0 %}
+            {%- assign item_url = item.url | regex_replace: regex,'/' | prepend: site.baseurl %}
+            {%- if sub_pages.size > 0 %}
           <details class="sub-nav">
-            <summary><span>{{ page.nav-section | default: page.nav-title | default: page.title }}</span></summary>
-          {%- else %}
-          <a href="{{ page.url | regex_replace: regex,'/' | prepend: site.baseurl }}">{{ page.nav-title | default: page.title }}</a>
-          {%- endif -%}
-          {% if sub_pages.size > 0 %}
+            <summary><span>{{ item.nav-section | default: item.nav-title | default: item.title }}</span></summary>
+            {%- else %}
+          <a href="{{ item_url }}"{% if item_url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ item.nav-title | default: item.title }}</a>
+            {%- endif -%}
+            {% if sub_pages.size > 0 %}
             <ul>
               <li>
-                <a href="{{ page.url | regex_replace: regex,'/' | prepend: site.baseurl }}">{{ page.nav-title | default: page.title }}</a>
+                <a href="{{ item_url }}"{% if item_url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ item.nav-title | default: item.title }}</a>
               </li>
               {%- for child in sub_pages %}
               <li>
-                <a href="{{ child.url | prepend: site.baseurl }}">{{ child.nav-title | default: child.title }}</a>
+                <a href="{{ child.url | prepend: site.baseurl }}"{% if child.url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ child.nav-title | default: child.title }}</a>
               </li>
               {%- endfor %}
             </ul>
           </details>
-          {%- endif %}
+            {%- endif %}
         </li>
         {%- endif %}
       {%- endfor %}

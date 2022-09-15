@@ -286,6 +286,12 @@ body > footer {
     content: ''
 }
 
+.site-breadcrumbs a[aria-current] {
+    color: var(--fore);
+    text-decoration: none;
+}
+
+
 /* Content Group */
 
 .content-group {
@@ -334,7 +340,7 @@ nav.site-nav li.has-children ul a {
     text-indent: calc(var(--marker-size) * 2);
 }
 
-nav.site-nav .current-item {
+nav.site-nav a[aria-current] {
     font-weight: bold;
 }
 

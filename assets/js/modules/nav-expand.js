@@ -25,23 +25,4 @@ import { qs, qsa } from './query.js';
     });
 }
 
-/**
- * Highlights the current navigation item
- * 
- * @param {string} navQuery 
- * @param {string} selectedClass 
- */
-function setNavigationItem(navQuery, selectedClass) {
-    const site = document.location.origin;
-    const location = document.location.pathname;
-
-    qsa(navQuery).forEach((anchor) => {
-        const href = anchor.href.replace(site, '');
-
-        if (href === location) {
-            anchor.classList.add(selectedClass);
-        }
-    });
-}
-
-export { setNavigationTree, setNavigationItem };
+export { setNavigationTree };

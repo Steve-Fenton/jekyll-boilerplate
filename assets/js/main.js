@@ -1,6 +1,6 @@
 // @ts-check
 
-import { setNavigationTree, setNavigationItem } from './modules/nav-expand.js';
+import { setNavigationTree } from './modules/nav-expand.js';
 import { setClickableBlocks } from './modules/click-blocks.js';
 import { addResizedEvent } from './modules/resizing.js';
 import { addStickyNavigation } from './modules/nav-sticky.js';
@@ -9,7 +9,6 @@ import { addIntersectionObserver } from './modules/animation.js';
 import { qsa } from './modules/query.js';
 
 setNavigationTree('details.sub-nav');
-setNavigationItem('.site-nav a', 'current-item')
 setClickableBlocks();
 
 const resizedEventName = addResizedEvent();
