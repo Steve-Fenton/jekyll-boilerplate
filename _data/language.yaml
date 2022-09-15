@@ -7,6 +7,12 @@
 # If you are running Jekyll v4.3.0 or higher, you don't need this file in your site
 # as it will be read from the theme's _data folder
 
+aria:
+  breadcrumbs:
+    en: Breadcrumbs
+  site_navigation:
+    en: Site Navigation
+
 skiplinks:
   skip_to_navigation:
     en: Skip to navigation

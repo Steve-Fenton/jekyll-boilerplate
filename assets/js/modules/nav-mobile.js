@@ -1,6 +1,6 @@
 // @ts-check
 
-import { qs } from './query.js';
+import { qs, qsa } from './query.js';
 import { getFocusableElement, trapFocusForward, trapReverseFocus } from './focus.js';
 
 /**
@@ -46,13 +46,19 @@ import { getFocusableElement, trapFocusForward, trapReverseFocus } from './focus
         overlay.className = 'overlay';
         overlay.style.display = 'block';
 
+        var ids = qsa('[id]', overlay);
+
+        for (var i = 0; i < ids.length; i++) {
+            ids[i].id = 'overlay__' + ids[i].id;
+        }
+
         // Modal Accessibility
         var title = qs('.site-nav-title', overlay);
         title.setAttribute('id', 'modal-title');
         title.setAttribute('tabindex', '-1');
         overlay.setAttribute('role', 'dialog');
         overlay.setAttribute('aria-modal', 'true');
-        overlay.setAttribute('aria-labelled-by', 'modal-title');
+        overlay.setAttribute('aria-labelledby', 'modal-title');
 
         // Trap Focus to Visible Overlay
         var focusElements = getFocusableElement(overlay);

@@ -7,7 +7,7 @@ layout: default
       </header>
       <div>
         {{ content }}
-        <form method="GET" action="{{ site.search_fallback_url }}" id="site-search" class="site-search note" autocomplete="off">
+        <form method="GET" action="{{ site.search_fallback_url }}" role="search" id="site-search" class="site-search note" autocomplete="off">
           <fieldset>
             <input type="hidden" name="{{ site.search_fallback_site }}" value="{{ site.url | prepend: 'site:' }}" />
               <div>

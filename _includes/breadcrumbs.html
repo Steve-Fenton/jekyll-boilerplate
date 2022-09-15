@@ -1,4 +1,4 @@
-<nav class="site-breadcrumbs">
+<nav class="site-breadcrumbs" aria-label="{{ 'aria' | t: 'breadcrumbs' }}">
     <ol vocab="http://schema.org/" typeof="BreadcrumbList">
        {%- for crumb in breadcrumbs %} 
        {%- if forloop.last %}

@@ -143,7 +143,7 @@ img {
     max-width: 100%;
 }
 
-p, main ul, main ol {
+p {
     margin: var(--paragraph-margin) 0;
 }
 
@@ -372,12 +372,20 @@ main {
     width: calc(var(--grid-width) - var(--navigation-width) - var(--grid-gap));
 }
 
+main > div > ul, main > div > ol {
+    margin: var(--paragraph-margin) 0 var(--paragraph-margin) 1.2rem;
+}
+
 main ul, main ol {
-    margin-left: 1.2em;
+    margin-left: 1.2rem;
 }
 
 main ul li, main ol li {
     line-height: 2em;
+}
+
+li::marker {
+    color: var(--fore-headings);
 }
 
 /* Jekyll Post List */
