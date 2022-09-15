@@ -6,7 +6,8 @@ authors: steve-fenton
 categories: articles
 tags: sample post
 date: 2022-09-01
-excerpt: This is a test post.
+keywords: test post
+description: This is a test post.
 banner-image: /assets/img/2022/09/surface-accessories-700.webp
 banner-image-alt: Microsoft Surface headphones and ergonomic keyboard
 ---

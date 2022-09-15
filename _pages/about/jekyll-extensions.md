@@ -4,6 +4,7 @@ title:  Jekyll Extensions
 permalink: /about/jekyll-extensions/
 date:   2022-09-06
 authors: steve-fenton
+keywords: jekyll boilerplate,jekyll extensions
 description: Information about baked-in extensions in Jekyll Boilerplate.
 nav-order: 4000
 ---

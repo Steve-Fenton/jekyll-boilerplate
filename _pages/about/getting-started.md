@@ -4,6 +4,7 @@ title:  Getting Started
 permalink: /about/getting-started/
 date:   2022-09-06
 authors: steve-fenton
+keywords: jekyll boilerplate,getting started
 description: There are just a couple of tasks to turn the Jekyll Boilerplate into your own working website.
 nav-order: 1000
 ---

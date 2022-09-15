@@ -4,7 +4,8 @@ title: Example Post 2
 permalink: /articles/2022/09/example-post-2/
 date: 2022-09-02
 authors: steve-fenton
-excerpt: This is a test post.
+keywords: test post
+description: This is a test post.
 categories: articles
 tags: sample post
 banner-image: /assets/img/2022/09/surface-accessories-700.webp

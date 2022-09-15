@@ -4,7 +4,9 @@ title: Example Post 5
 permalink: /articles/2022/09/example-post-5/
 date: 2022-09-05
 authors: [steve-fenton]
-excerpt: This is an example post with more of the front matter.
+keywords: test post
+description: This is a test post.
+excerpt: You can put a custom excerpt in front matter.
 categories: articles
 tags: sample post
 banner-image: /assets/img/2022/09/surface-accessories-700.webp

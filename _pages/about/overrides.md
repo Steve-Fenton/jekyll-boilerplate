@@ -4,6 +4,7 @@ title:  Overrides
 permalink: /about/overrides/
 date:   2022-09-06
 authors: steve-fenton
+keywords: jekyll boilerplate,overrides,files
 description: A description of theme files you can override.
 nav-order: 2000
 ---

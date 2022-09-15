@@ -4,6 +4,7 @@ title:  Front Matter
 permalink: /about/front-matter/
 date:   2022-09-06
 authors: steve-fenton
+keywords: jekyll boilerplate,front matter
 description: A list of all custom front matter features in Jekyll Boilerplate.
 nav-order: 3000
 ---

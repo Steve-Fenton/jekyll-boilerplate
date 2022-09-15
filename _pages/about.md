@@ -4,6 +4,7 @@ title:  About Jekyll Boilerplate
 permalink: /about/
 date:   2022-09-06
 authors: steve-fenton
+keywords: jekyll boilerplate,about
 description: Jekyll Boilerplate is an opinionated Jekyll site with built in theme and extensions.
 nav-section: About
 nav-title: Jekyll Boilerplate

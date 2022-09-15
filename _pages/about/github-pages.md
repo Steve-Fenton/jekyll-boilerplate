@@ -4,6 +4,7 @@ title:  Host Jekyll on GitHub Pages
 permalink: /about/github-pages/
 date:   2022-09-06
 authors: steve-fenton
+keywords: jekyll boilerplate,github pages,github action
 description: How to get the most from Jekyll Boilerplate and GitHub Pages.
 nav-title: GitHub Pages
 nav-order: 6000

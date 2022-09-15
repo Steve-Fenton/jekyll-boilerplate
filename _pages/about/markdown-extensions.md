@@ -4,7 +4,8 @@ title:  Markdown Extensions
 permalink: /about/markdown-extensions/
 date:   2022-09-06
 authors: steve-fenton
-description: Examples of custom markdown exentions in Jekyll Boilerplate.
+keywords: jekyll boilerplate,markdown extensions
+description: Examples of custom markdown extensions in Jekyll Boilerplate.
 nav-order: 5000
 ---
 
