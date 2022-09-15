@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  Overrides
-permalink: /about/overrides/
 date:   2022-09-06
 authors: steve-fenton
 description: A description of theme files you can override.

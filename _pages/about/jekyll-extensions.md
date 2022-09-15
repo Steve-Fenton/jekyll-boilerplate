@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  Jekyll Extensions
-permalink: /about/jekyll-extensions/
 date:   2022-09-06
 authors: steve-fenton
 description: Information about baked-in extensions in Jekyll Boilerplate.

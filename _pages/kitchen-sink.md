@@ -1,7 +1,6 @@
 ---
 layout: page
 title:  Heading 1
-permalink: /kitchen-sink/
 date:   2022-09-06
 authors: steve-fenton
 description: The most common content components arranged for testing.

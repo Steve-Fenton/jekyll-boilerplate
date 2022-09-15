@@ -8,7 +8,7 @@ description: A boilderplate for a very clean version of Jekyll.
 keywords: jekyll,boilerplate,site generator
 nav-title: Home
 nav-level: 1
-nav-order: 0
+nav-order: 1000
 published: true
 nav-sitemap: true
 nav-search: true
