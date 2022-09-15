@@ -14,7 +14,7 @@ import { qsa } from './query.js';
  * @returns {{first: HTMLElement, last: HTMLElement, all: HTMLElement[]}}
  */
  function getFocusableElement(target) {
-    var focusElements = Array.from(
+    const focusElements = Array.from(
         qsa('a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])', target)
     ).filter(function(el) {
         return !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden');

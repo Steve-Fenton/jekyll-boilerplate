@@ -8,12 +8,12 @@
  * @returns {HTMLElement}
  */
  function qs(query, container) {
-    var target = (container)
+    const target = (container)
         ? container
         : document;
 
     /** @type {HTMLElement | null} */
-    var result = target.querySelector(query);
+    const result = target.querySelector(query);
 
     if (result) {
         return result;
@@ -30,12 +30,12 @@
  * @returns {NodeListOf<any>}
  */
  function qsa(query, container) {
-    var target = (container)
+    const target = (container)
         ? container
         : document;
 
     /** @type {NodeListOf<HTMLElement>} */
-    var result = target.querySelectorAll(query);
+    const result = target.querySelectorAll(query);
     return result;
 }
 

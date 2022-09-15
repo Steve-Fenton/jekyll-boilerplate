@@ -15,14 +15,14 @@ import { qs, qsa } from './query.js';
  */
 function addStickyNavigation(headerSelector, navigationSelector, navigationListSelector, resizedEventName) {
     function setNavigationMode() {
-        var header = qs(headerSelector);
-        var navigation = qs(navigationSelector);
-        var navigationList = qs(navigationListSelector); 
+        const header = qs(headerSelector);
+        const navigation = qs(navigationSelector);
+        const navigationList = qs(navigationListSelector); 
         
-        var buffer = 50;
-        var className = 'sticky';
+        const buffer = 50;
+        const className = 'sticky';
 
-        var dimensions = {
+        const dimensions = {
             browserHeight: window.innerHeight,
             browserWidth: window.innerWidth,
             headerHeight: header.clientHeight,

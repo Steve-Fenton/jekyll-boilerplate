@@ -17,25 +17,21 @@ import { qsa } from './query.js';
  */
 function addIntersectionObserver(listItemQuery) {
     function handleIntersection(entries, observer) {
-        for (var entry of entries) {
-            var value = entry.isIntersecting ? 1 : 0;
+        for (let entry of entries) {
+            const value = entry.isIntersecting ? 1 : 0;
             entry.target.style.setProperty('--shown', value);
         }
     }
 
-    var options = {
+    const options = {
         root: null,
         rootMargin: '0px',
         threshold: 0
     };
 
-    var observer = new IntersectionObserver(handleIntersection, options)
+    const observer = new IntersectionObserver(handleIntersection, options)
 
-    var items = qsa(listItemQuery);
-
-    for (var i = 0; i < items.length; i++) {
-        observer.observe(items[i]);
-    }
+    qsa(listItemQuery).forEach((elem) => observer.observe(elem));
 }
 
 export { addIntersectionObserver };

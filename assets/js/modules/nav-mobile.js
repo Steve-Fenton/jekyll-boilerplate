@@ -15,13 +15,15 @@ import { getFocusableElement, trapFocusForward, trapReverseFocus } from './focus
  * 
  * @param {string} iconSelector 
  * @param {string} navigationSelector 
+ * @param {string} resizedEventName
  */
  function addMobileNavigation(iconSelector, navigationSelector, resizedEventName) {
-    var icon = qs(iconSelector);
-    var originalIcon = icon.innerHTML;
-    var overlay = document.createElement('div');
-    var dataOpen = 'data-open';
+    const icon = qs(iconSelector);
+    const originalIcon = icon.innerHTML;
+    const overlay = document.createElement('div');
+    const dataOpen = 'data-open';
 
+    // Focus trap (forwards the tab / shift-tab back to the menu)
     icon.addEventListener('keydown', function(e) { 
         if (icon.getAttribute(dataOpen) === dataOpen) {
             var focusElements = getFocusableElement(overlay);
@@ -30,6 +32,7 @@ import { getFocusableElement, trapFocusForward, trapReverseFocus } from './focus
         }
     });
 
+    // Opens and closes menu
     function handleIconInteraction() {
         if (icon.dataset.open == dataOpen) {
             closeMobileMenu();
@@ -40,20 +43,17 @@ import { getFocusableElement, trapFocusForward, trapReverseFocus } from './focus
 
     function openMobileMenu(){
         document.body.style.overflow = 'hidden';
-        var navigation = qs(navigationSelector);
         
-        overlay.innerHTML = navigation.outerHTML;
+        overlay.innerHTML = qs(navigationSelector).outerHTML;
         overlay.className = 'overlay';
         overlay.style.display = 'block';
 
-        var ids = qsa('[id]', overlay);
-
-        for (var i = 0; i < ids.length; i++) {
-            ids[i].id = 'overlay__' + ids[i].id;
-        }
+        qsa('[id]', overlay).forEach((elem) => {
+            elem.id = 'overlay__' + elem.id
+        });
 
         // Modal Accessibility
-        var title = qs('.site-nav-title', overlay);
+        const title = qs('.site-nav-title', overlay);
         title.setAttribute('id', 'modal-title');
         title.setAttribute('tabindex', '-1');
         overlay.setAttribute('role', 'dialog');
@@ -61,7 +61,7 @@ import { getFocusableElement, trapFocusForward, trapReverseFocus } from './focus
         overlay.setAttribute('aria-labelledby', 'modal-title');
 
         // Trap Focus to Visible Overlay
-        var focusElements = getFocusableElement(overlay);
+        const focusElements = getFocusableElement(overlay);
 
         focusElements.first.addEventListener('keydown', function(e) {
             trapReverseFocus(e, icon);
@@ -80,7 +80,7 @@ import { getFocusableElement, trapFocusForward, trapReverseFocus } from './focus
 
         document.body.appendChild(overlay);
         icon.setAttribute(dataOpen, dataOpen);
-        title.focus();
+        focusElements.first.focus();
     }
 
     function closeMobileMenu() {

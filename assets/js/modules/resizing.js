@@ -15,7 +15,7 @@ var height = window.innerHeight;
  * @returns {string}
  */
  function addResizedEvent() {
-    var debounce = null;
+    let debounce = null;
 
     function resizeEnd(e) {
         window.clearTimeout(debounce);
@@ -23,7 +23,7 @@ var height = window.innerHeight;
     }
 
     function raiseResizeEvent() {
-        var change = {
+        const change = {
             width: window.innerWidth - width,
             height: window.innerHeight - height
         };

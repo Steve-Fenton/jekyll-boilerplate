@@ -2,6 +2,8 @@
 
 import { qsa } from './query.js';
 
+const dataAttributeName = 'data-destination';
+
 /**
  * Makes an entire block clickable based on a data-attribute, usually "data-destination"
  * 
@@ -12,23 +14,27 @@ import { qsa } from './query.js';
  * Use clickable blocks to allow keyboard users to tab through the real links, but still
  * capture clicks elsewhere on the block.
  * 
- * @param {string} dataAttributeName
  */
- function setClickableBlocks(dataAttributeName) {
-    var listItems = qsa('[' + dataAttributeName + ']');
-
-    for(var i = 0; i < listItems.length; i++) {
-        var listItem = listItems[i];
+ function setClickableBlocks() {
+    qsa('[' + dataAttributeName + ']').forEach((listItem) => {
         listItem.style.cursor = 'pointer';
-        listItem.addEventListener('click', function (e) {
-            var location = this.getAttribute(dataAttributeName);
+        listItem.addEventListener('click', handleClick);
+    });
+}
 
-            if (location) {
-                e.preventDefault();
-                document.location = location;
-                return false;
-            }
-        });
+/**
+ * Handles the block-level clicks
+ * 
+ * @param {Event} e 
+ * @returns 
+ */
+function handleClick(e) {
+    const location = this.getAttribute(dataAttributeName);
+
+    if (location) {
+        e.preventDefault();
+        document.location = location;
+        return false;
     }
 }
 
