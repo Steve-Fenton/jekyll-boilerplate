@@ -12,7 +12,7 @@ nav-order: 1000
 Add the following to your `Gemfile`:
 
 ```ruby
-gem "fenton-jekyll-boilerplate", "~> 0.0.12"
+gem "fenton-jekyll-boilerplate", "~> 0.0.13"
 gem "fenton-jekyll-plugin", "~> 0.0.13"
 ```
 
