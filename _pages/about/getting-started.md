@@ -12,8 +12,8 @@ nav-order: 1000
 Add the following to your `Gemfile`:
 
 ```ruby
-gem "fenton-jekyll-boilerplate", "~> 0.0.10"
-gem "fenton-jekyll-plugin", "~> 0.0.5"
+gem "fenton-jekyll-boilerplate", "~> 0.0.11"
+gem "fenton-jekyll-plugin", "~> 0.0.13"
 ```
 
 Add the following to your `_config.yml`:
