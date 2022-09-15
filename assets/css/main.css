@@ -372,16 +372,12 @@ main {
     width: calc(var(--grid-width) - var(--navigation-width) - var(--grid-gap));
 }
 
-main > div > ul, main > div > ol {
+main ul, main ol {
     margin: var(--paragraph-margin) 0 var(--paragraph-margin) 1.2rem;
 }
 
-main ul, main ol {
-    margin-left: 1.2rem;
-}
-
-main ul li, main ol li {
-    line-height: 2em;
+main ul ol, main ul ul, main ol ol, main ol ul {
+    margin: 0 0 0 1.2rem;
 }
 
 li::marker {
@@ -420,6 +416,11 @@ li::marker {
 .post-paging {
     margin-top: 2rem;
     text-align: center;
+}
+
+.post-paging > * {
+    display: inline-block;
+    padding: 0.3rem;
 }
 
 /* Jekyll Post */
@@ -562,6 +563,21 @@ form.site-search button {
     nav.site-nav h2 {
         display: block;
     }
+
+    /* Collapse Paging */
+
+    .post-paging > * {
+        display: none;
+    }
+
+    .post-paging > *:first-child {
+        display: inline-block;
+    }
+    
+    .post-paging > *:last-child {
+        display: inline-block;
+    }
+    
 
     /*  */
     form.site-search div {

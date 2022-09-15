@@ -20,6 +20,7 @@ nav-order: 3000
     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
     <li class="list-item" data-destination="{{ post.url | relative_url }}">
+      <article>
       {%- if post.banner-image -%}
       <img src="{{ post.banner-image }}" alt="{{ post.banner-image-alt }}" {% unless forloop.first %}loading="lazy"{% endunless %} />
       {%- endif -%}
@@ -34,12 +35,13 @@ nav-order: 3000
           {{ post.excerpt | default: post.description }}
         {%- endif -%}
       </div>
+      </article>
     </li>
     {%- endfor -%}
   </ul>
 
   {% if paginator.total_pages > 1 %}
-  <div class="post-paging">
+  <nav class="post-paging" aria-label="{{ 'aria' | t: 'paging' }}">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; {{ 'articles' | t: 'previous' }}</a>
     {% else %}
@@ -60,7 +62,7 @@ nav-order: 3000
     {% else %}
       <span>{{ 'articles' | t: 'next' }} &raquo;</span>
     {% endif %}
-  </div>
+  </nav>
   {% endif %}
   {%- endif -%}
 </main>
