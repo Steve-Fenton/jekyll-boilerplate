@@ -5,11 +5,7 @@ permalink: /about/overrides/
 date:   2022-09-06
 authors: steve-fenton
 description: A description of theme files you can override.
-nav-title: Overrides
 nav-order: 2000
-published: true
-nav-sitemap: true
-nav-search: true
 ---
 
 Files in the theme will be used, unless you supply an alternate version of the same file. This means you can just use things out of the box, or you can override one or more files.

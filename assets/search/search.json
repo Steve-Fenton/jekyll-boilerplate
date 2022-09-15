@@ -2,36 +2,58 @@
 layout: null
 permalink: /search.json
 ---
-{%- assign pages = site.pages | where: 'nav-search', 'true' %}
-{%- assign posts = site.posts | where: 'nav-search', 'true' %}
-{%- assign authors = site.authors | where: 'nav-search', 'true' %}
-[
-  {% for page in pages %}{
-    "title"    : "{{ page.title | escape }}",
-    "category" : "{{ page.category }}",
-    "tags"     : "{{ page.tags | join: ' ' }} {{page.keywords}}",
-    "url"      : "{{ site.baseurl }}{{ page.url }}",
-    "date"     : "{{ page.date }}"
-  }{%- unless forloop.last %},{% endunless %}
-  {%- endfor %}
-  {%- if authors.size > 0 %},{% endif %}
-  {%- for author in authors %}{
-    "title"    : "{{ author.name | escape }}",
-    "category" : "{{ author.category }}",
-    "tags"     : "{{ page.tags | join: ' ' }} {{page.keywords}}",
-    "url"      : "{{ site.baseurl }}{{ author.url }}",
-    "date"     : "{{ author.date }}"
-  }{%- unless forloop.last %},{% endunless %}
-  {%- endfor %}
-  {%- if posts.size > 0 %},{% endif %}
-  {%- for post in posts %}{
-    "title"    : "{{ post.title | escape }}",
-    "category" : "{{ post.category }}",
-    "tags"     : "{{ page.tags | join: ' ' }} {{page.keywords}}",
-    "url"      : "{{ site.baseurl }}{{ post.url }}",
-    "date"     : "{{ post.date }}"
-  }
-  {%- unless forloop.last %},{% endunless %}
-  {%- endfor %}
-]
+{%- assign entries = '' | split:'@' %}
 
+{%- for item in site.pages %}
+{%- assign nav_search = item.nav-search | isnil: true %}
+{% if nav_search and item.title %}
+{%- capture data -%}
+{
+  "title"    : "{{ item.title | escape }}",
+  "category" : "{{ item.category }}",
+  "tags"     : "{{ item.tags | join: ' ' }} {{item.keywords}}",
+  "url"      : "{{ site.baseurl }}{{ item.url }}",
+  "date"     : "{{ item.date }}"
+}
+{%- endcapture %}
+{%- assign entries = entries | push: data %}
+{% endif %}
+{%- endfor %}
+
+{%- for item in site.posts %}
+{%- assign nav_search = item.nav-search | isnil: true %}
+{% if nav_search and item.title %}
+{%- capture data -%}
+{
+  "title"    : "{{ item.title | escape }}",
+  "category" : "{{ item.category }}",
+  "tags"     : "{{ item.tags | join: ' ' }} {{item.keywords}}",
+  "url"      : "{{ site.baseurl }}{{ item.url }}",
+  "date"     : "{{ item.date }}"
+}
+{%- endcapture %}
+{%- assign entries = entries | push: data %}
+{% endif %}
+{%- endfor %}
+
+{%- for item in site.authors %}
+{%- assign nav_search = item.nav-search | isnil: true %}
+{%- if nav_search and item.title %}
+{%- capture data -%}
+{
+  "title"    : "{{ item.name | escape }}",
+  "category" : "{{ item.category }}",
+  "tags"     : "{{ item.tags | join: ' ' }} {{item.keywords}}",
+  "url"      : "{{ site.baseurl }}{{ item.url }}",
+  "date"     : "{{ item.date }}"
+}
+{%- endcapture %}
+{%- assign entries = entries | push: data %}
+{%- endif %}
+{%- endfor %}
+[
+{%- for entry in entries -%}
+{{ entry }}
+{%- unless forloop.last %},{%- endunless -%}
+{%- endfor -%}
+]

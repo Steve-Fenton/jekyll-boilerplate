@@ -5,11 +5,7 @@ permalink: /about/getting-started/
 date:   2022-09-06
 authors: steve-fenton
 description: There are just a couple of tasks to turn the Jekyll Boilerplate into your own working website.
-nav-title: Getting Started
 nav-order: 1000
-published: true
-nav-sitemap: true
-nav-search: true
 ---
 
 Add the following to your `Gemfile`:

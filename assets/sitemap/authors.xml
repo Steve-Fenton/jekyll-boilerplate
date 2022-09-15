@@ -7,10 +7,20 @@ permalink: /sitemap/authors.xml
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9.xsd">
-{%- assign authors = site.authors | where: 'nav-sitemap','true' %}
-{%- for author in authors %}  <url>
+{%- assign entries = '' | split:'@' %}
+{%- for author in site.authors %}
+  {%- assign nav_sitemap = author.nav-sitemap | isnil: true %}
+  {%- if nav_sitemap and author.title %}
+    {%- capture data -%}
+  <url>
     <loc>{{ site.url }}{{ author.url }}</loc>
     <lastmod>{{ author.date }}</lastmod>
   </url>
+    {%- endcapture %}
+    {%- assign entries = entries | push: data %}
+  {%- endif %}
 {%- endfor %}
+{%- for entry in entries -%}
+  {{ entry }}
+{%- endfor -%}
 </urlset>

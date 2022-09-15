@@ -7,10 +7,20 @@ permalink: /sitemap/posts.xml
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9.xsd">
-{%- assign posts = site.posts | where: 'nav-sitemap','true' %}
-{%- for post in posts %}  <url>
+{%- assign entries = '' | split:'@' %}
+{%- for post in site.posts %}
+  {%- assign nav_sitemap = post.nav-sitemap | isnil: true %}
+  {%- if nav_sitemap and post.title %}
+    {%- capture data -%}
+  <url>
     <loc>{{ site.url }}{{ post.url }}</loc>
     <lastmod>{{ post.date }}</lastmod>
   </url>
+    {%- endcapture %}
+    {%- assign entries = entries | push: data %}
+  {%- endif %}
 {%- endfor %}
+{%- for entry in entries -%}
+  {{ entry }}
+{%- endfor -%}
 </urlset>

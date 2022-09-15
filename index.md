@@ -9,9 +9,6 @@ keywords: jekyll,boilerplate,site generator
 nav-title: Home
 nav-level: 1
 nav-order: 1000
-published: true
-nav-sitemap: true
-nav-search: true
 ---
 
 Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for the [Jekyll](https://jekyllrb.com/) site generator.

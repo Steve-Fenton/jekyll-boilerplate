@@ -9,9 +9,6 @@ categories: articles
 tags: sample post
 banner-image: /assets/img/2022/09/surface-accessories-700.webp
 banner-image-alt: Microsoft Surface headphones and ergonomic keyboard
-published: true
-nav-sitemap: true
-nav-search: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet elit sodales, egestas odio eu, interdum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elit odio, dapibus nec finibus sit amet, aliquam a tortor.

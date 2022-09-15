@@ -5,11 +5,7 @@ permalink: /about/jekyll-extensions/
 date:   2022-09-06
 authors: steve-fenton
 description: Information about baked-in extensions in Jekyll Boilerplate.
-nav-title: Jekyll Extensions
 nav-order: 4000
-published: true
-nav-sitemap: true
-nav-search: true
 ---
 
 There are no third-party dependencies in Jekyll Boilerplate, so a couple of extensions have been baked-in to provide key features.
@@ -30,7 +26,7 @@ It's based on `jekyll-breadcrumbs`, but is part of the boilerplate and works wit
 
 Authors are baked-in, allowing you to link posts to an author and display an author page, based on [Jet Holt's](https://jetholt.com/jekyll/) Jekyll articles.
 
-It used the `authors` front-matter, see the [front matter](/about/front-matter/) page for more information.
+It used the `authors` front matter, see the [front matter](/about/front-matter/) page for more information.
 
 ## Search
 

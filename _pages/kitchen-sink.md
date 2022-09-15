@@ -8,9 +8,6 @@ description: The most common content components arranged for testing.
 nav-title: Kitchen Sink
 nav-level: 1
 nav-order: 4000
-published: true
-nav-sitemap: true
-nav-search: true
 ---
 
 This page contains the most common content components, such as:
