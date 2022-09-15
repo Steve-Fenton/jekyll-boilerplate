@@ -22,6 +22,7 @@
 	<link rel="alternate" href="{{ "/sitemap.xml" | prepend: site.baseurl }}" type="application/rss+xml" />
 	<link rel="stylesheet" href="{{ "/assets/css/vars.css" | prepend: site.baseurl }}" />
 	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" />
-	<link rel="stylesheet" href="{{ "/assets/css/code.css" | prepend: site.baseurl }}" defer="defer" />
+	<link rel="stylesheet" href="{{ "/assets/css/code.css" | prepend: site.baseurl }}" media="print" onload="this.media = 'all'" />
+	<noscript><link rel="stylesheet" href="{{ "/assets/css/code.css" | prepend: site.baseurl }}" /></noscript>
     {% include analytics.html %}
 </head>
