@@ -18,7 +18,7 @@
             {%- assign child_perma = p.permalink %}
             {%- assign child_perma_truncated = child_perma | truncate: parent_perma_size, '' %}
 
-            {%- if parent_perma != '/' and child_perma_truncated == parent_perma and child_perma != parent_perma %}
+            {%- if p.nav-level != 0 and parent_perma != '/' and child_perma_truncated == parent_perma and child_perma != parent_perma %}
               {%- assign sub_pages = sub_pages | push: p %}
             {%- endif %}
           {%- endfor %}
@@ -36,7 +36,7 @@
               <li>
                 <a href="{{ item_url }}"{% if item_url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ item.nav-title | default: item.title }}</a>
               </li>
-              {%- for child in sub_pages %}
+              {%- for child in sub_pages | sort: 'nav-order' %}
               <li>
                 <a href="{{ child.url | prepend: site.baseurl }}"{% if child.url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ child.nav-title | default: child.title }}</a>
               </li>

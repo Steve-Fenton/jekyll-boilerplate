@@ -48,7 +48,7 @@ Full details of standard [Jekyll front matter](https://jekyllrb.com/docs/front-m
 
 The navigation controls allow you to control how pages appear in the navigation. In general, you only need to set these value on "top level" pages, or where you want to shorten text in the menu. The `nav-order` is useful in all cases where a page appears in a menu.
 
-- `nav-level`: Set to `1` for "top-level" pages. Not required elsewhere.
+- `nav-level`: Set to `1` for "top-level" pages, or `0` to remove from navigation. Not required elsewhere.
 - `nav-order`: Used to order the content in the site navigation
 - `nav-title`: Used in the site navigation, allowing a shorter title to be used in the menu (fallback `title`)
 - `nav-section`: Where the content has child content, this allows the navigation section to be named separately to the content (fallback `nav-title` then `title`)
