@@ -26,20 +26,16 @@ plugins:
 
 Run `bundler` before you run `jekyll serve`.
 
-The [full configuration file is available on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/_config.yml).
+The [full configuration file is available on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/_config.yml){:target="_blank"}.
 
 The basic configuration changes to make are:
 
-1. Edit `_config.yml`
-   1. Edit the `title`
-   2. Edit the `description`
-   3. Edit the `owner`
-   4. Edit the `url`
+1. [Edit `_config.yml`](/about/config-options/)
 2. Add your icons to `/assets/icons/`
 
 ### Additional Files and Folders
 
-You can download the latest [starter pack](https://github.com/Steve-Fenton/jekyll-boilerplate/actions/workflows/build-jekyll.yml) by selecting the latest run and clicking on "starter-pack" in the artefacts.
+You can download the latest [starter pack](https://github.com/Steve-Fenton/jekyll-boilerplate/actions/workflows/build-jekyll.yml){:target="_blank"} by selecting the latest run and clicking on "starter-pack" in the artefacts.
 
 - `_authors/`: Sample author data, which you can replace / extend
 - `articles/`: This contains the list page that supports pages lists of articles
@@ -61,7 +57,7 @@ Check out the [custom front matter](/about/front-matter/) to see how you can con
 
 If you want to download the code in the Jekyll Boilerplate repository on GitHub, follow these steps after downloading the code:
 
-- Install the [pre-requisites](https://jekyllrb.com/docs/)
-- Download the [Jekyll Boilerplate code from GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate)
+- Install the [pre-requisites](https://jekyllrb.com/docs/){:target="_blank"}
+- Download the [Jekyll Boilerplate code from GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate){:target="_blank"}
 - Run the `bundler` command from the root folder
 - Run the site using `jekyll serve`

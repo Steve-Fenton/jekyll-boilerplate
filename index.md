@@ -11,7 +11,7 @@ nav-level: 1
 nav-order: 1000
 ---
 
-Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for the [Jekyll](https://jekyllrb.com/) site generator.
+Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for the [Jekyll](https://jekyllrb.com/){:target="_blank"} site generator.
 
 :::note
 The Jekyll Boilerplate source code is available on [GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate){:target="_blank"}.
@@ -28,7 +28,7 @@ Jekyll Boilerplate is built on some strong opinions:
 >
 > It's just majestic HTML, simple CSS, and some minor non-essential enhancements in plain JavaScript. <cite>Steve Fenton</cite>
 
-Out of the box, Jekyll Boilerplate is a "top scores" high-performance website in the Pagespeed lab. [Pagespeed Insights](https://developers.google.com/speed/docs/insights/v5/about?hl=en-US) tests website performance on mobile and desktop across a number of measurements.
+Out of the box, Jekyll Boilerplate is a "top scores" high-performance website in the Pagespeed lab. [Pagespeed Insights](https://developers.google.com/speed/docs/insights/v5/about?hl=en-US){:target="_blank"} tests website performance on mobile and desktop across a number of measurements.
 
 ![Jekyll Boilerplate lighthouse score of 100 in performance, accessibility, SEO, and best practices](/assets/img/lighthouse-scores.webp){:loading="lazy"}
 

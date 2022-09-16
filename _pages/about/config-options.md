@@ -9,9 +9,36 @@ description: Items you can control through configuration
 nav-order: 5000
 ---
 
+Configuration can be a bit of a task, but it's not something you need to do regularly.
+
+## Theme and Plugin Config
+
+*Required*
+
+Ensure the following configuration is added to the bottom of your `_config.yaml` file.
+
+```yaml
+collections:
+  authors:
+    output: true
+    permalink: author/:title/
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: authors
+    values:
+      layout: author
+
+theme: fenton-jekyll-boilerplate
+plugins:
+  - fenton-jekyll-plugin
+```
+
 ## Standard Config
 
-*Recommended*
+*Required*
 
 The following configuration entries are standard for all Jekyll Sites. You'll want to tailor them to your website.
 
@@ -104,32 +131,4 @@ page_size: 4
 paginate_path: "/articles/page-:num/"
 # Should match the word for "page" above (including any separators, like -)
 paginate_page: "page-"
-
-
-
-# Build settings
-strict_front_matter: true
-
-markdown: kramdown
-
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
-
-include: [_pages]
-exclude: ['LICENSE', 'README.md']
-
-collections:
-  authors:
-    output: true
-
-defaults:
-  - scope:
-      path: ''
-      type: authors
-    values:
-      layout: author
-
-plugins:
-  - fenton-jekyll-plugin
 ```

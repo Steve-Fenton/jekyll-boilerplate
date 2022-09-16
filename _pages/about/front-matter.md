@@ -24,7 +24,7 @@ title:  Front Matter
 
 ### All Content
 
-Full details of standard [Jekyll front matter](https://jekyllrb.com/docs/front-matter/) is on the Jekyll website.
+Full details of standard [Jekyll front matter](https://jekyllrb.com/docs/front-matter/){:target="_blank"} is on the Jekyll website.
 
 - `layout`: The layout to be used for the content (or `null` to use no layout)
 - `title`: The main title for the page, used in the `H1` tag (and as a fallback)

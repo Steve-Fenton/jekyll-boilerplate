@@ -17,8 +17,8 @@ We have some recommended files to customise, as well as a list of more advanced 
 
 - `assets`
   - `css`
-    - `vars.css` see [vars.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/vars.css)
-  - `icons` see [icons on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/tree/main/assets/icons)
+    - `vars.css` see [vars.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/vars.css){:target="_blank"}
+  - `icons` see [icons on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/tree/main/assets/icons){:target="_blank"}
     - `android-chrome-192x192.png` (192x192)
     - `android-chrome-512x512.png` (512x512)
     - `apple-touch-icon.png` (180x180)
@@ -28,8 +28,8 @@ We have some recommended files to customise, as well as a list of more advanced 
 
 #### Advanced
 
-- `/assets/css/main.css` see [main.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/main.css)
-- `/assets/css/code.css` see [code.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/code.css)
+- `/assets/css/main.css` see [main.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/main.css){:target="_blank"}
+- `/assets/css/code.css` see [code.css on GitHub](https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/assets/css/code.css){:target="_blank"}
 
 ##### Sitemap and Feeds
 

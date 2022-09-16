@@ -25,7 +25,7 @@ It's based on `jekyll-breadcrumbs`, but is part of the boilerplate and works wit
 
 ## Authors
 
-Authors are baked-in, allowing you to link posts to an author and display an author page, based on [Jet Holt's](https://jetholt.com/jekyll/) Jekyll articles.
+Authors are baked-in, allowing you to link posts to an author and display an author page, based on [Jet Holt's](https://jetholt.com/jekyll/){:target="_blank"} Jekyll articles.
 
 It used the `authors` front matter, see the [front matter](/about/front-matter/) page for more information.
 
