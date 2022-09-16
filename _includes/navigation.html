@@ -36,7 +36,8 @@
               <li>
                 <a href="{{ item_url }}"{% if item_url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ item.nav-title | default: item.title }}</a>
               </li>
-              {%- for child in sub_pages | sort: 'nav-order' %}
+              {%- assign sub_pages_sorted = sub_pages | sort: 'nav-order' %}
+              {%- for child in sub_pages_sorted %}
               <li>
                 <a href="{{ child.url | prepend: site.baseurl }}"{% if child.url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ child.nav-title | default: child.title }}</a>
               </li>

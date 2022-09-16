@@ -41,6 +41,8 @@ search_fallback_site: q
 search_fallback_query: q
 
 # Build settings
+strict_front_matter: true
+
 markdown: kramdown
 
 kramdown:
