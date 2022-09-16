@@ -17,7 +17,7 @@ nav-order: 3000
   {% endif %}
   {%- if posts.size > 0 -%}
   <ul class="post-list">
-    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+    {%- assign date_format = site.date_format | default: '%b %-d, %Y' -%}
     {%- for post in posts -%}
     <li class="list-item" data-destination="{{ post.url | relative_url }}">
       <article>

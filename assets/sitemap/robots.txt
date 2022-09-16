@@ -3,4 +3,4 @@ layout: null
 permalink: robots.txt
 ---
 Sitemap: {{ site.url }}{{ '/sitemap.xml' | prepend: site.baseurl }}
-{{ site.robots_txt }}
+{{ site.robots_txt | default: 'User-agent: *' }}

@@ -33,7 +33,7 @@ It used the `authors` front matter, see the [front matter](/about/front-matter/)
 
 The built-in search uses `search.json` to get instant results. The search is perform client-side in real-time where JavaScript is enabled.
 
-If JavaScript isn't enabled, or the data cannot be loaded, the search falls back to the external site search defined in your [site search configuration](/about/config-options/).
+If JavaScript isn't enabled, or the data cannot be loaded, the search falls back to the external site search defined in your [site search configuration](/about/config-options/#search-options).
 
 For some search providers, you might need to supply the site to search in a separate parameter to the query. If this is the case, set `search_fallback_site` to be the site-name parameter. `search_fallback_query` is for the search term.
 

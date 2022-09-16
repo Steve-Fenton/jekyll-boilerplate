@@ -9,7 +9,58 @@ description: Items you can control through configuration
 nav-order: 5000
 ---
 
+## Standard Config
+
+*Recommended*
+
+The following configuration entries are standard for all Jekyll Sites. You'll want to tailor them to your website.
+
+```yaml
+# Displayed in the site header
+title: Jekyll Boilerplate
+# Shown in the copyright footer
+owner: Steve Fenton
+# Website description
+description: >-
+  Jekyll Boilerplate is a theme-less, plugin-less clean starting point
+  for Jekyll sites where you want to run only your own code.
+# The subpath of your site, e.g. "/blog"
+baseurl: ""
+# The output folder (update this to match the baseurl, if you change it, e.g. _site/blog)
+destination: _site
+# The website URL
+url: https://jekyll.stevefenton.co.uk
+```
+
+## Tailoring Config
+
+*Recommended*
+
+The following items tailor the website. The default values are shown below.
+
+```yaml
+# Sets the theme colour for browsers
+theme_color_hex: 333333
+# Sets the date format
+date_format: "%b %-d, %Y" # i.e. Sep 5, 2022
+# Whether to show exerpts on list pages
+show_excerpts: false
+```
+
+## Language Config
+
+*Recommended*
+
+You can set the language option for the website. This selects the appropriate language from the `_data/language.yaml` file.
+
+```yaml
+# Sets the language of included text strings
+language: en #en, fr, fr-be, etc
+```
+
 ## Search Options
+
+*Optional*
 
 If the user has disabled JavaScript, or there is an issue with it such as a transient network fault or an error in third-party code, the search will fallback to a search provider. The settings are shown below alongside the default values. You don't need to specify this if you use the defaults.
 
@@ -31,36 +82,22 @@ Each of the parameters is passed as a query string, in the case of Google, two s
        |^|                                             |^|
 ```
 
+## Robot Options
 
-```
-# Displayed in the site header
-title: Jekyll Boilerplate
-# Shown in the copyright footer
-owner: Steve Fenton
-# Website description
-description: >-
-  Jekyll Boilerplate is a theme-less, plugin-less clean starting point
-  for Jekyll sites where you want to run only your own code.
-# The subpath of your site, e.g. "/blog"
-baseurl: ""
-# The output folder (update this to match the baseurl, if you change it, e.g. _site/blog)
-destination: _site
-# The website URL
-url: https://jekyll.stevefenton.co.uk
+*Optional*
 
-# Sets the language of included text strings
-language: en #en, fr, fr-be, etc
+You can change the contents of the `robots.txt` file used by crawlers using the `robots_txt` option. The default is shown below.
 
+```yaml
 robots_txt: >-
   User-agent: *
+```
 
-# Sets the theme colour for browsers
-theme_color_hex: 222255
-# Sets the date format
-date_format: "%-d %B %Y"
-# Whether to show exerpts on list pages
-show_excerpts: true
+## Paging Options
 
+If you don't set `page_size`, paging will be switched off.
+
+```yaml
 # Number of results per page
 page_size: 4
 # The path for articles (note, rename the "articles" folder if you change this)
