@@ -30,7 +30,7 @@ The [full configuration file is available on GitHub](https://github.com/Steve-Fe
 
 The basic configuration changes to make are:
 
-1. [Edit `_config.yml`](/about/config-options/)
+1. [Edit `_config.yml`](/config/)
 2. Add your icons to `/assets/icons/`
 
 ### Additional Files and Folders

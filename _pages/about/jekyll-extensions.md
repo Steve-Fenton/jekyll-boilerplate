@@ -17,6 +17,8 @@ The pagination extension handles paging for your articles, posts, or blogs.
 
 It's based on the original `jekyll-paginate` plugin, but in part of the boilerplate, not a dependency.
 
+See also, [Paging Config](/config/paging/).
+
 ## Breadcrumbs
 
 The breadcrumbs extensions shows the path to the current content, to help users orient themselves within the site. It also adds structured data to help search engines understand the structure of the website.
@@ -29,13 +31,17 @@ Authors are baked-in, allowing you to link posts to an author and display an aut
 
 It used the `authors` front matter, see the [front matter](/about/front-matter/) page for more information.
 
+See also, [Theme Config](/config/theme/)
+
 ## Search
 
 The built-in search uses `search.json` to get instant results. The search is perform client-side in real-time where JavaScript is enabled.
 
-If JavaScript isn't enabled, or the data cannot be loaded, the search falls back to the external site search defined in your [site search configuration](/about/config-options/#search-options).
+If JavaScript isn't enabled, or the data cannot be loaded, the search falls back to the external search, for example Google Search with a "site" specified.
 
 For some search providers, you might need to supply the site to search in a separate parameter to the query. If this is the case, set `search_fallback_site` to be the site-name parameter. `search_fallback_query` is for the search term.
+
+See also, [Search Config](/config/search/)
 
 ## Liquid Translations
 
@@ -60,14 +66,30 @@ car:
     en-US: hood
 ```
 
-### Liquid Regex Replace
+### Liquid `regex_replace`
 
 This has been included as it supports pagination features.
 
 Replace all:
 
-    {{ 'Replaces 1 All 2 Number 3' | regex_replace: '^[0-9]*-', '' }}
+```
+'Replaces 1 All 2 Number 3' | regex_replace: '[0-9]', ''
+```
 
 Replace one:
 
-    {{ 'Replaces 1 One 2 Number 3' | regex_replace_once: '[0-9]*-', '' }}
+```liquid
+'Replaces 1 One 2 Number 3' | regex_replace_once: '[0-9]', ''
+```
+
+### Liquid `isnil`
+
+```liquid
+page.some-bool | isnil: true
+```
+
+In the below example, if `item.nav-search` isn't supplied (either `nil` or and empty string), the supplied default will be used.
+
+```liquid
+assign nav_search = item.nav-search | isnil: true
+```

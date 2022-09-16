@@ -8,7 +8,7 @@ keywords: jekyll boilerplate,kitchen sink
 description: The most common content components arranged for testing.
 nav-title: Kitchen Sink
 nav-level: 1
-nav-order: 4000
+nav-order: 20000
 ---
 
 This page contains the most common content components, such as:
