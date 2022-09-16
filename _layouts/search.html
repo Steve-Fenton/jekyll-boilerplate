@@ -7,12 +7,12 @@ layout: default
       </header>
       <div>
         {{ content }}
-        <form method="GET" action="{{ site.search_fallback_url }}" role="search" id="site-search" class="site-search note" autocomplete="off">
+        <form method="GET" action="{{ site.search_fallback_url | default: 'https://www.google.com/search' }}" role="search" id="site-search" class="site-search note" autocomplete="off">
           <fieldset>
-            <input type="hidden" name="{{ site.search_fallback_site }}" value="{{ site.url | prepend: 'site:' }}" />
+            <input type="hidden" name="{{ site.search_fallback_site | default: 'q' }}" value="{{ site.url | prepend: 'site:' }}" />
               <div>
                 <label for="site-search-query">{{ 'search' | t: 'search_for' }}</label>
-                <input type="text" name="{{ site.search_fallback_query }}" id="site-search-query" autofocus="autofocus" />
+                <input type="text" name="{{ site.search_fallback_query | default: 'q' }}" id="site-search-query" autofocus="autofocus" />
                 <button id="site-search-button" type="submit">{{ 'search' | t: 'submit' }}</button>
               </div>
           </fieldset>

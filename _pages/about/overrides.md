@@ -6,7 +6,7 @@ date:   2022-09-06
 authors: steve-fenton
 keywords: jekyll boilerplate,overrides,files
 description: A description of theme files you can override.
-nav-order: 2000
+nav-order: 6000
 ---
 
 Files in the theme will be used, unless you supply an alternate version of the same file. This means you can just use things out of the box, or you can override one or more files.

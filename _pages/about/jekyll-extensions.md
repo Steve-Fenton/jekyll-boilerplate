@@ -6,7 +6,7 @@ date:   2022-09-06
 authors: steve-fenton
 keywords: jekyll boilerplate,jekyll extensions
 description: Information about baked-in extensions in Jekyll Boilerplate.
-nav-order: 4000
+nav-order: 3000
 ---
 
 There are no third-party dependencies in Jekyll Boilerplate, so a couple of extensions have been baked-in to provide key features.
@@ -33,24 +33,7 @@ It used the `authors` front matter, see the [front matter](/about/front-matter/)
 
 The built-in search uses `search.json` to get instant results. The search is perform client-side in real-time where JavaScript is enabled.
 
-If JavaScript isn't enabled, or the data cannot be loaded, the search falls back to the external site search defined in `_config.yml`.
-
-Example fallback:
-
-```yaml
-search_fallback_url: https://www.google.com/search
-search_fallback_site: q
-search_fallback_query: q
-```
-
-This results in a fallback search on Google of `site:jekyll.stevefenton.co.uk search terms`.
-
-Each of the parameters is passed as a query string, in the case of Google, two separate `q` parameters:
-
-```
-/search?q=site%3Ahttps%3A%2F%2Fjekyll.stevefenton.co.uk&q=search+terms
-        ^                                               ^
-```
+If JavaScript isn't enabled, or the data cannot be loaded, the search falls back to the external site search defined in your [site search configuration](/about/config-options/).
 
 For some search providers, you might need to supply the site to search in a separate parameter to the query. If this is the case, set `search_fallback_site` to be the site-name parameter. `search_fallback_query` is for the search term.
 

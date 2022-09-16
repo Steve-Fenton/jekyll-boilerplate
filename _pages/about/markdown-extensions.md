@@ -6,7 +6,7 @@ date:   2022-09-06
 authors: steve-fenton
 keywords: jekyll boilerplate,markdown extensions
 description: Examples of custom markdown extensions in Jekyll Boilerplate.
-nav-order: 5000
+nav-order: 4000
 ---
 
 Built-in custom markdown extensions for Jekyll Boilerplate are explained below.

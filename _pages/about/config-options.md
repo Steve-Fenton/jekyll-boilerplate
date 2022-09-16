@@ -1,3 +1,38 @@
+---
+layout: page
+title:  Configuration Options
+permalink: /about/config-options/
+date:   2022-09-06
+authors: steve-fenton
+keywords: jekyll boilerplate,configuration,config
+description: Items you can control through configuration
+nav-order: 5000
+---
+
+## Search Options
+
+If the user has disabled JavaScript, or there is an issue with it such as a transient network fault or an error in third-party code, the search will fallback to a search provider. The settings are shown below alongside the default values. You don't need to specify this if you use the defaults.
+
+```yaml
+# A fallback search location
+search_fallback_url: https://www.google.com/search
+# The query parameter for the site to search (for Google, this is 'q')
+search_fallback_site: q
+# The query parameter for the fallback (for Google, this is 'q')
+search_fallback_query: q
+```
+
+This results in a fallback search on Google of `site:jekyll.stevefenton.co.uk search terms`.
+
+Each of the parameters is passed as a query string, in the case of Google, two separate `q` parameters:
+
+```
+/search?q=site%3Ahttps%3A%2F%2Fjekyll.stevefenton.co.uk&q=search+terms
+       |^|                                             |^|
+```
+
+
+```
 # Displayed in the site header
 title: Jekyll Boilerplate
 # Shown in the copyright footer
@@ -33,6 +68,8 @@ paginate_path: "/articles/page-:num/"
 # Should match the word for "page" above (including any separators, like -)
 paginate_page: "page-"
 
+
+
 # Build settings
 strict_front_matter: true
 
@@ -58,3 +95,4 @@ defaults:
 
 plugins:
   - fenton-jekyll-plugin
+```

@@ -6,7 +6,7 @@ date:   2022-09-06
 authors: steve-fenton
 keywords: jekyll boilerplate,front matter
 description: A list of all custom front matter features in Jekyll Boilerplate.
-nav-order: 3000
+nav-order: 2000
 ---
 
 There are several ways Jekyll Boilerplate gives you to customise the website using the YAML front matter on pages and posts.

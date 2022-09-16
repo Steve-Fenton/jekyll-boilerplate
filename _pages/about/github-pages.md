@@ -7,7 +7,7 @@ authors: steve-fenton
 keywords: jekyll boilerplate,github pages,github action
 description: How to get the most from Jekyll Boilerplate and GitHub Pages.
 nav-title: GitHub Pages
-nav-order: 6000
+nav-order: 7000
 ---
 
 GitHub use a sandbox version of Jekyll that limits some features for security purposes. To use all features, use the GitHub [Jekyll Deploy Action](https://github.com/jeffreytse/jekyll-deploy-action){:target="blank"} to run your own build.
