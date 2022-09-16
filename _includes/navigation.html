@@ -1,52 +1,58 @@
+{%- assign current_url = page.url | remove: 'index.html' %}
+{%- assign previous = null %}
+{%- assign page_num_regex = '/' | append: site.paginate_page | append: '[0-9]/' %}
+{%- assign main_pages = site.pages | where: 'nav-level', '1' | sort: 'nav-order' %}
   <nav class="site-nav" id="site-nav" aria-label="{{ 'aria' | t: 'site_navigation' }}">
       <h2 class="site-nav-title">{{ 'navigation' | t: 'title' }}</h2>
       <ul>
-      {%- assign current_url = page.url | remove: 'index.html' %}
-      {%- assign previous = null %}
-      {%- assign regex = '/' | append: site.paginate_page | append: '[0-9]/' %}
-      {%- assign main_pages = site.pages | where: 'nav-level', '1' | sort: 'nav-order' -%}
       {% for item in main_pages %}
         {%- assign current = item.nav-title | default: item.title %}
-        {%- if (current != previous) %}
-          {%- assign previous = item.nav-title | default: item.title %}
 
-          {%- assign parent_perma = item.permalink %}
-          {%- assign parent_perma_size = parent_perma | size %}
-          {%- assign sub_pages = '' | split: '' %}
+        {%- comment %}Paging can introduce duplicates{% endcomment %}
+        {%- if current == previous %}
+        {%- continue %}
+        {%- endif %}
 
-          {%- for p in site.pages %}
-            {%- assign child_perma = p.permalink %}
-            {%- assign child_perma_truncated = child_perma | truncate: parent_perma_size, '' %}
+        {%- comment %}Hierarchy and selected items are determined based on URL{% endcomment %}
+        {%- assign previous = item.nav-title | default: item.title %}
+        {%- assign parent_perma = item.permalink %}
+        {%- assign parent_perma_size = parent_perma | size %}
+        {%- assign sub_pages = '' | split: '' %}
+        {%- assign current_url_truncated = current_url | truncate: parent_perma_size, '' %}
+        
+        {%- comment %}Find matching child pages by path{% endcomment %}
+        {%- for potential_sub_page in site.pages %}
+          {%- assign child_perma = potential_sub_page.permalink %}
+          {%- assign child_perma_truncated = child_perma | truncate: parent_perma_size, '' %}
 
-            {%- if p.nav-level != 0 and parent_perma != '/' and child_perma_truncated == parent_perma and child_perma != parent_perma %}
-              {%- assign sub_pages = sub_pages | push: p %}
-            {%- endif %}
-          {%- endfor %}
+          {%- if potential_sub_page.nav-level != 0 and parent_perma != '/' and child_perma_truncated == parent_perma and child_perma != parent_perma %}
+            {%- assign sub_pages = sub_pages | push: potential_sub_page %}
+          {%- endif %}
+        {%- endfor %}
 
         <li{%- if sub_pages.size > 0 %} class="has-children"{% endif %}>
-            {%- assign item_url = item.url | regex_replace: regex,'/' | prepend: site.baseurl %}
-            {%- if sub_pages.size > 0 %}
-          <details class="sub-nav">
+          {%- assign item_url = item.url | regex_replace: page_num_regex,'/' | prepend: site.baseurl %}
+          {%- if sub_pages.size > 0 %}
+          <details class="sub-nav"{% if current_url_truncated == parent_perma %} open="open"{% endif %}>
             <summary><span>{{ item.nav-section | default: item.nav-title | default: item.title }}</span></summary>
-            {%- else %}
+          {%- else %}
           <a href="{{ item_url }}"{% if item_url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ item.nav-title | default: item.title }}</a>
-            {%- endif -%}
-            {% if sub_pages.size > 0 %}
+          {%- endif -%}
+          {% if sub_pages.size > 0 %}
             <ul>
               <li>
                 <a href="{{ item_url }}"{% if item_url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ item.nav-title | default: item.title }}</a>
               </li>
-              {%- assign sub_pages_sorted = sub_pages | sort: 'nav-order' %}
-              {%- for child in sub_pages_sorted %}
+            {%- assign sub_pages_sorted = sub_pages | sort: 'nav-order' %}
+            {%- for child in sub_pages_sorted %}
               <li>
                 <a href="{{ child.url | prepend: site.baseurl }}"{% if child.url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ child.nav-title | default: child.title }}</a>
               </li>
-              {%- endfor %}
+            {%- endfor %}
             </ul>
           </details>
-            {%- endif %}
+          {%- endif %}
         </li>
-        {%- endif %}
       {%- endfor %}
       </ul>
     </nav>
