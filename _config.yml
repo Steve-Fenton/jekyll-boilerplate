@@ -19,6 +19,25 @@ language: en #en, fr, fr-be, etc
 robots_txt: >-
   User-agent: *
 
+analytics_script: >-
+  <script>
+        function add_ga(id) {
+          var script = document.createElement('script');
+          script.setAttribute('async', 'async');
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', id, { 'anonymize_ip': true });
+          gtag('set', 'allow_ad_personalization_signals', false);
+        }
+        if (document.location.hostname === 'jekyll.stevefenton.co.uk') {
+          add_ga('G-Q3C5CMFDKJ')
+        }
+      </script>
+
 # Sets the theme colour for browsers
 theme_color_hex: 222255
 # Sets the date format

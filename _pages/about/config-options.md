@@ -85,6 +85,33 @@ You can set the language option for the website. This selects the appropriate la
 language: en #en, fr, fr-be, etc
 ```
 
+## Analytics Script Options
+
+*Optional*
+
+You should wrap analytics scripts in a host-name check to ensure they only run on your live website. The example below shows how to add Google Analytics.
+
+```yaml
+analytics_script: >-
+  <script>
+        function add_ga(id) {
+          var script = document.createElement('script');
+          script.setAttribute('async', 'async');
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', id, { 'anonymize_ip': true });
+          gtag('set', 'allow_ad_personalization_signals', false);
+        }
+        if (document.location.hostname === 'jekyll.stevefenton.co.uk') {
+          add_ga('G-YOUR-ID')
+        }
+      </script>
+```
+
 ## Search Options
 
 *Optional*
