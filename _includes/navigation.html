@@ -5,7 +5,7 @@
   <nav class="site-nav" id="site-nav" aria-label="{{ 'aria' | t: 'site_navigation' }}">
       <h2 class="site-nav-title">{{ 'navigation' | t: 'title' }}</h2>
       <ul>
-      {% for item in main_pages %}
+      {%- for item in main_pages %}
         {%- assign current = item.nav-title | default: item.title %}
 
         {%- comment %}Paging can introduce duplicates{% endcomment %}
@@ -32,18 +32,22 @@
 
         <li{%- if sub_pages.size > 0 %} class="has-children"{% endif %}>
           {%- assign item_url = item.url | regex_replace: page_num_regex,'/' | prepend: site.baseurl %}
+
+          {%- comment %}Details added if child pages exist{% endcomment %}
           {%- if sub_pages.size > 0 %}
           <details class="sub-nav"{% if current_url_truncated == parent_perma %} open="open"{% endif %}>
             <summary><span>{{ item.nav-section | default: item.nav-title | default: item.title }}</span></summary>
           {%- else %}
           <a href="{{ item_url }}"{% if item_url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ item.nav-title | default: item.title }}</a>
           {%- endif -%}
+
+          {%- comment %}Child pages list, parent injected as first item{% endcomment %}
+          {%- assign sub_pages_sorted = sub_pages | sort: 'nav-order' %}
           {% if sub_pages.size > 0 %}
             <ul>
               <li>
                 <a href="{{ item_url }}"{% if item_url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ item.nav-title | default: item.title }}</a>
               </li>
-            {%- assign sub_pages_sorted = sub_pages | sort: 'nav-order' %}
             {%- for child in sub_pages_sorted %}
               <li>
                 <a href="{{ child.url | prepend: site.baseurl }}"{% if child.url == current_url) %} class="current-item" aria-current="page"{% endif %}>{{ child.nav-title | default: child.title }}</a>

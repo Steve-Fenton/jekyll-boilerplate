@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
     spec.name          = "fenton-jekyll-boilerplate"
-    spec.version       = "0.0.14"
+    spec.version       = "0.0.15"
     spec.authors       = ["Steve Fenton"]
     spec.email         = ["rubygems@stevefenton.co.uk"]
    

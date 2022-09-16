@@ -1,22 +1,19 @@
 {%- assign current_url = page.url | remove: 'index.html' %}
-<nav class="site-breadcrumbs" aria-label="{{ 'aria' | t: 'breadcrumbs' }}">
-    <ol vocab="http://schema.org/" typeof="BreadcrumbList">
-       {%- for crumb in breadcrumbs %} 
-         {%- if forloop.last %}
+{%- assign aria_current = '' %}
+  <nav class="site-breadcrumbs" aria-label="{{ 'aria' | t: 'breadcrumbs' }}">
+   <ol vocab="http://schema.org/" typeof="BreadcrumbList">
+   {%- for crumb in breadcrumbs %} 
+      {%- if forloop.last %}
+         {%- assign aria_current = ' aria-current="page"' %}
+      {%- else %}
+         {%- assign aria_current = '' %}
+      {%- endif %}
       <li property="itemListElement" typeof="ListItem">
-         <a property="item" typeof="WebPage" href="{{ crumb.url | relative_url }}" aria-current="page">
+         <a property="item" typeof="WebPage" href="{{ crumb.url | relative_url }}"{{aria_current}}>
             <span property="name">{{ crumb.title }}</span>
             <meta property="position" content="{{ crumb.position }}" />
          </a>
       </li>
-         {%- else %}
-       <li property="itemListElement" typeof="ListItem">
-          <a property="item" typeof="WebPage" href="{{ crumb.url | relative_url }}">
-             <span property="name">{{ crumb.title }}</span>
-             <meta property="position" content="{{ crumb.position }}" />
-          </a>
-       </li>
-         {%- endif %}
-       {%- endfor %}
-    </ol>
+   {%- endfor %}
+   </ol>
   </nav>
