@@ -11,6 +11,8 @@ nav-level: 1
 nav-order: 1000
 ---
 
+I'm experimenting with Jekyll and Astro. This is the Jekyll version. This is the Jekyll version, there is also an [Astro version](https://astro.stevefenton.co.uk/).
+
 Welcome to Jekyll Boilerplate. A super-lightweight, accessible, SEO friendly starter project for the [Jekyll](https://jekyllrb.com/){:target="_blank"} site generator.
 
 :::note
@@ -20,7 +22,7 @@ The Jekyll Boilerplate source code is available on [GitHub](https://github.com/S
 Jekyll Boilerplate is built on some strong opinions:
 
 - Accessibility is not just important, it's fundamental
-- Everythings should still work without JavaScript
+- Everything should still work without JavaScript
 - The democratising force in the World Wide Web is HTML files
 - Software supply chains should be minimal
 

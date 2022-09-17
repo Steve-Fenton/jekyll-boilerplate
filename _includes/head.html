@@ -1,5 +1,5 @@
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8" />
 	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="{{ page.description }}">
@@ -16,7 +16,7 @@
 	<meta property="og:image" content="{{ page.banner-image }}" />
 	{%- endif %}
 	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html',''}}" />
-	<link rel="alternate" type="application/rss+xml" title="Steve Fenton &raquo; Feed" href="https://www.stevefenton.co.uk{{ site.baseurl }}/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="Steve Fenton &raquo; Feed" href="{{ site.url }}{{ site.baseurl }}/feed/" />
 	<link rel="shortcut icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon" />
 	<link rel="apple-touch-icon" href="{{ "/assets/icons/apple-touch-icon.png" | prepend: site.baseurl }}" />
 	<link rel="alternate" href="{{ "/sitemap.xml" | prepend: site.baseurl }}" type="application/rss+xml" />

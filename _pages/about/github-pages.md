@@ -12,7 +12,7 @@ nav-order: 7000
 
 GitHub use a sandbox version of Jekyll that limits some features for security purposes. To use all features, use the GitHub [Jekyll Deploy Action](https://github.com/jeffreytse/jekyll-deploy-action){:target="blank"} to run your own build.
 
-You can copy [the Jekyll Boilerplate GitHub Action configuration](https://github.com/Steve-Fenton/jekyll-boilerplate/tree/main/.github/workflows){:target="_blank"} if you want to host your site on GitHub Actions.
+You can copy [the Jekyll Boilerplate GitHub Action configuration](https://github.com/Steve-Fenton/jekyll-boilerplate/tree/main/.github/workflows){:target="_blank"} if you want to host your site on GitHub Pages.
 
 The Jekyll Deploy Action is really easy to set up and publishes the `_site` output to a branch in your repository. All you need to do is set up GitHub Pages to serve the content in the branch.
 
