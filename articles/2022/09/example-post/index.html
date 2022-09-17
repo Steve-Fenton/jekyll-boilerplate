@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Example Post - Jekyll Boilerplate</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="This is a test post.">
+	<meta name="keywords" content="test post">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#222255" />
+	<meta name="msapplication-navbutton-color" content="#222255" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#222255" />
+	<meta property="og:title" content="Example Post" />
+	<meta property="og:url" content="https://jekyll.stevefenton.co.uk/articles/2022/09/example-post/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="This is a test post." />
+	<link rel="canonical" href="https://jekyll.stevefenton.co.uk/articles/2022/09/example-post/" />
+	<link rel="alternate" type="application/rss+xml" title="Steve Fenton &raquo; Feed" href="https://jekyll.stevefenton.co.uk/feed/" />
+	<link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+	<link rel="alternate" href="/sitemap.xml" type="application/rss+xml" />
+	<link rel="stylesheet" href="/assets/css/vars.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/code.css" media="print" onload="this.media = 'all'" />
+	<noscript><link rel="stylesheet" href="/assets/css/code.css" /></noscript>
+    <script>
+      function add_ga(id) {
+        var script = document.createElement('script');
+        script.setAttribute('async', 'async');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', id, { 'anonymize_ip': true });
+        gtag('set', 'allow_ad_personalization_signals', false);
+      }
+      if (document.location.hostname === 'jekyll.stevefenton.co.uk') {
+        add_ga('G-Q3C5CMFDKJ')
+      }
+    </script>
+</head>
+<body>
+  <nav class="skip-links" aria-label="skiplinks">
+    <a href="#site-nav">Skip to navigation</a>
+    <a href="#site-main">Skip to main content</a>
+    <a href="#site-footer">Skip to footer</a>
+  </nav>
+  <header class="site-header">
+    <a href="#site-nav" class="navigation-icon" title="Toggle Menu"><svg xmlns="http://www.w3.org/2000/svg" 
+      width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" 
+      fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="4" y1="12" x2="20" y2="12" />
+      <line x1="4" y1="18" x2="20" y2="18" />
+    </svg></a>
+    <a href="/" class="site-title">Jekyll Boilerplate</a>
+    <a href="/search/" class="search-icon" title="Search"><svg xmlns="http://www.w3.org/2000/svg" 
+      width="40" height="40" viewBox="0 0 24 24" stroke-width="1" 
+      fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="10" cy="10" r="7" />
+      <line x1="21" y1="21" x2="15" y2="15" />
+    </svg></a>
+  </header>
+  
+  <nav class="site-breadcrumbs" aria-label="Breadcrumb">
+   <ol vocab="http://schema.org/" typeof="BreadcrumbList">
+      <li property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="/">
+            <span property="name">Home</span>
+            <meta property="position" content="1" />
+         </a>
+      </li>
+      <li property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="/articles/">
+            <span property="name">Articles</span>
+            <meta property="position" content="2" />
+         </a>
+      </li>
+      <li property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="/articles/2022/09/example-post/" aria-current="page">
+            <span property="name">Example Post</span>
+            <meta property="position" content="3" />
+         </a>
+      </li>
+   </ol>
+  </nav>
+  <div class="content-group">
+  
+  <nav class="site-nav" id="site-nav" aria-label="Site Navigation">
+      <h2 class="site-nav-title">Navigation</h2>
+      <ul>
+
+        <li>
+          <a href="/">Home</a>
+          
+        </li>
+
+        <li class="has-children">
+          <details class="sub-nav">
+            <summary><span>About</span></summary>
+          
+            <ul>
+              <li>
+                <a href="/about/">Jekyll Boilerplate</a>
+              </li>
+              <li>
+                <a href="/about/getting-started/">Getting Started</a>
+              </li>
+              <li>
+                <a href="/about/front-matter/">Front Matter</a>
+              </li>
+              <li>
+                <a href="/about/jekyll-extensions/">Jekyll Extensions</a>
+              </li>
+              <li>
+                <a href="/about/markdown-extensions/">Markdown Extensions</a>
+              </li>
+              <li>
+                <a href="/about/overrides/">Overrides</a>
+              </li>
+              <li>
+                <a href="/about/github-pages/">GitHub Pages</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="has-children">
+          <details class="sub-nav">
+            <summary><span>Configuration</span></summary>
+          
+            <ul>
+              <li>
+                <a href="/config/">Configuration List</a>
+              </li>
+              <li>
+                <a href="/config/jekyll/">Jekyll</a>
+              </li>
+              <li>
+                <a href="/config/theme/">Theme</a>
+              </li>
+              <li>
+                <a href="/config/tailoring/">Tailoring</a>
+              </li>
+              <li>
+                <a href="/config/language/">Language</a>
+              </li>
+              <li>
+                <a href="/config/paging/">Paging</a>
+              </li>
+              <li>
+                <a href="/config/analytics/">Analytics</a>
+              </li>
+              <li>
+                <a href="/config/search/">Search</a>
+              </li>
+              <li>
+                <a href="/config/robots/">Robots</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li>
+          <a href="/articles/">Articles</a>
+          
+        </li>
+
+        <li>
+          <a href="/kitchen-sink/">Kitchen Sink</a>
+          
+        </li>
+      </ul>
+    </nav>
+    <main id="site-main">
+    <article>
+      <header>
+        <h1>Example Post</h1>
+      </header>
+      <div class="post-meta">
+        <img src="/assets/img/authors/steve-fenton.webp" alt="Steve Fenton" class="author-image" />
+        <div class="author-info">
+          <span>Written by <a href="https://jekyll.stevefenton.co.uk/authors/steve-fenton/">Steve Fenton</a>
+            <time class="dt-published" datetime="2022-09-01T00:00:00+00:00" itemprop="datePublished"></time>
+              1 September 2022
+            </time>
+          </span>
+        </div>
+      </div>
+      <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet elit sodales, egestas odio eu, interdum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elit odio, dapibus nec finibus sit amet, aliquam a tortor.</p>
+
+<p>Sed ultricies sollicitudin ipsum at bibendum. Nulla euismod erat arcu, vel convallis risus sagittis non. Fusce scelerisque arcu nec blandit dictum. In vel ultricies nisi. Vivamus pharetra, nibh sit amet semper tristique, leo sapien scelerisque risus, a pharetra tortor lectus at nisl.</p>
+
+<p>Vestibulum dui mauris, mattis mattis hendrerit non, aliquam non sem. Nullam orci arcu, viverra vel quam sed, dapibus porta dui. Etiam venenatis ipsum eget mi sodales lobortis. Donec varius non metus eget congue. Suspendisse quis mauris vitae lectus porttitor placerat at quis sapien.</p>
+
+      </div>
+    </article>
+    </main>
+  </div>
+  <footer id="site-footer">
+    <p>Copyright &copy; 2022 Steve Fenton</p>
+  </footer>
+  <script src="/assets/js/main.js" type="module" async></script>
+</body>
+</html>

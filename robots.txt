@@ -1,0 +1,2 @@
+Sitemap: https://jekyll.stevefenton.co.uk/sitemap.xml
+User-agent: *

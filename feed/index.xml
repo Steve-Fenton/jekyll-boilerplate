@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Jekyll Boilerplate</title>
+	<subtitle>Jekyll Boilerplate is a theme-less, plugin-less clean starting point for Jekyll sites where you want to run only your own code.</subtitle>
+	<link href="https://jekyll.stevefenton.co.uk/feed/atom.xml" rel="self" />
+	<link href="https://jekyll.stevefenton.co.uk" />
+	<id>https://jekyll.stevefenton.co.uk/feed/atom.xml</id>
+    <updated>2022-09-05T00:00:00+00:00</updated>
+	<entry>
+		<title>Example Post 5</title>
+		<link href="https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-5/" />
+		<id>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-5/</id>
+        <published>2022-09-05T00:00:00+00:00</published>
+		<updated>2022-09-05T00:00:00+00:00</updated>
+		<summary>You can put a custom excerpt in front matter.</summary>
+		<author>
+            <name>Steve Fenton</name>
+            <email></email>
+		</author>
+	</entry>
+	<entry>
+		<title>Example Post 4</title>
+		<link href="https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-4/" />
+		<id>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-4/</id>
+        <published>2022-09-04T00:00:00+00:00</published>
+		<updated>2022-09-04T00:00:00+00:00</updated>
+		<summary><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet elit sodales, egestas odio eu, interdum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elit odio, dapibus nec finibus sit amet, aliquam a tortor.</p>
+</summary>
+		<author>
+            <name>Steve Fenton</name>
+            <email></email>
+		</author>
+	</entry>
+	<entry>
+		<title>Example Post 3</title>
+		<link href="https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-3/" />
+		<id>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-3/</id>
+        <published>2022-09-03T00:00:00+00:00</published>
+		<updated>2022-09-03T00:00:00+00:00</updated>
+		<summary><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet elit sodales, egestas odio eu, interdum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elit odio, dapibus nec finibus sit amet, aliquam a tortor.</p>
+</summary>
+		<author>
+            <name>Steve Fenton</name>
+            <email></email>
+		</author>
+	</entry>
+	<entry>
+		<title>Example Post 2</title>
+		<link href="https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-2/" />
+		<id>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-2/</id>
+        <published>2022-09-02T00:00:00+00:00</published>
+		<updated>2022-09-02T00:00:00+00:00</updated>
+		<summary><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet elit sodales, egestas odio eu, interdum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elit odio, dapibus nec finibus sit amet, aliquam a tortor.</p>
+</summary>
+		<author>
+            <name>Steve Fenton</name>
+            <email></email>
+		</author>
+	</entry>
+	<entry>
+		<title>Example Post</title>
+		<link href="https://jekyll.stevefenton.co.uk/articles/2022/09/example-post/" />
+		<id>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post/</id>
+        <published>2022-09-01T00:00:00+00:00</published>
+		<updated>2022-09-01T00:00:00+00:00</updated>
+		<summary><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet elit sodales, egestas odio eu, interdum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elit odio, dapibus nec finibus sit amet, aliquam a tortor.</p>
+</summary>
+		<author>
+            <name>Steve Fenton</name>
+            <email></email>
+		</author>
+	</entry>
+</feed>

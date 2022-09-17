@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Getting Started - Jekyll Boilerplate</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="There are just a couple of tasks to turn the Jekyll Boilerplate into your own working website.">
+	<meta name="keywords" content="jekyll boilerplate,getting started">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#222255" />
+	<meta name="msapplication-navbutton-color" content="#222255" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#222255" />
+	<meta property="og:title" content="Getting Started" />
+	<meta property="og:url" content="https://jekyll.stevefenton.co.uk/about/getting-started/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="There are just a couple of tasks to turn the Jekyll Boilerplate into your own working website." />
+	<link rel="canonical" href="https://jekyll.stevefenton.co.uk/about/getting-started/" />
+	<link rel="alternate" type="application/rss+xml" title="Steve Fenton &raquo; Feed" href="https://jekyll.stevefenton.co.uk/feed/" />
+	<link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+	<link rel="alternate" href="/sitemap.xml" type="application/rss+xml" />
+	<link rel="stylesheet" href="/assets/css/vars.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/code.css" media="print" onload="this.media = 'all'" />
+	<noscript><link rel="stylesheet" href="/assets/css/code.css" /></noscript>
+    <script>
+      function add_ga(id) {
+        var script = document.createElement('script');
+        script.setAttribute('async', 'async');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', id, { 'anonymize_ip': true });
+        gtag('set', 'allow_ad_personalization_signals', false);
+      }
+      if (document.location.hostname === 'jekyll.stevefenton.co.uk') {
+        add_ga('G-Q3C5CMFDKJ')
+      }
+    </script>
+</head>
+<body>
+  <nav class="skip-links" aria-label="skiplinks">
+    <a href="#site-nav">Skip to navigation</a>
+    <a href="#site-main">Skip to main content</a>
+    <a href="#site-footer">Skip to footer</a>
+  </nav>
+  <header class="site-header">
+    <a href="#site-nav" class="navigation-icon" title="Toggle Menu"><svg xmlns="http://www.w3.org/2000/svg" 
+      width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" 
+      fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="4" y1="12" x2="20" y2="12" />
+      <line x1="4" y1="18" x2="20" y2="18" />
+    </svg></a>
+    <a href="/" class="site-title">Jekyll Boilerplate</a>
+    <a href="/search/" class="search-icon" title="Search"><svg xmlns="http://www.w3.org/2000/svg" 
+      width="40" height="40" viewBox="0 0 24 24" stroke-width="1" 
+      fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="10" cy="10" r="7" />
+      <line x1="21" y1="21" x2="15" y2="15" />
+    </svg></a>
+  </header>
+  
+  <nav class="site-breadcrumbs" aria-label="Breadcrumb">
+   <ol vocab="http://schema.org/" typeof="BreadcrumbList">
+      <li property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="/">
+            <span property="name">Home</span>
+            <meta property="position" content="1" />
+         </a>
+      </li>
+      <li property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="/about/">
+            <span property="name">Jekyll Boilerplate</span>
+            <meta property="position" content="2" />
+         </a>
+      </li>
+      <li property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="/about/getting-started/" aria-current="page">
+            <span property="name">Getting Started</span>
+            <meta property="position" content="3" />
+         </a>
+      </li>
+   </ol>
+  </nav>
+  <div class="content-group">
+  
+  <nav class="site-nav" id="site-nav" aria-label="Site Navigation">
+      <h2 class="site-nav-title">Navigation</h2>
+      <ul>
+
+        <li>
+          <a href="/">Home</a>
+          
+        </li>
+
+        <li class="has-children">
+          <details class="sub-nav" open="open">
+            <summary><span>About</span></summary>
+          
+            <ul>
+              <li>
+                <a href="/about/">Jekyll Boilerplate</a>
+              </li>
+              <li>
+                <a href="/about/getting-started/" class="current-item" aria-current="page">Getting Started</a>
+              </li>
+              <li>
+                <a href="/about/front-matter/">Front Matter</a>
+              </li>
+              <li>
+                <a href="/about/jekyll-extensions/">Jekyll Extensions</a>
+              </li>
+              <li>
+                <a href="/about/markdown-extensions/">Markdown Extensions</a>
+              </li>
+              <li>
+                <a href="/about/overrides/">Overrides</a>
+              </li>
+              <li>
+                <a href="/about/github-pages/">GitHub Pages</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="has-children">
+          <details class="sub-nav">
+            <summary><span>Configuration</span></summary>
+          
+            <ul>
+              <li>
+                <a href="/config/">Configuration List</a>
+              </li>
+              <li>
+                <a href="/config/jekyll/">Jekyll</a>
+              </li>
+              <li>
+                <a href="/config/theme/">Theme</a>
+              </li>
+              <li>
+                <a href="/config/tailoring/">Tailoring</a>
+              </li>
+              <li>
+                <a href="/config/language/">Language</a>
+              </li>
+              <li>
+                <a href="/config/paging/">Paging</a>
+              </li>
+              <li>
+                <a href="/config/analytics/">Analytics</a>
+              </li>
+              <li>
+                <a href="/config/search/">Search</a>
+              </li>
+              <li>
+                <a href="/config/robots/">Robots</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li>
+          <a href="/articles/">Articles</a>
+          
+        </li>
+
+        <li>
+          <a href="/kitchen-sink/">Kitchen Sink</a>
+          
+        </li>
+      </ul>
+    </nav>
+    <main id="site-main">
+    <article>
+      <header>
+          <h1>Getting Started</h1>
+      </header>
+      <div>
+          <p>Add the following to your <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s2">"fenton-jekyll-boilerplate"</span><span class="p">,</span> <span class="s2">"~&gt; 0.0.15"</span>
+<span class="n">gem</span> <span class="s2">"fenton-jekyll-plugin"</span><span class="p">,</span> <span class="s2">"~&gt; 0.0.13"</span>
+</code></pre></div></div>
+
+<p>Add the following to your <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">theme</span><span class="pi">:</span> <span class="s">fenton-jekyll-boilerplate</span>
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">fenton-jekyll-plugin</span>
+</code></pre></div></div>
+
+<p>Run <code class="language-plaintext highlighter-rouge">bundler</code> before you run <code class="language-plaintext highlighter-rouge">jekyll serve</code>.</p>
+
+<p>The <a href="https://github.com/Steve-Fenton/jekyll-boilerplate/blob/main/_config.yml" target="_blank">full configuration file is available on GitHub</a>.</p>
+
+<p>The basic configuration changes to make are:</p>
+
+<ol>
+  <li><a href="/config/">Edit <code class="language-plaintext highlighter-rouge">_config.yml</code></a></li>
+  <li>Add your icons to <code class="language-plaintext highlighter-rouge">/assets/icons/</code></li>
+</ol>
+
+<h3 id="additional-files-and-folders">Additional Files and Folders</h3>
+
+<p>You can download the latest <a href="https://github.com/Steve-Fenton/jekyll-boilerplate/actions/workflows/build-jekyll.yml" target="_blank">starter pack</a> by selecting the latest run and clicking on “starter-pack” in the artefacts.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_authors/</code>: Sample author data, which you can replace / extend</li>
+  <li><code class="language-plaintext highlighter-rouge">articles/</code>: This contains the list page that supports pages lists of articles</li>
+</ul>
+
+<p>Jekyll version &lt; 4.3.0</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_data/language.yml</code>: Only required for versions of Jekyll prior to 4.3.0 - contains translations for the UI</li>
+</ul>
+
+<h2 id="adjusting-the-theme">Adjusting the Theme</h2>
+
+<p>You can then edit the CSS variables in <code class="language-plaintext highlighter-rouge">/assets/css/vars.css</code>, or completely replace the stylesheets. We strongly recommend sticking with the supplied HTML and using your CSS chops to make style changes.</p>
+
+<h2 id="writing-content">Writing Content</h2>
+
+<p>Check out the <a href="/about/front-matter/">custom front matter</a> to see how you can control how content is displayed in navigation. You can set short-titles and section titles for menu items.</p>
+
+<h2 id="running-the-jekyll-boilerplate-code">Running the Jekyll Boilerplate Code</h2>
+
+<p>If you want to download the code in the Jekyll Boilerplate repository on GitHub, follow these steps after downloading the code:</p>
+
+<ul>
+  <li>Install the <a href="https://jekyllrb.com/docs/" target="_blank">pre-requisites</a></li>
+  <li>Download the <a href="https://github.com/Steve-Fenton/jekyll-boilerplate" target="_blank">Jekyll Boilerplate code from GitHub</a></li>
+  <li>Run the <code class="language-plaintext highlighter-rouge">bundler</code> command from the root folder</li>
+  <li>Run the site using <code class="language-plaintext highlighter-rouge">jekyll serve</code></li>
+</ul>
+
+      </div>
+    </article>
+    </main>
+  </div>
+  <footer id="site-footer">
+    <p>Copyright &copy; 2022 Steve Fenton</p>
+  </footer>
+  <script src="/assets/js/main.js" type="module" async></script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Heading 1 - Jekyll Boilerplate</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="The most common content components arranged for testing.">
+	<meta name="keywords" content="jekyll boilerplate,kitchen sink">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#222255" />
+	<meta name="msapplication-navbutton-color" content="#222255" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#222255" />
+	<meta property="og:title" content="Heading 1" />
+	<meta property="og:url" content="https://jekyll.stevefenton.co.uk/kitchen-sink/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="The most common content components arranged for testing." />
+	<link rel="canonical" href="https://jekyll.stevefenton.co.uk/kitchen-sink/" />
+	<link rel="alternate" type="application/rss+xml" title="Steve Fenton &raquo; Feed" href="https://jekyll.stevefenton.co.uk/feed/" />
+	<link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+	<link rel="alternate" href="/sitemap.xml" type="application/rss+xml" />
+	<link rel="stylesheet" href="/assets/css/vars.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/code.css" media="print" onload="this.media = 'all'" />
+	<noscript><link rel="stylesheet" href="/assets/css/code.css" /></noscript>
+    <script>
+      function add_ga(id) {
+        var script = document.createElement('script');
+        script.setAttribute('async', 'async');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', id, { 'anonymize_ip': true });
+        gtag('set', 'allow_ad_personalization_signals', false);
+      }
+      if (document.location.hostname === 'jekyll.stevefenton.co.uk') {
+        add_ga('G-Q3C5CMFDKJ')
+      }
+    </script>
+</head>
+<body>
+  <nav class="skip-links" aria-label="skiplinks">
+    <a href="#site-nav">Skip to navigation</a>
+    <a href="#site-main">Skip to main content</a>
+    <a href="#site-footer">Skip to footer</a>
+  </nav>
+  <header class="site-header">
+    <a href="#site-nav" class="navigation-icon" title="Toggle Menu"><svg xmlns="http://www.w3.org/2000/svg" 
+      width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" 
+      fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="4" y1="12" x2="20" y2="12" />
+      <line x1="4" y1="18" x2="20" y2="18" />
+    </svg></a>
+    <a href="/" class="site-title">Jekyll Boilerplate</a>
+    <a href="/search/" class="search-icon" title="Search"><svg xmlns="http://www.w3.org/2000/svg" 
+      width="40" height="40" viewBox="0 0 24 24" stroke-width="1" 
+      fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="10" cy="10" r="7" />
+      <line x1="21" y1="21" x2="15" y2="15" />
+    </svg></a>
+  </header>
+  
+  <nav class="site-breadcrumbs" aria-label="Breadcrumb">
+   <ol vocab="http://schema.org/" typeof="BreadcrumbList">
+      <li property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="/">
+            <span property="name">Home</span>
+            <meta property="position" content="1" />
+         </a>
+      </li>
+      <li property="itemListElement" typeof="ListItem">
+         <a property="item" typeof="WebPage" href="/kitchen-sink/" aria-current="page">
+            <span property="name">Kitchen Sink</span>
+            <meta property="position" content="2" />
+         </a>
+      </li>
+   </ol>
+  </nav>
+  <div class="content-group">
+  
+  <nav class="site-nav" id="site-nav" aria-label="Site Navigation">
+      <h2 class="site-nav-title">Navigation</h2>
+      <ul>
+
+        <li>
+          <a href="/">Home</a>
+          
+        </li>
+
+        <li class="has-children">
+          <details class="sub-nav">
+            <summary><span>About</span></summary>
+          
+            <ul>
+              <li>
+                <a href="/about/">Jekyll Boilerplate</a>
+              </li>
+              <li>
+                <a href="/about/getting-started/">Getting Started</a>
+              </li>
+              <li>
+                <a href="/about/front-matter/">Front Matter</a>
+              </li>
+              <li>
+                <a href="/about/jekyll-extensions/">Jekyll Extensions</a>
+              </li>
+              <li>
+                <a href="/about/markdown-extensions/">Markdown Extensions</a>
+              </li>
+              <li>
+                <a href="/about/overrides/">Overrides</a>
+              </li>
+              <li>
+                <a href="/about/github-pages/">GitHub Pages</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="has-children">
+          <details class="sub-nav">
+            <summary><span>Configuration</span></summary>
+          
+            <ul>
+              <li>
+                <a href="/config/">Configuration List</a>
+              </li>
+              <li>
+                <a href="/config/jekyll/">Jekyll</a>
+              </li>
+              <li>
+                <a href="/config/theme/">Theme</a>
+              </li>
+              <li>
+                <a href="/config/tailoring/">Tailoring</a>
+              </li>
+              <li>
+                <a href="/config/language/">Language</a>
+              </li>
+              <li>
+                <a href="/config/paging/">Paging</a>
+              </li>
+              <li>
+                <a href="/config/analytics/">Analytics</a>
+              </li>
+              <li>
+                <a href="/config/search/">Search</a>
+              </li>
+              <li>
+                <a href="/config/robots/">Robots</a>
+              </li>
+            </ul>
+          </details>
+        </li>
+
+        <li>
+          <a href="/articles/">Articles</a>
+          
+        </li>
+
+        <li>
+          <a href="/kitchen-sink/" class="current-item" aria-current="page">Kitchen Sink</a>
+          
+        </li>
+      </ul>
+    </nav>
+    <main id="site-main">
+    <article>
+      <header>
+          <h1>Heading 1</h1>
+      </header>
+      <div>
+          <p>This page contains the most common content components, such as:</p>
+
+<ul>
+  <li><a href="#heading-2">Heading 2</a>
+    <ul>
+      <li><a href="#heading-3">Heading 3</a>
+        <ul>
+          <li><a href="#heading-4">Heading 4</a>
+            <ul>
+              <li><a href="#heading-5">Heading 5</a>
+                <ul>
+                  <li><a href="#heading-6">Heading 6</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#block-quote">Block Quote</a></li>
+  <li><a href="#code">Code</a></li>
+  <li><a href="#custom-elements">Custom Elements</a>
+    <ul>
+      <li><a href="#note">Note</a></li>
+      <li><a href="#simple-grid">Simple Grid</a></li>
+    </ul>
+  </li>
+  <li><a href="#images">Images</a></li>
+  <li><a href="#lists">Lists</a></li>
+  <li><a href="#horizontal-rule">Horizontal Rule</a></li>
+  <li><a href="#links">Links</a></li>
+  <li><a href="#tables">Tables</a></li>
+  <li><a href="#text">Text</a></li>
+</ul>
+
+<h2 id="heading-2">Heading 2</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque varius morbi enim nunc faucibus a. Montes nascetur ridiculus mus mauris vitae ultricies.</p>
+
+<h3 id="heading-3">Heading 3</h3>
+
+<p>Lectus nulla at volutpat diam ut. Tortor vitae purus faucibus ornare suspendisse. Sagittis purus sit amet volutpat consequat mauris nunc congue nisi. Elementum facilisis leo vel fringilla est ullamcorper eget nulla. Velit euismod in pellentesque massa. Quis commodo odio aenean sed. Quis auctor elit sed vulputate mi sit amet.</p>
+
+<h4 id="heading-4">Heading 4</h4>
+
+<p>Condimentum lacinia quis vel eros. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Dignissim cras tincidunt lobortis feugiat vivamus at. Luctus venenatis lectus magna fringilla urna.</p>
+
+<h5 id="heading-5">Heading 5</h5>
+
+<p>Suspendisse faucibus interdum posuere lorem ipsum dolor. Ultricies lacus sed turpis tincidunt id aliquet risus. Volutpat est velit egestas dui id ornare arcu. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Enim eu turpis egestas pretium aenean pharetra magna. Nulla malesuada pellentesque elit eget.</p>
+
+<h6 id="heading-6">Heading 6</h6>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque varius morbi enim nunc faucibus a. Montes nascetur ridiculus mus mauris vitae ultricies.</p>
+
+<h2 id="block-quote">Block Quote</h2>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; Quiet minds cannot be perplexed or frightened </span>
+but go on in fortune or misfortune at their own 
+private pace, like a clock during a thunderstorm. 
+<span class="nt">&lt;cite&gt;</span>Robert Louis Stevenson<span class="nt">&lt;/cite&gt;</span>
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<blockquote>
+  <p>Quiet minds cannot be perplexed or frightened 
+but go on in fortune or misfortune at their own 
+private pace, like a clock during a thunderstorm. 
+<cite>Robert Louis Stevenson</cite></p>
+</blockquote>
+
+<h2 id="code">Code</h2>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Inline <span class="sb">`code`</span> and a code block.<span class="sb">
+
+    const elem = document.querySelector('.elem');
+
+</span>A code block with a language set.
+
+<span class="p">```</span><span class="nl">javascript
+</span><span class="kd">const</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.elem</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">```</span>
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<p>Inline <code class="language-plaintext highlighter-rouge">code</code> and a code block.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const elem = document.querySelector('.elem');
+</code></pre></div></div>
+
+<p>A code block with a language set.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">elem</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">.elem</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="custom-elements">Custom Elements</h2>
+
+<h3 id="note">Note</h3>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code> :::note
+ This is a custom div element with the class <span class="sb">`note`</span>
+ :::
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<div class="note">
+  <p>This is a custom div element with the class <code class="language-plaintext highlighter-rouge">note</code></p>
+</div>
+
+<h3 id="simple-grid">Simple Grid</h3>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code> :::simple-grid
+
+ !<span class="p">[</span><span class="nv">An old book front for Jekyll and Hyde</span><span class="p">](</span><span class="sx">/assets/img/jekyll-and-hyde.webp</span><span class="p">)</span>{:loading="lazy"}
+
+ !<span class="p">[</span><span class="nv">An old book front for Jekyll and Hyde</span><span class="p">](</span><span class="sx">/assets/img/jekyll-and-hyde.webp</span><span class="p">)</span>{:loading="lazy"}
+
+ :::
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<div class="simple-grid">
+
+  <p><img src="/assets/img/jekyll-and-hyde.webp" alt="An old book front for Jekyll and Hyde" loading="lazy" /></p>
+
+  <p><img src="/assets/img/jekyll-and-hyde.webp" alt="An old book front for Jekyll and Hyde" loading="lazy" /></p>
+
+</div>
+
+<h2 id="images">Images</h2>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">An old book front for Jekyll and Hyde</span><span class="p">](</span><span class="sx">/assets/img/jekyll-and-hyde.webp</span><span class="p">)</span>{:loading="lazy"}
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<p><img src="/assets/img/jekyll-and-hyde.webp" alt="An old book front for Jekyll and Hyde" loading="lazy" /></p>
+
+<h2 id="lists">Lists</h2>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">1.</span> Item
+<span class="p">1.</span> Item
+<span class="p">   -</span> Nested Item
+<span class="p">1.</span> Item
+
+   Item additional paragraph.
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<ol>
+  <li>Item</li>
+  <li>Item
+    <ul>
+      <li>Nested Item</li>
+    </ul>
+  </li>
+  <li>
+    <p>Item</p>
+
+    <p>Item additional paragraph.</p>
+  </li>
+</ol>
+
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">***
+</span></code></pre></div></div>
+
+<p>Result:</p>
+
+<hr />
+
+<h2 id="links">Links</h2>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">&lt;https://jekyll.stevefenton.co.uk/kitchen-sink/&gt;</span>
+
+<span class="p">[</span><span class="nv">Jekyll Boilerplate</span><span class="p">](</span><span class="sx">https://jekyll.stevefenton.co.uk/</span> <span class="nn">"The Jekyll Boilerplate Site"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<p><a href="https://jekyll.stevefenton.co.uk/kitchen-sink/">https://jekyll.stevefenton.co.uk/kitchen-sink/</a></p>
+
+<p><a href="https://jekyll.stevefenton.co.uk/" title="The Jekyll Boilerplate Site">Jekyll Boilerplate</a></p>
+
+<h2 id="tables">Tables</h2>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Item | One | Two | Three |
+| :--  | :-: | :-: | :-:   |
+| A    | 1   | 2   | 3     |
+| B    | 2   | 3   | 4     |
+| C    | 3   | 4   | 5     |
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Item</th>
+      <th style="text-align: center">One</th>
+      <th style="text-align: center">Two</th>
+      <th style="text-align: center">Three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">A</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">B</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">C</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="text">Text</h2>
+
+<p>Markdown:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text can use <span class="ge">*emphasis*</span> or <span class="gs">**strong**</span>. You can create<span class="err">\</span>
+line breaks.
+</code></pre></div></div>
+
+<p>Result:</p>
+
+<p>Text can use <em>emphasis</em> or <strong>strong</strong>. You can create<br />
+line breaks.</p>
+
+      </div>
+    </article>
+    </main>
+  </div>
+  <footer id="site-footer">
+    <p>Copyright &copy; 2022 Steve Fenton</p>
+  </footer>
+  <script src="/assets/js/main.js" type="module" async></script>
+</body>
+</html>

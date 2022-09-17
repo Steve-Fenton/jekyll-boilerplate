@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9.xsd"><url>
+    <loc>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-5/</loc>
+    <lastmod>2022-09-05 00:00:00 +0000</lastmod>
+  </url><url>
+    <loc>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-4/</loc>
+    <lastmod>2022-09-04 00:00:00 +0000</lastmod>
+  </url><url>
+    <loc>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-3/</loc>
+    <lastmod>2022-09-03 00:00:00 +0000</lastmod>
+  </url><url>
+    <loc>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post-2/</loc>
+    <lastmod>2022-09-02 00:00:00 +0000</lastmod>
+  </url><url>
+    <loc>https://jekyll.stevefenton.co.uk/articles/2022/09/example-post/</loc>
+    <lastmod>2022-09-01 00:00:00 +0000</lastmod>
+  </url></urlset>
